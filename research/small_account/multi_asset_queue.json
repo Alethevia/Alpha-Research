@@ -98,6 +98,25 @@
     "No remote broker API, order router or unattended research schedule has been enabled."
   ],
   "next_candidate": {
+    "status": "BREADTH_SCREEN_COMPLETED_FIRST_WAVE_INTAKE_NOT_PERFORMANCE_READY",
+    "catalogue": "idea_catalogue_100.json",
+    "screen_report": "idea_100_directions_20261013.md",
+    "intake_details": "idea_validation_queue.json",
+    "first_wave": [
+      "I037",
+      "I010",
+      "I019"
+    ],
+    "second_wave": [
+      "I001",
+      "I023",
+      "I076"
+    ],
+    "selection_basis": "Research information value and different mechanisms, not expected-return ranking. All twelve priority directions need data/implementation gates before a separately registered performance test.",
+    "new_performance_backtests": 0,
+    "execution_authorized": false
+  },
+  "retained_h3b_candidate": {
     "id": "H3B",
     "status": "IDEA_ONLY_NOT_PREREGISTERED_IMPLEMENTED_OR_BACKTESTED",
     "motivation": "Descriptive directional continuation differences are positive over 14 shared events; no costs or executable short positions in that statistic.",

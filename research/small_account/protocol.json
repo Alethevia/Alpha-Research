@@ -155,5 +155,23 @@
     "no_additional_capital_assumed": true,
     "all_products_share_the_same_account_drawdown_limit": true,
     "candidate_queue": "multi_asset_queue.json"
-  }
+  },
+  "research_catalogues": [
+    {
+      "id": "IDEA_100_MECHANISM_SCREEN_20261013",
+      "catalogue": "idea_catalogue_100.json",
+      "report": "idea_100_directions_20261013.md",
+      "validation_intake": "idea_validation_queue.json",
+      "arithmetic_and_checks": "idea_screen_results_20261013.json",
+      "scope": "20 correlated families / 100 distinguishable questions, not independent alphas or completed performance experiments",
+      "initial_desk_screen": {
+        "priority_minimum_falsification": 12,
+        "evidence_required": 61,
+        "park_current_constraints": 27
+      },
+      "new_performance_backtests": 0,
+      "validated_profitable": 0,
+      "not_performance_preregistration": true
+    }
+  ]
 }
