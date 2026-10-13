@@ -1,0 +1,65 @@
+{
+  "experiment_family": "H3_FOMC_CONTINUATION_20261013",
+  "evidence_type": "historical_development",
+  "hypothesis": "A strong positive first-15-minute price response after a scheduled FOMC decision continues after a five-minute additional delay, beyond an event-day clock-only long control.",
+  "status_at_freeze": "No H3 performance calculated. Rules fixed before event extraction; no parameter search.",
+  "initial_capital_usd": 2000,
+  "symbols": ["SPY", "QQQ", "TQQQ"],
+  "event_dates": ["2025-01-29", "2025-03-19", "2025-05-07", "2025-06-18", "2025-07-30", "2025-09-17", "2025-10-29", "2025-12-10", "2026-01-28", "2026-03-18", "2026-04-29", "2026-06-17", "2026-07-29", "2026-09-16"],
+  "event_time": "14:00 America/New_York",
+  "event_definition": "All regular FOMC policy-decision release days within the two windows. Exclude minutes, unscheduled decisions and notation votes. The Fed calendar and linked statements identify dates and release times; do not use statement content or revised macroeconomic values as features.",
+  "sources": ["https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm", "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a.htm", "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"],
+  "periods": [
+    {"name": "development_2025", "start": "2025-01-01", "end": "2026-01-01", "full_calendar_year": true},
+    {"name": "chronological_check_2026_Q1_Q3", "start": "2026-01-01", "end": "2026-10-01", "full_calendar_year": false}
+  ],
+  "rules": ["opening_drive_long", "clock_only_long"],
+  "rule_name_note": "Internal opening_drive_long identifier reuses the M2 calculation but here its input bars are the FOMC reaction bars, not the session opening bars. This is a new economic hypothesis on reused data, not an independent or blind dataset.",
+  "strategy": {
+    "timezone": "America/New_York",
+    "opening_bar_times": ["14:00", "14:05", "14:10"],
+    "minimum_positive_body_fraction": 0.25,
+    "minimum_close_position_in_range": 0.80,
+    "entry_time": "14:20",
+    "timed_exit": "15:50 regular-session open",
+    "stop": "Low of the three reaction bars; completed close at/below threshold triggers exit at bar-start + 10 minutes or next available regular-session open. No assumed stop-price fill.",
+    "max_entry_notional_fraction": 0.95,
+    "cash_reserve_months_of_overhead": 3,
+    "integer_shares": true,
+    "long_only": true,
+    "account_borrowing": false,
+    "one_entry_per_session": true,
+    "non_event_sessions": "No entries, but settlement, account drawdown and monthly overhead still processed. All calendar months are charged even with no events."
+  },
+  "risk": {"risk_per_trade": 0.01, "reduce_drawdown": 0.20, "pause_drawdown": 0.30, "max_drawdown": 0.40},
+  "cost_cases": [
+    {"name": "zero_cost_diagnostic", "slippage_bps_per_side": 0, "cash_fee_per_order_usd": 0, "monthly_overhead_usd": 0},
+    {"name": "base_cost_assumption", "slippage_bps_per_side": 5, "cash_fee_per_order_usd": 0.02, "monthly_overhead_usd": 10},
+    {"name": "double_variable_cost_stress", "slippage_bps_per_side": 10, "cash_fee_per_order_usd": 0.04, "monthly_overhead_usd": 10}
+  ],
+  "inheritance": "Use the unchanged M2 calendar, conservative settlement convention, raw-bar validation and risk controller. Add only an optional active-event-date filter to the shared replay; verify default replay parity against saved M2 results.",
+  "data_provenance": "Reuse all 36 Massive CSV files from the M2 snapshot whose data-manifest SHA256 is 8e99aa78c906e3346ab3ce1f23a661415c202ecae6112bfb798a1fecc09233b8. These histories and M2 results have already been inspected. H3 is exploratory historical research, not a fresh holdout. No October 2026 stock performance.",
+  "capital_interpretation": "36 alternatives, each starting at $2000. Do not add symbols or reset-window results into a portfolio. Costs assume a standalone account, not a shared-cost combination.",
+  "primary_metric": "Net return and observed drawdown in each complete evaluation window, candidate minus matching same-event clock control. Report all 36 cases and calendar inactivity.",
+  "rejection_rules": [
+    "Base-cost candidate must have positive net return and beat its same-event clock control in both windows, without observed drawdown above 40%, to justify collecting better execution evidence.",
+    "Even a pass is only a pilot with 8 and 6 event opportunities; it is not evidence of a stable annual return or deployment eligibility.",
+    "Report the contribution of the largest winning event and the result after removing that trade arithmetically, without resimulating later sizes. Do not tune or delete the event.",
+    "Only the complete 2025 window can be checked against +1000%; never annualize the nine-month result into achieved performance."
+  ],
+  "descriptive_control": "For each of the 14 events, choose the previous same weekday 7 days earlier; if not a full non-FOMC trading day, move back another 7 days. Compare sign(first-15-minute return) * subsequent 14:20-to-15:50 raw return on the event and its paired day. This bidirectional price statistic is NOT an executable short strategy or account return. Report pairs, mean differences and leave-one-event-out means; no causal, significance or confidence claim.",
+  "nano_data_gate": {
+    "contracts": ["NESZ6", "MESZ6"],
+    "start": "2026-09-01",
+    "end_exclusive": "2026-10-01",
+    "resolution": "5min",
+    "checks": "Each expected full regular session has 78 slots. Report missing slots, volume, transactions, low-volume bars and signal/exit-bar availability. Missing aggregates are not forward filled or automatically called no trades: distinguish possible inactivity from vendor omissions.",
+    "NES_specs": {"usd_per_index_point": 0.5, "minimum_tick_points": 0.5, "minimum_contracts": 1},
+    "MES_specs": {"usd_per_index_point": 5.0, "minimum_tick_points": 0.25, "minimum_contracts": 1},
+    "illustrative_costs": "For ONE actual contract, assume $1 cash fees per side and one tick adverse price slippage per side. These are assumed all-in fees, not broker quotes. Evaluate stop-risk dollars and $20 planned-risk fit on the September 16 event only, for positive first-15-minute response; do not synthesize NES fills from MES prices.",
+    "capital_gate": "Account-specific and historical margins, quote depth, receipt timestamps and permissions remain unknown. Passing the unit risk calculation cannot authorize a position.",
+    "performance_claim": "No NES account return or annual return is calculated. One month after a recent listing cannot establish annual performance.",
+    "inspection_disclosure": "Three midnight-UTC NESZ6 bars from 2026-09-16 and three midnight-UTC MESZ5 bars from 2025-12-10 were inspected for format/access before freeze. No event response was calculated. Earlier launch-day NES probe was empty; later September access succeeded."
+  },
+  "execution_authorized": false
+}
