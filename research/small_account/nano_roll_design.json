@@ -1,0 +1,20 @@
+{
+  "experiment_id": "M1_NANO_ROLL_COVERAGE_FOLLOWUP_20261013",
+  "evidence_type": "historical_development",
+  "purpose": "Resolve a concrete contract-selection ambiguity in the original fixed-December-contract coverage audit, not change strategy returns.",
+  "trigger_and_inspection": "The original NESZ6 September screen showed 604 missing regular slots, 602 before September 14. MESZ6 was also a deferred contract early in the month. This is an explicitly post-hoc follow-up; keep the original audit unchanged. September-expiry price bars have not been retrieved when this specification is frozen.",
+  "source": "https://www.cmegroup.com/trading/equity-index/rolldates.html",
+  "source_rule": "CME equity roll date is the Monday prior to the third Friday; official September 2026 roll date is September 14, expiration September 18. Participants can roll at other times; this is a fixed convention, not a claim about the maximum-volume contract every minute.",
+  "fixed_schedule": [
+    {"start_inclusive": "2026-09-01", "end_exclusive": "2026-09-14", "NES": "NESU6", "MES": "MESU6"},
+    {"start_inclusive": "2026-09-14", "end_exclusive": "2026-10-01", "NES": "NESZ6", "MES": "MESZ6"}
+  ],
+  "new_data": "Massive /futures/v1/aggs/NESU6 and MESU6; resolution 5min, window_start.gte 2026-09-01, window_start.lt 2026-09-14, limit 50000, sort window_start.asc. Preserve all pages and reject unresolved pagination.",
+  "prior_data": "Reuse frozen NESZ6 and MESZ6 September CSVs from H3; do not change or overwrite them.",
+  "calendar": "Use the same 21 full US equity regular sessions and 78 five-minute slots per session as the original H3 nano gate. No weekend, Labor Day or overnight slots in the coverage denominator.",
+  "metrics": ["Present/missing regular slots by day and month", "Longest missing run in each daily 09:30-16:00 window", "Median present-bar contract volume", "Total contract volume and transactions", "Counts of present bars with volume below 10 or transactions at most 3"],
+  "method": "Select the dated contract by the fixed calendar before looking up each slot. No future-volume contract choice, price back-adjustment, forward fill or synthetic traded price. Do not calculate returns across the switch.",
+  "interpretation": "A reduction in missing slots would indicate that the earlier fixed-December-contract result cannot stand in for customary nearby-contract coverage. It would not prove spreads, executable depth, fill probability or broker eligibility.",
+  "performance_or_capital_claim": "None. This is a data-coverage audit only; no funded account, PnL or annual return is computed.",
+  "execution_authorized": false
+}
