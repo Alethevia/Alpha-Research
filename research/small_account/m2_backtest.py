@@ -118,7 +118,8 @@ def opening_signal(bars: list[Bar], design: dict, rule: str) -> tuple[bool, floa
     return signal, low
 
 
-def simulate(bars: list[Bar], design: dict, period: dict, cost: dict, rule: str, symbol: str) -> dict:
+def simulate(bars: list[Bar], design: dict, period: dict, cost: dict, rule: str, symbol: str,
+             *, active_dates: set[date] | None = None) -> dict:
     start, end = date.fromisoformat(period["start"]), date.fromisoformat(period["end"])
     expected = trading_days(start, end, design)
     early = set(design["calendar"]["skip_known_early_close_sessions"])
@@ -177,6 +178,10 @@ def simulate(bars: list[Bar], design: dict, period: dict, cost: dict, rule: str,
         if d.isoformat() in early:
             counts["known_early_close_skips"] += 1
             daily.append({"date": d.isoformat(), "equity": equity(), "early_close_skipped": True})
+            continue
+        if active_dates is not None and d not in active_dates:
+            daily.append({"date": d.isoformat(), "equity": equity(), "early_close_skipped": False,
+                          "inactive_event_session": True})
             continue
         rows = sessions[d]
         counts["missing_regular_bars"] += 78 - len(rows)
