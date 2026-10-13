@@ -13,7 +13,7 @@
     "instrument_and_contract_or_minimum_order_size": null,
     "point_in_time_data_source_and_license": null,
     "broker_fee_margin_and_financing_schedule": null,
-    "user_maximum_drawdown_and_dollar_loss_budget": null,
+    "user_maximum_drawdown_and_dollar_loss_budget": "40% peak-to-trough drawdown confirmed; no deposits assumed. Initial reference loss $800; floor ratchets upward with equity peak.",
     "fixed_training_validation_and_untouched_test_windows": null
   },
   "research_questions": [
@@ -65,5 +65,27 @@
     "Use block/event resampling and a documented multiple-testing method when warranted; neither Monte Carlo nor a p-value proves future returns.",
     "A short profitable sample must not be promoted as a demonstrated annual return. Include all cash costs and all inactivity.",
     "Forward paper validation is a separate dataset with locked rules and order-event reconciliation; no live execution is implemented in this prototype."
-  ]
+  ],
+  "account_constraints": {
+    "user_reported_brokers": [
+      "moomoo",
+      "IBKR",
+      "Alpaca",
+      "Fidelity"
+    ],
+    "maximum_drawdown_from_high_watermark": 0.4,
+    "initial_reference_floor_usd": 1200,
+    "account_types_and_permissions_verified": false,
+    "aggregate_research_capital_usd": 2000,
+    "do_not_treat_each_broker_as_additional_capital": true
+  },
+  "research_risk_policy": {
+    "risk_per_trade": 0.01,
+    "reduce_new_entry_risk_at_drawdown": 0.2,
+    "pause_and_request_flatten_at_drawdown": 0.3,
+    "maximum_tolerated_drawdown": 0.4,
+    "pause_is_latched": true,
+    "overshoot_possible_and_must_be_reported": true,
+    "live_execution_authorized": false
+  }
 }

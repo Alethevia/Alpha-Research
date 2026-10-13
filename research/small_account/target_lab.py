@@ -146,7 +146,7 @@ def simulate_scenario(
     target_multiple: float = 11,
     paths: int = 3000,
     seed: int = 20261013,
-    drawdown_level: float = 0.3,
+    drawdown_level: float = 0.4,
 ) -> dict:
     """Conditional simulation with exact fixed payoffs and fractional sizing.
 
