@@ -1,5 +1,5 @@
 {
-  "status": "M2_OPENING_SUBTEST_COMPLETED_OTHER_TRACKS_AWAITING_DATA",
+  "status": "M2_AND_H3_FIXED_RULES_REJECTED_NANO_ROLL_COVERAGE_CHECKED_EXECUTION_UNRESOLVED",
   "ordering_basis": "Information value, access and implementability; not predicted returns or investment allocation.",
   "shared_constraints": {
     "capital_usd": 2000,
@@ -21,8 +21,13 @@
       "first_data_gate": "Exact contract-month trades and executable quotes, receive timestamps, roll/settlement calendar, current IBKR permissions, minimum-equity rules, initial/maintenance margin and all-in fees.",
       "rejection_before_performance": "A minimum integer contract cannot fit risk/funding constraints, or quotes/depth cannot support delayed entry and exit.",
       "history_rule": "No NES/NNQ synthetic fills before listing. ES/MES can support signal discovery only; cannot certify nano execution. Short post-launch histories cannot establish one-year returns.",
-      "status": "NOT_PREREGISTERED_AWAITING_DATA",
-      "access_probe": "NES dated contract metadata was accessible. One launch-day minute-bar query was empty; quote access returned NOT_ENTITLED. Metadata is not a fill or account-permission test."
+      "status": "ACTUAL_DATED_BARS_AND_ROLL_COVERAGE_CHECKED_EXECUTION_GATE_UNRESOLVED",
+      "access_probe": "Actual September 2026 NESZ6/MESZ6 and NESU6/MESU6 five-minute aggregates retrieved. Calendar-roll coverage: NES 1600/1638, MES 1614/1638. Shared two-hour September 11 gap unresolved. Earlier quote access was NOT_ENTITLED; no account margin/permission or fill verification.",
+      "completed_diagnostics": [
+        "M1_NANO_DATA_GATE",
+        "M1_NANO_ROLL_COVERAGE_FOLLOWUP_20261013"
+      ],
+      "results": "h3_results_20261013.md"
     },
     {
       "id": "M2",
@@ -35,7 +40,7 @@
       "mechanism_to_test": "Post-announcement price continuation after information is public; compare stock and ETF expressions.",
       "first_data_gate": "Point-in-time event release/receipt times, delisted-inclusive universe, corporate actions, minute quotes, account-specific costs and buying power.",
       "rejection_before_performance": "The apparent edge requires retrospective event labels, future constituent selection or fills before receipt.",
-      "status": "OPENING_DRIVE_SUBTEST_REJECTED_ANNOUNCEMENT_TESTS_PENDING",
+      "status": "OPENING_AND_POSITIVE_FOMC_SUBTESTS_REJECTED_OTHER_ANNOUNCEMENTS_UNTESTED",
       "subtests": [
         {
           "experiment_family": "M2_OPENING_DRIVE_FIXED_20261013",
@@ -46,6 +51,15 @@
           "cases": 36,
           "data": "Massive actual unadjusted 5-minute ETF aggregates, 2025 and 2026 Q1-Q3. Quotes and earnings endpoints returned NOT_ENTITLED.",
           "next_requirement": "An independently motivated new event hypothesis needs point-in-time event times and executable quotes; retain this failure and count subsequent revisions."
+        },
+        {
+          "experiment_family": "H3_FOMC_CONTINUATION_20261013",
+          "design": "h3_design.json",
+          "results": "h3_results_20261013.md",
+          "status": "REJECTED_BY_PREDECLARED_TWO_WINDOW_GATE",
+          "cases": 36,
+          "scope": "14 scheduled FOMC decisions on previously inspected M2 ETF data, positive-reaction long-only rule. One shared trading event in 2025 and zero in 2026; annual inactivity charged. Not independent holdout validation.",
+          "next_requirement": "Any two-sided or negative-response variant is a new trial requiring its own frozen design, tradable instrument/cost model and unused evaluation data."
         }
       ]
     },
@@ -82,5 +96,17 @@
   "additional_scope": [
     "FX, rates, commodity futures, bonds and other products remain admissible after the same access/size/cost/data gates.",
     "No remote broker API, order router or unattended research schedule has been enabled."
-  ]
+  ],
+  "next_candidate": {
+    "id": "H3B",
+    "status": "IDEA_ONLY_NOT_PREREGISTERED_IMPLEMENTED_OR_BACKTESTED",
+    "motivation": "Descriptive directional continuation differences are positive over 14 shared events; no costs or executable short positions in that statistic.",
+    "hypothesis_to_formalize": "Negative-response or two-sided post-FOMC continuation after executable delay and full costs.",
+    "required_gates": [
+      "Freeze a new rule before evaluation and retain all prior trials.",
+      "Resolve shared futures data gap without deleting it or filling it with invented prices.",
+      "Actual inverse-ETF or dated-futures prices, executable quotes and account-specific funding/fees.",
+      "Untouched chronological and future paper data; previously used 2025/2026 histories remain development data."
+    ]
+  }
 }

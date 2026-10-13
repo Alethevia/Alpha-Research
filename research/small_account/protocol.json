@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "ONE_FIXED_H1_PRICE_PROXY_BASELINE_REJECTED_NO_STRATEGY_VALIDATED",
+  "status": "H1_M2_H3_FIXED_RULES_REJECTED_NANO_EXECUTION_UNRESOLVED_NO_STRATEGY_VALIDATED",
   "target": {
     "initial_capital_usd": 2000,
     "one_year_return_decimal": 10,
@@ -62,7 +62,7 @@
     }
   ],
   "validation_protocol": [
-    "The six hypotheses are a design catalogue; only one fixed H1 baseline has been frozen and price-screened. The new multi-asset tracks and H6 are not preregistered or backtested.",
+    "H1 fixed crypto baseline, M2 opening-drive subtest and H3 positive FOMC subtest completed historical price screening. Original and roll-aware nano coverage diagnostics completed. Other catalogue hypotheses remain drafts unless separately frozen; H3B is not preregistered or backtested.",
     "Freeze economic mechanism, parameters, data hashes, code revision, costs, sample windows, primary metric and rejection rules before each experiment.",
     "Separate chronological development/selection from untouched evaluation; purge or embargo overlapping labels and event groups.",
     "Count all legacy, failed, interrupted and new variants when addressing selection bias; a new journal does not reset the trial count.",
@@ -103,6 +103,35 @@
       "results": "h1_results_20261013.json",
       "cases": 12,
       "decision": "REJECT_THIS_FROZEN_H1_BASELINE_FOR_BOTH_ASSETS",
+      "evidence_type": "historical_development",
+      "execution_verified": false
+    },
+    {
+      "family": "M2_OPENING_DRIVE_FIXED_20261013",
+      "design": "m2_design.json",
+      "results": "m2_results_20261013.json",
+      "cases": 36,
+      "decision": "REJECT_THIS_FIXED_OPENING_RULE_BY_TWO_WINDOW_GATE",
+      "evidence_type": "historical_development",
+      "execution_verified": false
+    },
+    {
+      "family": "H3_FOMC_CONTINUATION_20261013",
+      "design": "h3_design.json",
+      "results": "h3_results_20261013.json",
+      "cases": 36,
+      "separately_registered_diagnostics": 2,
+      "decision": "REJECT_THIS_FIXED_POSITIVE_FOMC_RULE; NANO_EXECUTION_UNRESOLVED",
+      "evidence_type": "historical_development",
+      "execution_verified": false
+    },
+    {
+      "family": "M1_NANO_ROLL_COVERAGE_FOLLOWUP_20261013",
+      "design": "nano_roll_design.json",
+      "results": "h3_results_20261013.json",
+      "coverage_diagnostics": 1,
+      "posthoc_followup": true,
+      "decision": "FIXED_DECEMBER_COVERAGE_NOT_REPRESENTATIVE_OF_NEARBY_CONTRACT; QUOTES_AND_SHARED_GAP_UNRESOLVED",
       "evidence_type": "historical_development",
       "execution_verified": false
     }

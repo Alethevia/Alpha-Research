@@ -1,0 +1,3947 @@
+{
+  "date": "2026-10-13",
+  "decision": "REJECT_THIS_FIXED_POSITIVE_FOMC_ETF_RULE; NANO_EXECUTION_GATE_UNRESOLVED",
+  "h3_summary": {
+    "experiment_family": "H3_FOMC_CONTINUATION_20261013",
+    "evidence_type": "historical_development",
+    "execution_authorized": false,
+    "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f",
+    "local_revision": "2a0872e92a48d59afba0baa585ace9a369a861dd",
+    "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+    "design_sha256": "0ac88d08b5890ca6ae4805d2e0ee29d0ce1e8e6d20186cc1f06cf6893bddfa0d",
+    "scenario_count": 36,
+    "separately_registered_diagnostics": 2,
+    "error_count": 0,
+    "selection_gates": [
+      {
+        "symbol": "SPY",
+        "advance_quote_collection_only": false,
+        "windows": [
+          {
+            "period": "development_2025",
+            "candidate_return": -0.055935207499999695,
+            "control_return": -0.061903890874999146,
+            "passed": false
+          },
+          {
+            "period": "chronological_check_2026_Q1_Q3",
+            "candidate_return": -0.04500000000000004,
+            "control_return": -0.05695499499999934,
+            "passed": false
+          }
+        ]
+      },
+      {
+        "symbol": "QQQ",
+        "advance_quote_collection_only": false,
+        "windows": [
+          {
+            "period": "development_2025",
+            "candidate_return": -0.05672130499999983,
+            "control_return": -0.06248085749999921,
+            "passed": false
+          },
+          {
+            "period": "chronological_check_2026_Q1_Q3",
+            "candidate_return": -0.04500000000000004,
+            "control_return": -0.0638366699999996,
+            "passed": false
+          }
+        ]
+      },
+      {
+        "symbol": "TQQQ",
+        "advance_quote_collection_only": false,
+        "windows": [
+          {
+            "period": "development_2025",
+            "candidate_return": -0.05283664999999993,
+            "control_return": -0.058921673249999085,
+            "passed": false
+          },
+          {
+            "period": "chronological_check_2026_Q1_Q3",
+            "candidate_return": -0.04500000000000004,
+            "control_return": -0.06677545054999956,
+            "passed": false
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 2009.8700000000001,
+          "net_period_return": 0.004935000000000134,
+          "max_observed_drawdown": 0.005663306311580407,
+          "open_close_max_drawdown": 0.004732941071410757,
+          "intrabar_low_drawdown_diagnostic": 0.005663306311580407,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 1,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": 9.870000000000118,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 2009.8700000000001,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 1,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 9.870000000000118,
+          "return_without_largest_win_arithmetic_only": 0.0
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__development_2025__opening_drive_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1888.1295850000006,
+          "net_period_return": -0.055935207499999695,
+          "max_observed_drawdown": 0.055935207499999695,
+          "open_close_max_drawdown": 0.055935207499999695,
+          "intrabar_low_drawdown_diagnostic": 0.01663386999999994,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 1,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.04,
+          "assumed_slippage_usd": 1.700415,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": 8.129585000000588,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1888.1295850000006,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 1,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 8.129585000000588,
+          "return_without_largest_win_arithmetic_only": -0.06000000000000005
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__development_2025__opening_drive_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1886.3891700000004,
+          "net_period_return": -0.056805414999999804,
+          "max_observed_drawdown": 0.056805414999999804,
+          "open_close_max_drawdown": 0.056805414999999804,
+          "intrabar_low_drawdown_diagnostic": 0.017067739999999998,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 1,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.08,
+          "assumed_slippage_usd": 3.40083,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": 6.389170000000377,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1886.3891700000004,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 1,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 6.389170000000377,
+          "return_without_largest_win_arithmetic_only": -0.06000000000000005
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__development_2025__opening_drive_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 2007.0915000000002,
+          "net_period_return": 0.003545750000000014,
+          "max_observed_drawdown": 0.0146176720129928,
+          "open_close_max_drawdown": 0.013867766935343973,
+          "intrabar_low_drawdown_diagnostic": 0.0146176720129928,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 8,
+          "profitable_round_trips": 4,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": 7.091500000000224,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 2007.0915000000002,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 8,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 9.886499999999842,
+          "return_without_largest_win_arithmetic_only": -0.0013974999999998294
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__development_2025__clock_only_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1876.1922182500018,
+          "net_period_return": -0.061903890874999146,
+          "max_observed_drawdown": 0.06657975587499909,
+          "open_close_max_drawdown": 0.06581985587499917,
+          "intrabar_low_drawdown_diagnostic": 0.06657975587499909,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 8,
+          "profitable_round_trips": 4,
+          "cash_fees_usd": 0.32,
+          "assumed_slippage_usd": 12.304281750000001,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": -3.8077817499981848,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1876.1922182500018,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 8,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 8.16994324999996,
+          "return_without_largest_win_arithmetic_only": -0.06598886249999902
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__development_2025__clock_only_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1863.5679365000017,
+          "net_period_return": -0.06821603174999913,
+          "max_observed_drawdown": 0.07253776174999915,
+          "open_close_max_drawdown": 0.07177786174999912,
+          "intrabar_low_drawdown_diagnostic": 0.07253776174999915,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 8,
+          "profitable_round_trips": 3,
+          "cash_fees_usd": 0.64,
+          "assumed_slippage_usd": 24.608563500000002,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": -16.43206349999832,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1863.5679365000017,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 8,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 6.453386500000079,
+          "return_without_largest_win_arithmetic_only": -0.07144272499999915
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__development_2025__clock_only_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 2000.0,
+          "net_period_return": 0.0,
+          "max_observed_drawdown": 0.0,
+          "open_close_max_drawdown": 0.0,
+          "intrabar_low_drawdown_diagnostic": 0.0,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 0,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": 0,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 2000.0,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 0,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": 0.0
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__chronological_check_2026_Q1_Q3__opening_drive_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1910.0,
+          "net_period_return": -0.04500000000000004,
+          "max_observed_drawdown": 0.04500000000000004,
+          "open_close_max_drawdown": 0.04500000000000004,
+          "intrabar_low_drawdown_diagnostic": 0.0,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 0,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": 0,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1910.0,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 0,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": -0.04500000000000004
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__chronological_check_2026_Q1_Q3__opening_drive_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1910.0,
+          "net_period_return": -0.04500000000000004,
+          "max_observed_drawdown": 0.04500000000000004,
+          "open_close_max_drawdown": 0.04500000000000004,
+          "intrabar_low_drawdown_diagnostic": 0.0,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 0,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": 0,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1910.0,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 0,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": -0.04500000000000004
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__chronological_check_2026_Q1_Q3__opening_drive_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1983.58,
+          "net_period_return": -0.00821000000000005,
+          "max_observed_drawdown": 0.013512570876224483,
+          "open_close_max_drawdown": 0.011928132255782264,
+          "intrabar_low_drawdown_diagnostic": 0.013512570876224483,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 5,
+          "profitable_round_trips": 2,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": -16.420000000000073,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1983.58,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 6,
+          "below_stop_entry_skips": 1,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 2.380000000000109,
+          "return_without_largest_win_arithmetic_only": -0.009400000000000075
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__chronological_check_2026_Q1_Q3__clock_only_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1886.0900100000013,
+          "net_period_return": -0.05695499499999934,
+          "max_observed_drawdown": 0.05840604999999943,
+          "open_close_max_drawdown": 0.05695499499999934,
+          "intrabar_low_drawdown_diagnostic": 0.05840604999999943,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 5,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.19999999999999998,
+          "assumed_slippage_usd": 7.28999,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": -23.909989999998743,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1886.0900100000013,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 6,
+          "below_stop_entry_skips": 1,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.9197300000002997,
+          "return_without_largest_win_arithmetic_only": -0.05741485999999951
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__chronological_check_2026_Q1_Q3__clock_only_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "SPY",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1878.600020000001,
+          "net_period_return": -0.06069998999999948,
+          "max_observed_drawdown": 0.0617620999999996,
+          "open_close_max_drawdown": 0.06069998999999948,
+          "intrabar_low_drawdown_diagnostic": 0.0617620999999996,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 5,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.39999999999999997,
+          "assumed_slippage_usd": 14.57998,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": -31.399979999999005,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1878.600020000001,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 6,
+          "below_stop_entry_skips": 1,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": -0.06069998999999948
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_SPY__chronological_check_2026_Q1_Q3__clock_only_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 2008.04,
+          "net_period_return": 0.0040199999999999125,
+          "max_observed_drawdown": 0.006577805116401492,
+          "open_close_max_drawdown": 0.005952764811222977,
+          "intrabar_low_drawdown_diagnostic": 0.006577805116401492,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 1,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": 8.039999999999964,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 2008.04,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 1,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 8.039999999999964,
+          "return_without_largest_win_arithmetic_only": 0.0
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__development_2025__opening_drive_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1886.5573900000004,
+          "net_period_return": -0.05672130499999983,
+          "max_observed_drawdown": 0.05672130499999983,
+          "open_close_max_drawdown": 0.05672130499999983,
+          "intrabar_low_drawdown_diagnostic": 0.016794647499999926,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 1,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.04,
+          "assumed_slippage_usd": 1.44261,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": 6.557390000000396,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1886.5573900000004,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 1,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 6.557390000000396,
+          "return_without_largest_win_arithmetic_only": -0.06000000000000005
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__development_2025__opening_drive_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1885.0747800000001,
+          "net_period_return": -0.05746260999999997,
+          "max_observed_drawdown": 0.05746260999999997,
+          "open_close_max_drawdown": 0.05746260999999997,
+          "intrabar_low_drawdown_diagnostic": 0.01716429499999994,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 1,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.08,
+          "assumed_slippage_usd": 2.88522,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": 5.074780000000146,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1885.0747800000001,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 1,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 5.074780000000146,
+          "return_without_largest_win_arithmetic_only": -0.06000000000000005
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__development_2025__opening_drive_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 2006.12,
+          "net_period_return": 0.0030599999999998406,
+          "max_observed_drawdown": 0.019585622428617278,
+          "open_close_max_drawdown": 0.017885738217831793,
+          "intrabar_low_drawdown_diagnostic": 0.019585622428617278,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 8,
+          "profitable_round_trips": 4,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": 6.119999999999891,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 2006.12,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 8,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 13.230000000000246,
+          "return_without_largest_win_arithmetic_only": -0.003555000000000197
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__development_2025__clock_only_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1875.0382850000017,
+          "net_period_return": -0.06248085749999921,
+          "max_observed_drawdown": 0.06759663749999922,
+          "open_close_max_drawdown": 0.06644663749999924,
+          "intrabar_low_drawdown_diagnostic": 0.06759663749999922,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 8,
+          "profitable_round_trips": 4,
+          "cash_fees_usd": 0.32,
+          "assumed_slippage_usd": 12.011715,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": -4.961714999998321,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1875.0382850000017,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 8,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 11.749505000000227,
+          "return_without_largest_win_arithmetic_only": -0.06835560999999923
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__development_2025__clock_only_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1862.706570000003,
+          "net_period_return": -0.06864671499999853,
+          "max_observed_drawdown": 0.07343827499999867,
+          "open_close_max_drawdown": 0.07228827499999868,
+          "intrabar_low_drawdown_diagnostic": 0.07343827499999867,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 8,
+          "profitable_round_trips": 3,
+          "cash_fees_usd": 0.64,
+          "assumed_slippage_usd": 24.02343,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": -17.293429999996988,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1862.706570000003,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 8,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 10.269010000000435,
+          "return_without_largest_win_arithmetic_only": -0.07378121999999876
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__development_2025__clock_only_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 2000.0,
+          "net_period_return": 0.0,
+          "max_observed_drawdown": 0.0,
+          "open_close_max_drawdown": 0.0,
+          "intrabar_low_drawdown_diagnostic": 0.0,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 0,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": 0,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 2000.0,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 0,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": 0.0
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__chronological_check_2026_Q1_Q3__opening_drive_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1910.0,
+          "net_period_return": -0.04500000000000004,
+          "max_observed_drawdown": 0.04500000000000004,
+          "open_close_max_drawdown": 0.04500000000000004,
+          "intrabar_low_drawdown_diagnostic": 0.0,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 0,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": 0,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1910.0,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 0,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": -0.04500000000000004
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__chronological_check_2026_Q1_Q3__opening_drive_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1910.0,
+          "net_period_return": -0.04500000000000004,
+          "max_observed_drawdown": 0.04500000000000004,
+          "open_close_max_drawdown": 0.04500000000000004,
+          "intrabar_low_drawdown_diagnostic": 0.0,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 0,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": 0,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1910.0,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 0,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": -0.04500000000000004
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__chronological_check_2026_Q1_Q3__opening_drive_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1969.3899999999996,
+          "net_period_return": -0.015305000000000124,
+          "max_observed_drawdown": 0.023163681733001318,
+          "open_close_max_drawdown": 0.02143386172375572,
+          "intrabar_low_drawdown_diagnostic": 0.023163681733001318,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 5,
+          "profitable_round_trips": 2,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": -30.610000000000355,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1969.3899999999996,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 6,
+          "below_stop_entry_skips": 1,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 2.880000000000109,
+          "return_without_largest_win_arithmetic_only": -0.016745000000000232
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__chronological_check_2026_Q1_Q3__clock_only_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1872.3266600000009,
+          "net_period_return": -0.0638366699999996,
+          "max_observed_drawdown": 0.0655826749999997,
+          "open_close_max_drawdown": 0.06384267499999963,
+          "intrabar_low_drawdown_diagnostic": 0.0655826749999997,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 5,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.19999999999999998,
+          "assumed_slippage_usd": 6.79334,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": -37.67333999999914,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1872.3266600000009,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 6,
+          "below_stop_entry_skips": 1,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 1.5207800000002862,
+          "return_without_largest_win_arithmetic_only": -0.06459705999999976
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__chronological_check_2026_Q1_Q3__clock_only_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "QQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1865.333320000001,
+          "net_period_return": -0.06733333999999946,
+          "max_observed_drawdown": 0.06871534999999951,
+          "open_close_max_drawdown": 0.06733333999999946,
+          "intrabar_low_drawdown_diagnostic": 0.06871534999999951,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 5,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.39999999999999997,
+          "assumed_slippage_usd": 13.58668,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": -44.666679999998905,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1865.333320000001,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 6,
+          "below_stop_entry_skips": 1,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.16156000000023596,
+          "return_without_largest_win_arithmetic_only": -0.06741411999999958
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_QQQ__chronological_check_2026_Q1_Q3__clock_only_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 2016.32,
+          "net_period_return": 0.008159999999999945,
+          "max_observed_drawdown": 0.013095209972203148,
+          "open_close_max_drawdown": 0.011756553510823387,
+          "intrabar_low_drawdown_diagnostic": 0.013095209972203148,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 1,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": 16.319999999999936,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 2016.32,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 1,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 16.319999999999936,
+          "return_without_largest_win_arithmetic_only": 0.0
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__development_2025__opening_drive_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1894.3267,
+          "net_period_return": -0.05283664999999993,
+          "max_observed_drawdown": 0.05283664999999993,
+          "open_close_max_drawdown": 0.05283664999999993,
+          "intrabar_low_drawdown_diagnostic": 0.01794141249999992,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 1,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.04,
+          "assumed_slippage_usd": 0.9333,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": 14.326700000000187,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1894.3267,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 1,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 14.326700000000187,
+          "return_without_largest_win_arithmetic_only": -0.06000000000000005
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__development_2025__opening_drive_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1892.4578400000003,
+          "net_period_return": -0.05377107999999986,
+          "max_observed_drawdown": 0.05377107999999986,
+          "open_close_max_drawdown": 0.05377107999999986,
+          "intrabar_low_drawdown_diagnostic": 0.017971969999999837,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 1,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.08,
+          "assumed_slippage_usd": 1.74216,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": 12.457840000000147,
+          "cash_identity_error_usd": 2.2737367544323206e-13,
+          "settled_cash_at_end": 1892.4578400000003,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 1,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 12.457840000000147,
+          "return_without_largest_win_arithmetic_only": -0.06000000000000005
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__development_2025__opening_drive_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 2016.9385,
+          "net_period_return": 0.008469250000000095,
+          "max_observed_drawdown": 0.06000661602315127,
+          "open_close_max_drawdown": 0.05600368403015765,
+          "intrabar_low_drawdown_diagnostic": 0.06000661602315127,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 8,
+          "profitable_round_trips": 4,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": 16.938499999999976,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 2016.9385,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 8,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 53.8900000000001,
+          "return_without_largest_win_arithmetic_only": -0.018475750000000013
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__development_2025__clock_only_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1882.1566535000018,
+          "net_period_return": -0.058921673249999085,
+          "max_observed_drawdown": 0.09653217763386679,
+          "open_close_max_drawdown": 0.09298511423841727,
+          "intrabar_low_drawdown_diagnostic": 0.09653217763386679,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 8,
+          "profitable_round_trips": 4,
+          "cash_fees_usd": 0.32,
+          "assumed_slippage_usd": 13.230346500000001,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": 2.1566535000018803,
+          "cash_identity_error_usd": 2.2737367544323206e-13,
+          "settled_cash_at_end": 1882.1566535000018,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 8,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 50.407512500000166,
+          "return_without_largest_win_arithmetic_only": -0.08412542949999924
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__development_2025__clock_only_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "development_2025",
+          "start": "2025-01-01",
+          "end": "2026-01-01",
+          "full_calendar_year": true
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1867.1722470000027,
+          "net_period_return": -0.06641387649999864,
+          "max_observed_drawdown": 0.10046530702809109,
+          "open_close_max_drawdown": 0.09719591329017763,
+          "intrabar_low_drawdown_diagnostic": 0.10046530702809109,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 8,
+          "profitable_round_trips": 4,
+          "cash_fees_usd": 0.64,
+          "assumed_slippage_usd": 26.234753000000005,
+          "overhead_usd": 120.0,
+          "trade_net_pnl_usd": -12.827752999997415,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1867.1722470000027,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1880.0,
+          "full_year_1000pct_target_hit": false,
+          "annualized_return": null,
+          "expected_sessions": 250,
+          "known_early_close_skips": 3,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 8,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 8,
+          "largest_winning_trade_usd": 48.51002500000027,
+          "return_without_largest_win_arithmetic_only": -0.09066888899999881
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__development_2025__clock_only_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 2000.0,
+          "net_period_return": 0.0,
+          "max_observed_drawdown": 0.0,
+          "open_close_max_drawdown": 0.0,
+          "intrabar_low_drawdown_diagnostic": 0.0,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 0,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": 0,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 2000.0,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 0,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": 0.0
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__chronological_check_2026_Q1_Q3__opening_drive_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1910.0,
+          "net_period_return": -0.04500000000000004,
+          "max_observed_drawdown": 0.04500000000000004,
+          "open_close_max_drawdown": 0.04500000000000004,
+          "intrabar_low_drawdown_diagnostic": 0.0,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 0,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": 0,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1910.0,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 0,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": -0.04500000000000004
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__chronological_check_2026_Q1_Q3__opening_drive_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "opening_drive_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1910.0,
+          "net_period_return": -0.04500000000000004,
+          "max_observed_drawdown": 0.04500000000000004,
+          "open_close_max_drawdown": 0.04500000000000004,
+          "intrabar_low_drawdown_diagnostic": 0.0,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 0,
+          "profitable_round_trips": 0,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": 0,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1910.0,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 0,
+          "below_stop_entry_skips": 0,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 0.0,
+          "return_without_largest_win_arithmetic_only": -0.04500000000000004
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__chronological_check_2026_Q1_Q3__opening_drive_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "zero_cost_diagnostic",
+          "slippage_bps_per_side": 0,
+          "cash_fee_per_order_usd": 0,
+          "monthly_overhead_usd": 0
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1960.4078000000002,
+          "net_period_return": -0.019796099999999872,
+          "max_observed_drawdown": 0.051909971855839454,
+          "open_close_max_drawdown": 0.04543288341113971,
+          "intrabar_low_drawdown_diagnostic": 0.051909971855839454,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 5,
+          "profitable_round_trips": 2,
+          "cash_fees_usd": 0.0,
+          "assumed_slippage_usd": 0.0,
+          "overhead_usd": 0.0,
+          "trade_net_pnl_usd": -39.592199999999934,
+          "cash_identity_error_usd": 2.2737367544323206e-13,
+          "settled_cash_at_end": 1960.4078000000002,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 2000.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 6,
+          "below_stop_entry_skips": 1,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 12.08999999999969,
+          "return_without_largest_win_arithmetic_only": -0.025841099999999728
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__chronological_check_2026_Q1_Q3__clock_only_long__zero_cost_diagnostic",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "base_cost_assumption",
+          "slippage_bps_per_side": 5,
+          "cash_fee_per_order_usd": 0.02,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1866.449098900001,
+          "net_period_return": -0.06677545054999956,
+          "max_observed_drawdown": 0.07432846531159287,
+          "open_close_max_drawdown": 0.06818258168328928,
+          "intrabar_low_drawdown_diagnostic": 0.07432846531159287,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 5,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.19999999999999998,
+          "assumed_slippage_usd": 7.9087011,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": -43.55090109999912,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1866.449098900001,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 6,
+          "below_stop_entry_skips": 1,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 9.82145000000014,
+          "return_without_largest_win_arithmetic_only": -0.07168617554999956
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__chronological_check_2026_Q1_Q3__clock_only_long__base_cost_assumption",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      },
+      {
+        "evidence_type": "historical_development",
+        "execution_authorized": false,
+        "symbol": "TQQQ",
+        "rule": "clock_only_long",
+        "period": {
+          "name": "chronological_check_2026_Q1_Q3",
+          "start": "2026-01-01",
+          "end": "2026-10-01",
+          "full_calendar_year": false
+        },
+        "cost_case": {
+          "name": "double_variable_cost_stress",
+          "slippage_bps_per_side": 10,
+          "cash_fee_per_order_usd": 0.04,
+          "monthly_overhead_usd": 10
+        },
+        "metrics": {
+          "initial_equity": 2000.0,
+          "final_equity": 1861.3878278000009,
+          "net_period_return": -0.06930608609999955,
+          "max_observed_drawdown": 0.07617521109999958,
+          "open_close_max_drawdown": 0.07002771109999972,
+          "intrabar_low_drawdown_diagnostic": 0.07617521109999958,
+          "drawdown_pause_latched": false,
+          "observed_40pct_breach": false,
+          "round_trips": 5,
+          "profitable_round_trips": 1,
+          "cash_fees_usd": 0.39999999999999997,
+          "assumed_slippage_usd": 15.6599722,
+          "overhead_usd": 90.0,
+          "trade_net_pnl_usd": -48.61217219999912,
+          "cash_identity_error_usd": 0.0,
+          "settled_cash_at_end": 1861.3878278000009,
+          "unsettled_cash_at_end": 0,
+          "cash_only_final_after_overhead": 1910.0,
+          "full_year_1000pct_target_hit": null,
+          "annualized_return": null,
+          "expected_sessions": 187,
+          "known_early_close_skips": 0,
+          "missing_regular_bars": 0,
+          "missing_opening_input_sessions": 0,
+          "missing_entry_bar_sessions": 0,
+          "signal_sessions": 6,
+          "below_stop_entry_skips": 1,
+          "zero_quantity_skips": 0,
+          "pause_entry_skips": 0,
+          "settled_cash_binding_entries": 0,
+          "event_opportunities": 6,
+          "largest_winning_trade_usd": 7.942900000000009,
+          "return_without_largest_win_arithmetic_only": -0.07327753609999954
+        },
+        "limits": [
+          "Bar-price proxy with assumed fills, not actual NBBO/executions.",
+          "Unknown intrabar high/low ordering and missing bars can understate maximum drawdown.",
+          "Cash availability uses a conservative union calendar, not verified broker settlement.",
+          "Historical development and chronological check; no statistical confidence or forward validation claimed."
+        ],
+        "experiment_id": "H3_TQQQ__chronological_check_2026_Q1_Q3__clock_only_long__double_variable_cost_stress",
+        "data_manifest_sha256": "ffe1b997ac67c8725e616643fe9af85cb75566b2d81c3c830e085c9522941510",
+        "code_revision": "a3063df2c560f5d64bd04ba7c0840b584e10657f"
+      }
+    ],
+    "diagnostics": {
+      "H3_PAIRED_PRICE_DIAGNOSTIC": {
+        "evidence_type": "historical_development",
+        "experiment_id": "H3_PAIRED_PRICE_DIAGNOSTIC",
+        "result": {
+          "SPY": {
+            "statistic_only_not_account_return": true,
+            "paired_events": 14,
+            "event_mean_bps": 17.21505959087179,
+            "control_mean_bps": -13.241321518646496,
+            "mean_difference_bps": 30.456381109518283,
+            "positive_pair_differences": 9,
+            "leave_one_event_out_mean_difference_range_bps": [
+              22.64117673943616,
+              38.90318482326862
+            ],
+            "pairs": [
+              {
+                "event": {
+                  "date": "2025-01-29",
+                  "reaction_return": -0.0024108463981113992,
+                  "later_raw_return": 0.0035346293641000948,
+                  "direction": -1,
+                  "directional_continuation_bps": -35.34629364100095
+                },
+                "control": {
+                  "date": "2025-01-22",
+                  "reaction_return": 6.589351607821925e-05,
+                  "later_raw_return": -0.0004035944616955778,
+                  "direction": 1,
+                  "directional_continuation_bps": -4.035944616955778
+                },
+                "difference_bps": -31.31034902404517
+              },
+              {
+                "event": {
+                  "date": "2025-03-19",
+                  "reaction_return": 0.003569018786178768,
+                  "later_raw_return": 0.00582136032274061,
+                  "direction": 1,
+                  "directional_continuation_bps": 58.2136032274061
+                },
+                "control": {
+                  "date": "2025-03-12",
+                  "reaction_return": 0.0024729410078130343,
+                  "later_raw_return": -0.00041091974558715716,
+                  "direction": 1,
+                  "directional_continuation_bps": -4.109197455871572
+                },
+                "difference_bps": 62.32280068327767
+              },
+              {
+                "event": {
+                  "date": "2025-05-07",
+                  "reaction_return": -0.004533156901839197,
+                  "later_raw_return": 0.005914345630733342,
+                  "direction": -1,
+                  "directional_continuation_bps": -59.14345630733342
+                },
+                "control": {
+                  "date": "2025-04-30",
+                  "reaction_return": 0.0014714431041997766,
+                  "later_raw_return": 0.002020861086190262,
+                  "direction": 1,
+                  "directional_continuation_bps": 20.20861086190262
+                },
+                "difference_bps": -79.35206716923605
+              },
+              {
+                "event": {
+                  "date": "2025-06-18",
+                  "reaction_return": -0.000350227647971213,
+                  "later_raw_return": -0.0012185147473668945,
+                  "direction": -1,
+                  "directional_continuation_bps": 12.185147473668945
+                },
+                "control": {
+                  "date": "2025-06-11",
+                  "reaction_return": -0.003485419329139816,
+                  "later_raw_return": 8.329168748977267e-05,
+                  "direction": -1,
+                  "directional_continuation_bps": -0.8329168748977267
+                },
+                "difference_bps": 13.018064348566671
+              },
+              {
+                "event": {
+                  "date": "2025-07-30",
+                  "reaction_return": -0.0005732639134292672,
+                  "later_raw_return": -0.005775350646289312,
+                  "direction": -1,
+                  "directional_continuation_bps": 57.75350646289312
+                },
+                "control": {
+                  "date": "2025-07-23",
+                  "reaction_return": 0.001130407974514469,
+                  "later_raw_return": 0.0002527246880428269,
+                  "direction": 1,
+                  "directional_continuation_bps": 2.527246880428269
+                },
+                "difference_bps": 55.22625958246485
+              },
+              {
+                "event": {
+                  "date": "2025-09-17",
+                  "reaction_return": -0.0027711329203919943,
+                  "later_raw_return": 0.0012298068747722546,
+                  "direction": -1,
+                  "directional_continuation_bps": -12.298068747722546
+                },
+                "control": {
+                  "date": "2025-09-10",
+                  "reaction_return": -0.0003525768770886728,
+                  "later_raw_return": 0.0003222588813014404,
+                  "direction": -1,
+                  "directional_continuation_bps": -3.2225888130144043
+                },
+                "difference_bps": -9.075479934708142
+              },
+              {
+                "event": {
+                  "date": "2025-10-29",
+                  "reaction_return": -0.0007266280100565181,
+                  "later_raw_return": -0.0027323198558265593,
+                  "direction": -1,
+                  "directional_continuation_bps": 27.323198558265595
+                },
+                "control": {
+                  "date": "2025-10-22",
+                  "reaction_return": -0.0004362542309138684,
+                  "later_raw_return": 0.005358459894335921,
+                  "direction": -1,
+                  "directional_continuation_bps": -53.58459894335921
+                },
+                "difference_bps": 80.9077975016248
+              },
+              {
+                "event": {
+                  "date": "2025-12-10",
+                  "reaction_return": 0.0027677708461470996,
+                  "later_raw_return": 0.004685720958748085,
+                  "direction": 1,
+                  "directional_continuation_bps": 46.85720958748085
+                },
+                "control": {
+                  "date": "2025-12-03",
+                  "reaction_return": 0.0006945358307379745,
+                  "later_raw_return": 0.00013445220954677595,
+                  "direction": 1,
+                  "directional_continuation_bps": 1.3445220954677595
+                },
+                "difference_bps": 45.51268749201309
+              },
+              {
+                "event": {
+                  "date": "2026-01-28",
+                  "reaction_return": -0.0002517659583651799,
+                  "later_raw_return": 5.755644128524473e-05,
+                  "direction": -1,
+                  "directional_continuation_bps": -0.5755644128524473
+                },
+                "control": {
+                  "date": "2026-01-21",
+                  "reaction_return": -0.0013509743168034216,
+                  "later_raw_return": 0.007569299509097904,
+                  "direction": -1,
+                  "directional_continuation_bps": -75.69299509097904
+                },
+                "difference_bps": 75.1174306781266
+              },
+              {
+                "event": {
+                  "date": "2026-03-18",
+                  "reaction_return": -0.00022498537595072587,
+                  "later_raw_return": -0.005618737136246832,
+                  "direction": -1,
+                  "directional_continuation_bps": 56.18737136246832
+                },
+                "control": {
+                  "date": "2026-03-11",
+                  "reaction_return": -0.0009629772292922834,
+                  "later_raw_return": 0.001200302298356437,
+                  "direction": -1,
+                  "directional_continuation_bps": -12.003022983564371
+                },
+                "difference_bps": 68.19039434603269
+              },
+              {
+                "event": {
+                  "date": "2026-04-29",
+                  "reaction_return": -0.0021418218150603963,
+                  "later_raw_return": 0.0016771429376780667,
+                  "direction": -1,
+                  "directional_continuation_bps": -16.771429376780667
+                },
+                "control": {
+                  "date": "2026-04-22",
+                  "reaction_return": -2.817020437484441e-05,
+                  "later_raw_return": 0.001507806775266296,
+                  "direction": -1,
+                  "directional_continuation_bps": -15.07806775266296
+                },
+                "difference_bps": -1.6933616241177063
+              },
+              {
+                "event": {
+                  "date": "2026-06-17",
+                  "reaction_return": -0.0056072027916145295,
+                  "later_raw_return": -0.00912203734417627,
+                  "direction": -1,
+                  "directional_continuation_bps": 91.2203734417627
+                },
+                "control": {
+                  "date": "2026-06-10",
+                  "reaction_return": 8.2114166062075e-05,
+                  "later_raw_return": -0.0040833664478823195,
+                  "direction": 1,
+                  "directional_continuation_bps": -40.833664478823195
+                },
+                "difference_bps": 132.0540379205859
+              },
+              {
+                "event": {
+                  "date": "2026-07-29",
+                  "reaction_return": 0.0013851732145524487,
+                  "later_raw_return": -0.006946988507618657,
+                  "direction": 1,
+                  "directional_continuation_bps": -69.46988507618657
+                },
+                "control": {
+                  "date": "2026-07-22",
+                  "reaction_return": -0.0006345898211792544,
+                  "later_raw_return": -0.0003474774473771758,
+                  "direction": -1,
+                  "directional_continuation_bps": 3.474774473771758
+                },
+                "difference_bps": -72.94465954995833
+              },
+              {
+                "event": {
+                  "date": "2026-09-16",
+                  "reaction_return": -0.00027835454054658815,
+                  "later_raw_return": -0.0084875121720136,
+                  "direction": -1,
+                  "directional_continuation_bps": 84.87512172013601
+                },
+                "control": {
+                  "date": "2026-09-09",
+                  "reaction_return": -0.0008125606144007147,
+                  "later_raw_return": 0.0003540658562493082,
+                  "direction": -1,
+                  "directional_continuation_bps": -3.540658562493082
+                },
+                "difference_bps": 88.41578028262909
+              }
+            ],
+            "limits": "No costs, stops, risk sizing or borrow modeled in this bidirectional price statistic. Not a short-trading strategy. All three ETFs share the same 14 event dates; 42 pairs are not 42 independent events. No causal or statistical-significance claim."
+          },
+          "QQQ": {
+            "statistic_only_not_account_return": true,
+            "paired_events": 14,
+            "event_mean_bps": 1.0585841581944087,
+            "control_mean_bps": -9.915996776223885,
+            "mean_difference_bps": 10.974580934418293,
+            "positive_pair_differences": 8,
+            "leave_one_event_out_mean_difference_range_bps": [
+              4.87706993889678,
+              20.559107513114135
+            ],
+            "pairs": [
+              {
+                "event": {
+                  "date": "2025-01-29",
+                  "reaction_return": -0.0018778167250876887,
+                  "later_raw_return": 0.0055614560200829555,
+                  "direction": -1,
+                  "directional_continuation_bps": -55.61456020082956
+                },
+                "control": {
+                  "date": "2025-01-22",
+                  "reaction_return": 0.0002912302127859867,
+                  "later_raw_return": -0.0009486329354083667,
+                  "direction": 1,
+                  "directional_continuation_bps": -9.486329354083667
+                },
+                "difference_bps": -46.12823084674589
+              },
+              {
+                "event": {
+                  "date": "2025-03-19",
+                  "reaction_return": 0.004463069669984332,
+                  "later_raw_return": 0.005588805705586841,
+                  "direction": 1,
+                  "directional_continuation_bps": 55.888057055868416
+                },
+                "control": {
+                  "date": "2025-03-12",
+                  "reaction_return": 0.003176473063087659,
+                  "later_raw_return": -5.238289803144447e-05,
+                  "direction": 1,
+                  "directional_continuation_bps": -0.5238289803144447
+                },
+                "difference_bps": 56.411886036182864
+              },
+              {
+                "event": {
+                  "date": "2025-05-07",
+                  "reaction_return": -0.005269735471776782,
+                  "later_raw_return": 0.009226713532513253,
+                  "direction": -1,
+                  "directional_continuation_bps": -92.26713532513253
+                },
+                "control": {
+                  "date": "2025-04-30",
+                  "reaction_return": 0.0020361415118350656,
+                  "later_raw_return": 0.002135712926349509,
+                  "direction": 1,
+                  "directional_continuation_bps": 21.35712926349509
+                },
+                "difference_bps": -113.62426458862763
+              },
+              {
+                "event": {
+                  "date": "2025-06-18",
+                  "reaction_return": -0.0006593447996534607,
+                  "later_raw_return": -0.0008299068240973373,
+                  "direction": -1,
+                  "directional_continuation_bps": 8.299068240973373
+                },
+                "control": {
+                  "date": "2025-06-11",
+                  "reaction_return": -0.003657575871253149,
+                  "later_raw_return": 0.0008284536160116929,
+                  "direction": -1,
+                  "directional_continuation_bps": -8.284536160116929
+                },
+                "difference_bps": 16.5836044010903
+              },
+              {
+                "event": {
+                  "date": "2025-07-30",
+                  "reaction_return": 7.02444506883726e-05,
+                  "later_raw_return": -0.004707287513392999,
+                  "direction": 1,
+                  "directional_continuation_bps": -47.07287513392999
+                },
+                "control": {
+                  "date": "2025-07-23",
+                  "reaction_return": 0.001226972046375785,
+                  "later_raw_return": -0.00033748978649339456,
+                  "direction": 1,
+                  "directional_continuation_bps": -3.3748978649339456
+                },
+                "difference_bps": -43.69797726899604
+              },
+              {
+                "event": {
+                  "date": "2025-09-17",
+                  "reaction_return": -0.005492902315229586,
+                  "later_raw_return": 0.00473175381263613,
+                  "direction": -1,
+                  "directional_continuation_bps": -47.3175381263613
+                },
+                "control": {
+                  "date": "2025-09-10",
+                  "reaction_return": -0.0004300927279921041,
+                  "later_raw_return": 0.0001206106344120439,
+                  "direction": -1,
+                  "directional_continuation_bps": -1.206106344120439
+                },
+                "difference_bps": -46.11143178224086
+              },
+              {
+                "event": {
+                  "date": "2025-10-29",
+                  "reaction_return": -0.00122776640957023,
+                  "later_raw_return": -0.0008975105890504098,
+                  "direction": -1,
+                  "directional_continuation_bps": 8.975105890504098
+                },
+                "control": {
+                  "date": "2025-10-22",
+                  "reaction_return": -0.0005154724887342921,
+                  "later_raw_return": 0.00707340859954364,
+                  "direction": -1,
+                  "directional_continuation_bps": -70.7340859954364
+                },
+                "difference_bps": 79.7091918859405
+              },
+              {
+                "event": {
+                  "date": "2025-12-10",
+                  "reaction_return": 0.0030090753713198914,
+                  "later_raw_return": 0.004909093816460652,
+                  "direction": 1,
+                  "directional_continuation_bps": 49.09093816460653
+                },
+                "control": {
+                  "date": "2025-12-03",
+                  "reaction_return": 0.0008188167295495319,
+                  "later_raw_return": 0.0011552717295379988,
+                  "direction": 1,
+                  "directional_continuation_bps": 11.552717295379988
+                },
+                "difference_bps": 37.538220869226535
+              },
+              {
+                "event": {
+                  "date": "2026-01-28",
+                  "reaction_return": -0.0009629653016764994,
+                  "later_raw_return": 0.00011058975938826876,
+                  "direction": -1,
+                  "directional_continuation_bps": -1.1058975938826876
+                },
+                "control": {
+                  "date": "2026-01-21",
+                  "reaction_return": -0.001547706647044178,
+                  "later_raw_return": 0.009134812147008065,
+                  "direction": -1,
+                  "directional_continuation_bps": -91.34812147008064
+                },
+                "difference_bps": 90.24222387619795
+              },
+              {
+                "event": {
+                  "date": "2026-03-18",
+                  "reaction_return": -9.996168135562034e-05,
+                  "later_raw_return": -0.006582130641528461,
+                  "direction": -1,
+                  "directional_continuation_bps": 65.82130641528461
+                },
+                "control": {
+                  "date": "2026-03-11",
+                  "reaction_return": -0.0015075873659234906,
+                  "later_raw_return": 0.0015505921942529088,
+                  "direction": -1,
+                  "directional_continuation_bps": -15.505921942529088
+                },
+                "difference_bps": 81.3272283578137
+              },
+              {
+                "event": {
+                  "date": "2026-04-29",
+                  "reaction_return": -0.0021073377804730065,
+                  "later_raw_return": 0.0021854937850021017,
+                  "direction": -1,
+                  "directional_continuation_bps": -21.854937850021017
+                },
+                "control": {
+                  "date": "2026-04-22",
+                  "reaction_return": -1.5295431254669367e-05,
+                  "later_raw_return": 0.0018364348677766262,
+                  "direction": -1,
+                  "directional_continuation_bps": -18.364348677766262
+                },
+                "difference_bps": -3.4905891722547544
+              },
+              {
+                "event": {
+                  "date": "2026-06-17",
+                  "reaction_return": -0.006770563714137645,
+                  "later_raw_return": -0.010428499089901289,
+                  "direction": -1,
+                  "directional_continuation_bps": 104.28499089901288
+                },
+                "control": {
+                  "date": "2026-06-10",
+                  "reaction_return": -2.8576327370410937e-05,
+                  "later_raw_return": -0.004524303815591768,
+                  "direction": -1,
+                  "directional_continuation_bps": 45.24303815591768
+                },
+                "difference_bps": 59.0419527430952
+              },
+              {
+                "event": {
+                  "date": "2026-07-29",
+                  "reaction_return": 0.003415718270364021,
+                  "later_raw_return": -0.009331051417516334,
+                  "direction": 1,
+                  "directional_continuation_bps": -93.31051417516333
+                },
+                "control": {
+                  "date": "2026-07-22",
+                  "reaction_return": -0.0006503881120364374,
+                  "later_raw_return": -0.00028288543140031486,
+                  "direction": -1,
+                  "directional_continuation_bps": 2.8288543140031486
+                },
+                "difference_bps": -96.13936848916649
+              },
+              {
+                "event": {
+                  "date": "2026-09-16",
+                  "reaction_return": -0.0004505709578858097,
+                  "later_raw_return": -0.008100416995379223,
+                  "direction": -1,
+                  "directional_continuation_bps": 81.00416995379223
+                },
+                "control": {
+                  "date": "2026-09-09",
+                  "reaction_return": -0.0009015055323781107,
+                  "later_raw_return": 9.775171065484756e-05,
+                  "direction": -1,
+                  "directional_continuation_bps": -0.9775171065484756
+                },
+                "difference_bps": 81.9816870603407
+              }
+            ],
+            "limits": "No costs, stops, risk sizing or borrow modeled in this bidirectional price statistic. Not a short-trading strategy. All three ETFs share the same 14 event dates; 42 pairs are not 42 independent events. No causal or statistical-significance claim."
+          },
+          "TQQQ": {
+            "statistic_only_not_account_return": true,
+            "paired_events": 14,
+            "event_mean_bps": 22.224079531944017,
+            "control_mean_bps": -50.17652427272035,
+            "mean_difference_bps": 72.40060380466436,
+            "positive_pair_differences": 9,
+            "leave_one_event_out_mean_difference_range_bps": [
+              43.40144079827728,
+              104.3583913646011
+            ],
+            "pairs": [
+              {
+                "event": {
+                  "date": "2025-01-29",
+                  "reaction_return": -0.0054352102286697734,
+                  "later_raw_return": 0.01684836471754214,
+                  "direction": -1,
+                  "directional_continuation_bps": -168.48364717542142
+                },
+                "control": {
+                  "date": "2025-01-22",
+                  "reaction_return": 0.0007385147345602139,
+                  "later_raw_return": -0.0026645501445660136,
+                  "direction": 1,
+                  "directional_continuation_bps": -26.645501445660138
+                },
+                "difference_bps": -141.8381457297613
+              },
+              {
+                "event": {
+                  "date": "2025-03-19",
+                  "reaction_return": 0.013229252259654878,
+                  "later_raw_return": 0.016528925619834656,
+                  "direction": 1,
+                  "directional_continuation_bps": 165.28925619834655
+                },
+                "control": {
+                  "date": "2025-03-12",
+                  "reaction_return": 0.009766829144125522,
+                  "later_raw_return": -0.0004899559039684975,
+                  "direction": 1,
+                  "directional_continuation_bps": -4.899559039684975
+                },
+                "difference_bps": 170.18881523803154
+              },
+              {
+                "event": {
+                  "date": "2025-05-07",
+                  "reaction_return": -0.015913940256045533,
+                  "later_raw_return": 0.02856113163348062,
+                  "direction": -1,
+                  "directional_continuation_bps": -285.6113163348062
+                },
+                "control": {
+                  "date": "2025-04-30",
+                  "reaction_return": 0.00645583832335328,
+                  "later_raw_return": 0.005743931813970704,
+                  "direction": 1,
+                  "directional_continuation_bps": 57.43931813970704
+                },
+                "difference_bps": -343.05063447451323
+              },
+              {
+                "event": {
+                  "date": "2025-06-18",
+                  "reaction_return": -0.0014148083271576795,
+                  "later_raw_return": -0.0029059944583361697,
+                  "direction": -1,
+                  "directional_continuation_bps": 29.0599445833617
+                },
+                "control": {
+                  "date": "2025-06-11",
+                  "reaction_return": -0.011055209850390657,
+                  "later_raw_return": 0.0026791694574679337,
+                  "direction": -1,
+                  "directional_continuation_bps": -26.791694574679337
+                },
+                "difference_bps": 55.85163915804104
+              },
+              {
+                "event": {
+                  "date": "2025-07-30",
+                  "reaction_return": -0.00038729666924874895,
+                  "later_raw_return": -0.014011962782454646,
+                  "direction": -1,
+                  "directional_continuation_bps": 140.11962782454646
+                },
+                "control": {
+                  "date": "2025-07-23",
+                  "reaction_return": 0.003727491684826223,
+                  "later_raw_return": -0.0011431184270691563,
+                  "direction": 1,
+                  "directional_continuation_bps": -11.431184270691563
+                },
+                "difference_bps": 151.55081209523803
+              },
+              {
+                "event": {
+                  "date": "2025-09-17",
+                  "reaction_return": -0.01650472270006087,
+                  "later_raw_return": 0.014227820203195796,
+                  "direction": -1,
+                  "directional_continuation_bps": -142.27820203195796
+                },
+                "control": {
+                  "date": "2025-09-10",
+                  "reaction_return": -0.0012200297050711795,
+                  "later_raw_return": 0.0004263028882021125,
+                  "direction": -1,
+                  "directional_continuation_bps": -4.263028882021125
+                },
+                "difference_bps": -138.01517314993683
+              },
+              {
+                "event": {
+                  "date": "2025-10-29",
+                  "reaction_return": -0.003572021930553171,
+                  "later_raw_return": -0.0026604589291653324,
+                  "direction": -1,
+                  "directional_continuation_bps": 26.604589291653326
+                },
+                "control": {
+                  "date": "2025-10-22",
+                  "reaction_return": -0.0016106203328614122,
+                  "later_raw_return": 0.02196335918485537,
+                  "direction": -1,
+                  "directional_continuation_bps": -219.6335918485537
+                },
+                "difference_bps": 246.23818114020702
+              },
+              {
+                "event": {
+                  "date": "2025-12-10",
+                  "reaction_return": 0.009286809124515294,
+                  "later_raw_return": 0.014802924915284343,
+                  "direction": 1,
+                  "directional_continuation_bps": 148.02924915284342
+                },
+                "control": {
+                  "date": "2025-12-03",
+                  "reaction_return": 0.002341498559077726,
+                  "later_raw_return": 0.0033264407084419023,
+                  "direction": 1,
+                  "directional_continuation_bps": 33.26440708441902
+                },
+                "difference_bps": 114.7648420684244
+              },
+              {
+                "event": {
+                  "date": "2026-01-28",
+                  "reaction_return": -0.002712724092697849,
+                  "later_raw_return": 0.00037862586856074465,
+                  "direction": -1,
+                  "directional_continuation_bps": -3.7862586856074465
+                },
+                "control": {
+                  "date": "2026-01-21",
+                  "reaction_return": -0.004768365962395826,
+                  "later_raw_return": 0.02683780630105015,
+                  "direction": -1,
+                  "directional_continuation_bps": -268.3780630105015
+                },
+                "difference_bps": 264.59180432489404
+              },
+              {
+                "event": {
+                  "date": "2026-03-18",
+                  "reaction_return": -0.0004008016032063244,
+                  "later_raw_return": -0.019917364127555848,
+                  "direction": -1,
+                  "directional_continuation_bps": 199.17364127555848
+                },
+                "control": {
+                  "date": "2026-03-11",
+                  "reaction_return": -0.004371695811305365,
+                  "later_raw_return": 0.004558569662045375,
+                  "direction": -1,
+                  "directional_continuation_bps": -45.58569662045375
+                },
+                "difference_bps": 244.75933789601223
+              },
+              {
+                "event": {
+                  "date": "2026-04-29",
+                  "reaction_return": -0.006201044386422994,
+                  "later_raw_return": 0.0063840235717791405,
+                  "direction": -1,
+                  "directional_continuation_bps": -63.8402357177914
+                },
+                "control": {
+                  "date": "2026-04-22",
+                  "reaction_return": -8.34794223224522e-05,
+                  "later_raw_return": 0.005183079752549613,
+                  "direction": -1,
+                  "directional_continuation_bps": -51.83079752549613
+                },
+                "difference_bps": -12.00943819229527
+              },
+              {
+                "event": {
+                  "date": "2026-06-17",
+                  "reaction_return": -0.02005413385826771,
+                  "later_raw_return": -0.03093812375249483,
+                  "direction": -1,
+                  "directional_continuation_bps": 309.3812375249483
+                },
+                "control": {
+                  "date": "2026-06-10",
+                  "reaction_return": 0.00014058765640379,
+                  "later_raw_return": -0.014000848536274813,
+                  "direction": 1,
+                  "directional_continuation_bps": -140.00848536274813
+                },
+                "difference_bps": 449.3897228876964
+              },
+              {
+                "event": {
+                  "date": "2026-07-29",
+                  "reaction_return": 0.00863500498173364,
+                  "later_raw_return": -0.028174832686110873,
+                  "direction": 1,
+                  "directional_continuation_bps": -281.74832686110875
+                },
+                "control": {
+                  "date": "2026-07-22",
+                  "reaction_return": -0.0021867945823927926,
+                  "later_raw_return": -0.0009790998215581936,
+                  "direction": -1,
+                  "directional_continuation_bps": 9.790998215581936
+                },
+                "difference_bps": -291.5393250766907
+              },
+              {
+                "event": {
+                  "date": "2026-09-16",
+                  "reaction_return": -0.0014402877697841099,
+                  "later_raw_return": -0.02392275544026512,
+                  "direction": -1,
+                  "directional_continuation_bps": 239.2275544026512
+                },
+                "control": {
+                  "date": "2026-09-09",
+                  "reaction_return": -0.0026521496370742748,
+                  "later_raw_return": 0.00034984606773025284,
+                  "direction": -1,
+                  "directional_continuation_bps": -3.4984606773025284
+                },
+                "difference_bps": 242.72601507995373
+              }
+            ],
+            "limits": "No costs, stops, risk sizing or borrow modeled in this bidirectional price statistic. Not a short-trading strategy. All three ETFs share the same 14 event dates; 42 pairs are not 42 independent events. No causal or statistical-significance claim."
+          }
+        }
+      },
+      "M1_NANO_DATA_GATE": {
+        "evidence_type": "historical_development",
+        "experiment_id": "M1_NANO_DATA_GATE",
+        "result": {
+          "evidence_type": "historical_development",
+          "execution_authorized": false,
+          "results": [
+            {
+              "ticker": "NESZ6",
+              "all_session_bars": 3392,
+              "regular_session_bars": 1034,
+              "expected_full_sessions": 21,
+              "expected_regular_slots": 1638,
+              "missing_regular_slots": 604,
+              "missing_slot_fraction": 0.36874236874236876,
+              "regular_volume_contracts": 52925.0,
+              "median_present_bar_contract_volume": 29.0,
+              "present_bars_volume_le_1": 21,
+              "present_bars_volume_lt_10": 163,
+              "present_bars_transactions_le_3": 70,
+              "maximum_missing_run_minutes": 315,
+              "daily_coverage": [
+                {
+                  "date": "2026-09-01",
+                  "present_slots": 4,
+                  "missing_slots": 74,
+                  "longest_missing_run_minutes": 260,
+                  "volume_contracts": 8.0,
+                  "transactions": 5
+                },
+                {
+                  "date": "2026-09-02",
+                  "present_slots": 2,
+                  "missing_slots": 76,
+                  "longest_missing_run_minutes": 240,
+                  "volume_contracts": 2.0,
+                  "transactions": 2
+                },
+                {
+                  "date": "2026-09-03",
+                  "present_slots": 5,
+                  "missing_slots": 73,
+                  "longest_missing_run_minutes": 265,
+                  "volume_contracts": 14.0,
+                  "transactions": 7
+                },
+                {
+                  "date": "2026-09-04",
+                  "present_slots": 1,
+                  "missing_slots": 77,
+                  "longest_missing_run_minutes": 310,
+                  "volume_contracts": 1.0,
+                  "transactions": 1
+                },
+                {
+                  "date": "2026-09-08",
+                  "present_slots": 1,
+                  "missing_slots": 77,
+                  "longest_missing_run_minutes": 315,
+                  "volume_contracts": 1.0,
+                  "transactions": 1
+                },
+                {
+                  "date": "2026-09-09",
+                  "present_slots": 3,
+                  "missing_slots": 75,
+                  "longest_missing_run_minutes": 170,
+                  "volume_contracts": 8.0,
+                  "transactions": 4
+                },
+                {
+                  "date": "2026-09-10",
+                  "present_slots": 3,
+                  "missing_slots": 75,
+                  "longest_missing_run_minutes": 260,
+                  "volume_contracts": 6.0,
+                  "transactions": 3
+                },
+                {
+                  "date": "2026-09-11",
+                  "present_slots": 3,
+                  "missing_slots": 75,
+                  "longest_missing_run_minutes": 265,
+                  "volume_contracts": 6.0,
+                  "transactions": 4
+                },
+                {
+                  "date": "2026-09-14",
+                  "present_slots": 76,
+                  "missing_slots": 2,
+                  "longest_missing_run_minutes": 5,
+                  "volume_contracts": 1718.0,
+                  "transactions": 619
+                },
+                {
+                  "date": "2026-09-15",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 2500.0,
+                  "transactions": 1098
+                },
+                {
+                  "date": "2026-09-16",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 4735.0,
+                  "transactions": 2117
+                },
+                {
+                  "date": "2026-09-17",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 2084.0,
+                  "transactions": 1158
+                },
+                {
+                  "date": "2026-09-18",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 2807.0,
+                  "transactions": 1369
+                },
+                {
+                  "date": "2026-09-21",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 3799.0,
+                  "transactions": 1733
+                },
+                {
+                  "date": "2026-09-22",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 4336.0,
+                  "transactions": 1503
+                },
+                {
+                  "date": "2026-09-23",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 4161.0,
+                  "transactions": 1955
+                },
+                {
+                  "date": "2026-09-24",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 6963.0,
+                  "transactions": 2259
+                },
+                {
+                  "date": "2026-09-25",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 5237.0,
+                  "transactions": 2318
+                },
+                {
+                  "date": "2026-09-28",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 5826.0,
+                  "transactions": 2026
+                },
+                {
+                  "date": "2026-09-29",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 4206.0,
+                  "transactions": 2032
+                },
+                {
+                  "date": "2026-09-30",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 4507.0,
+                  "transactions": 2124
+                }
+              ],
+              "september_fomc_unit_check": {
+                "event_date": "2026-09-16",
+                "required_bars_available": {
+                  "14:00": true,
+                  "14:05": true,
+                  "14:10": true,
+                  "14:20": true,
+                  "15:50": true
+                },
+                "account_capital_eligibility": "UNKNOWN",
+                "execution_authorized": false,
+                "positive_reaction_signal": false,
+                "entry_raw_price": 7677.0,
+                "reaction_low": 7656.5,
+                "reaction_high": 7694.0,
+                "one_contract_notional_reference_usd": 3838.5,
+                "round_trip_assumed_friction_usd": 2.5,
+                "illustrative_one_contract_stop_risk_usd": 12.75,
+                "within_20_usd_planned_risk_if_long": true,
+                "signal_and_unit_risk_gate_pass": false
+              }
+            },
+            {
+              "ticker": "MESZ6",
+              "all_session_bars": 5754,
+              "regular_session_bars": 1611,
+              "expected_full_sessions": 21,
+              "expected_regular_slots": 1638,
+              "missing_regular_slots": 27,
+              "missing_slot_fraction": 0.016483516483516484,
+              "regular_volume_contracts": 10003682.0,
+              "median_present_bar_contract_volume": 4428.0,
+              "present_bars_volume_le_1": 3,
+              "present_bars_volume_lt_10": 88,
+              "present_bars_transactions_le_3": 28,
+              "maximum_missing_run_minutes": 120,
+              "daily_coverage": [
+                {
+                  "date": "2026-09-01",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 2704.0,
+                  "transactions": 1155
+                },
+                {
+                  "date": "2026-09-02",
+                  "present_slots": 76,
+                  "missing_slots": 2,
+                  "longest_missing_run_minutes": 5,
+                  "volume_contracts": 1736.0,
+                  "transactions": 920
+                },
+                {
+                  "date": "2026-09-03",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 3507.0,
+                  "transactions": 1725
+                },
+                {
+                  "date": "2026-09-04",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 2247.0,
+                  "transactions": 1155
+                },
+                {
+                  "date": "2026-09-08",
+                  "present_slots": 77,
+                  "missing_slots": 1,
+                  "longest_missing_run_minutes": 5,
+                  "volume_contracts": 3721.0,
+                  "transactions": 1678
+                },
+                {
+                  "date": "2026-09-09",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 4319.0,
+                  "transactions": 2366
+                },
+                {
+                  "date": "2026-09-10",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 9334.0,
+                  "transactions": 5599
+                },
+                {
+                  "date": "2026-09-11",
+                  "present_slots": 54,
+                  "missing_slots": 24,
+                  "longest_missing_run_minutes": 120,
+                  "volume_contracts": 15623.0,
+                  "transactions": 7393
+                },
+                {
+                  "date": "2026-09-14",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 431816.0,
+                  "transactions": 130589
+                },
+                {
+                  "date": "2026-09-15",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 611639.0,
+                  "transactions": 162722
+                },
+                {
+                  "date": "2026-09-16",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 883378.0,
+                  "transactions": 288597
+                },
+                {
+                  "date": "2026-09-17",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 723039.0,
+                  "transactions": 193263
+                },
+                {
+                  "date": "2026-09-18",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 629990.0,
+                  "transactions": 193999
+                },
+                {
+                  "date": "2026-09-21",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 662695.0,
+                  "transactions": 178798
+                },
+                {
+                  "date": "2026-09-22",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 649134.0,
+                  "transactions": 181234
+                },
+                {
+                  "date": "2026-09-23",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 807736.0,
+                  "transactions": 241552
+                },
+                {
+                  "date": "2026-09-24",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 960805.0,
+                  "transactions": 295254
+                },
+                {
+                  "date": "2026-09-25",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 900321.0,
+                  "transactions": 274200
+                },
+                {
+                  "date": "2026-09-28",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 939043.0,
+                  "transactions": 281001
+                },
+                {
+                  "date": "2026-09-29",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 874815.0,
+                  "transactions": 263033
+                },
+                {
+                  "date": "2026-09-30",
+                  "present_slots": 78,
+                  "missing_slots": 0,
+                  "longest_missing_run_minutes": 0,
+                  "volume_contracts": 886080.0,
+                  "transactions": 263645
+                }
+              ],
+              "september_fomc_unit_check": {
+                "event_date": "2026-09-16",
+                "required_bars_available": {
+                  "14:00": true,
+                  "14:05": true,
+                  "14:10": true,
+                  "14:20": true,
+                  "15:50": true
+                },
+                "account_capital_eligibility": "UNKNOWN",
+                "execution_authorized": false,
+                "positive_reaction_signal": false,
+                "entry_raw_price": 7681.0,
+                "reaction_low": 7669.25,
+                "reaction_high": 7694.0,
+                "one_contract_notional_reference_usd": 38405.0,
+                "round_trip_assumed_friction_usd": 4.5,
+                "illustrative_one_contract_stop_risk_usd": 63.25,
+                "within_20_usd_planned_risk_if_long": false,
+                "signal_and_unit_risk_gate_pass": false
+              }
+            }
+          ],
+          "limits": "Coverage uses real contract prices, no MES-to-NES scaling. Missing bars may reflect inactivity or vendor omissions; do not forward fill. Aggregate volume is not available bid/ask depth or a guaranteed fill. Contract/account margin, all-in fees and live receipt latency remain unverified. No nano account return is reported."
+        }
+      }
+    }
+  },
+  "h3_integrity_and_accounting_audit": {
+    "journal_events_verified": 76,
+    "all_38_specs_registered_before_computation": true,
+    "artifact_hashes_verified": 38,
+    "data_file_hashes_verified": 40,
+    "scenario_trade_records_checked": 126,
+    "max_reconciliation_error_usd": 1.1368683772161603e-12,
+    "error_cases": [],
+    "status": "passed",
+    "scope": "Integrity and accounting, event-date eligibility and timing; not actual executable fills, source truth or forward profitability."
+  },
+  "nano_roll_followup": {
+    "evidence_type": "historical_development",
+    "experiment_id": "M1_NANO_ROLL_COVERAGE_FOLLOWUP_20261013",
+    "code_revision": "f597659742aae8b172ff9512665633e3ac54b2ee",
+    "data_manifest_sha256": "56e2abceb45a9a15cba83899bb2b644132222bbdef32d8e5c71dc96de0ea50f3",
+    "execution_authorized": false,
+    "posthoc_followup": true,
+    "performance_computed": false,
+    "results": [
+      {
+        "product": "NES",
+        "expected_regular_slots": 1638,
+        "present_regular_slots": 1600,
+        "missing_regular_slots": 38,
+        "missing_slot_fraction": 0.0231990231990232,
+        "median_present_bar_volume": 22.0,
+        "total_contract_volume": 65812.0,
+        "total_transactions": 28267,
+        "present_bars_volume_lt_10": 377,
+        "present_bars_transactions_le_3": 159,
+        "maximum_daily_missing_run_minutes": 120,
+        "daily_coverage": [
+          {
+            "date": "2026-09-01",
+            "selected_contract": "NESU6",
+            "present_slots": 77,
+            "missing_slots": 1,
+            "longest_missing_run_minutes": 5,
+            "volume_contracts": 1695.0,
+            "transactions": 647
+          },
+          {
+            "date": "2026-09-02",
+            "selected_contract": "NESU6",
+            "present_slots": 71,
+            "missing_slots": 7,
+            "longest_missing_run_minutes": 15,
+            "volume_contracts": 1064.0,
+            "transactions": 442
+          },
+          {
+            "date": "2026-09-03",
+            "selected_contract": "NESU6",
+            "present_slots": 77,
+            "missing_slots": 1,
+            "longest_missing_run_minutes": 5,
+            "volume_contracts": 1509.0,
+            "transactions": 796
+          },
+          {
+            "date": "2026-09-04",
+            "selected_contract": "NESU6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 1293.0,
+            "transactions": 692
+          },
+          {
+            "date": "2026-09-08",
+            "selected_contract": "NESU6",
+            "present_slots": 76,
+            "missing_slots": 2,
+            "longest_missing_run_minutes": 5,
+            "volume_contracts": 1250.0,
+            "transactions": 699
+          },
+          {
+            "date": "2026-09-09",
+            "selected_contract": "NESU6",
+            "present_slots": 77,
+            "missing_slots": 1,
+            "longest_missing_run_minutes": 5,
+            "volume_contracts": 1605.0,
+            "transactions": 778
+          },
+          {
+            "date": "2026-09-10",
+            "selected_contract": "NESU6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 2451.0,
+            "transactions": 1058
+          },
+          {
+            "date": "2026-09-11",
+            "selected_contract": "NESU6",
+            "present_slots": 54,
+            "missing_slots": 24,
+            "longest_missing_run_minutes": 120,
+            "volume_contracts": 2066.0,
+            "transactions": 844
+          },
+          {
+            "date": "2026-09-14",
+            "selected_contract": "NESZ6",
+            "present_slots": 76,
+            "missing_slots": 2,
+            "longest_missing_run_minutes": 5,
+            "volume_contracts": 1718.0,
+            "transactions": 619
+          },
+          {
+            "date": "2026-09-15",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 2500.0,
+            "transactions": 1098
+          },
+          {
+            "date": "2026-09-16",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 4735.0,
+            "transactions": 2117
+          },
+          {
+            "date": "2026-09-17",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 2084.0,
+            "transactions": 1158
+          },
+          {
+            "date": "2026-09-18",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 2807.0,
+            "transactions": 1369
+          },
+          {
+            "date": "2026-09-21",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 3799.0,
+            "transactions": 1733
+          },
+          {
+            "date": "2026-09-22",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 4336.0,
+            "transactions": 1503
+          },
+          {
+            "date": "2026-09-23",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 4161.0,
+            "transactions": 1955
+          },
+          {
+            "date": "2026-09-24",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 6963.0,
+            "transactions": 2259
+          },
+          {
+            "date": "2026-09-25",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 5237.0,
+            "transactions": 2318
+          },
+          {
+            "date": "2026-09-28",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 5826.0,
+            "transactions": 2026
+          },
+          {
+            "date": "2026-09-29",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 4206.0,
+            "transactions": 2032
+          },
+          {
+            "date": "2026-09-30",
+            "selected_contract": "NESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 4507.0,
+            "transactions": 2124
+          }
+        ]
+      },
+      {
+        "product": "MES",
+        "expected_regular_slots": 1638,
+        "present_regular_slots": 1614,
+        "missing_regular_slots": 24,
+        "missing_slot_fraction": 0.014652014652014652,
+        "median_present_bar_volume": 7703.5,
+        "total_contract_volume": 16030120.0,
+        "total_transactions": 4693235,
+        "present_bars_volume_lt_10": 0,
+        "present_bars_transactions_le_3": 0,
+        "maximum_daily_missing_run_minutes": 120,
+        "daily_coverage": [
+          {
+            "date": "2026-09-01",
+            "selected_contract": "MESU6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 841354.0,
+            "transactions": 239263
+          },
+          {
+            "date": "2026-09-02",
+            "selected_contract": "MESU6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 708320.0,
+            "transactions": 206058
+          },
+          {
+            "date": "2026-09-03",
+            "selected_contract": "MESU6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 730570.0,
+            "transactions": 223940
+          },
+          {
+            "date": "2026-09-04",
+            "selected_contract": "MESU6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 724747.0,
+            "transactions": 209279
+          },
+          {
+            "date": "2026-09-08",
+            "selected_contract": "MESU6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 860936.0,
+            "transactions": 226566
+          },
+          {
+            "date": "2026-09-09",
+            "selected_contract": "MESU6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 702859.0,
+            "transactions": 213136
+          },
+          {
+            "date": "2026-09-10",
+            "selected_contract": "MESU6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 855318.0,
+            "transactions": 246174
+          },
+          {
+            "date": "2026-09-11",
+            "selected_contract": "MESU6",
+            "present_slots": 54,
+            "missing_slots": 24,
+            "longest_missing_run_minutes": 120,
+            "volume_contracts": 645525.0,
+            "transactions": 180932
+          },
+          {
+            "date": "2026-09-14",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 431816.0,
+            "transactions": 130589
+          },
+          {
+            "date": "2026-09-15",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 611639.0,
+            "transactions": 162722
+          },
+          {
+            "date": "2026-09-16",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 883378.0,
+            "transactions": 288597
+          },
+          {
+            "date": "2026-09-17",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 723039.0,
+            "transactions": 193263
+          },
+          {
+            "date": "2026-09-18",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 629990.0,
+            "transactions": 193999
+          },
+          {
+            "date": "2026-09-21",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 662695.0,
+            "transactions": 178798
+          },
+          {
+            "date": "2026-09-22",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 649134.0,
+            "transactions": 181234
+          },
+          {
+            "date": "2026-09-23",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 807736.0,
+            "transactions": 241552
+          },
+          {
+            "date": "2026-09-24",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 960805.0,
+            "transactions": 295254
+          },
+          {
+            "date": "2026-09-25",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 900321.0,
+            "transactions": 274200
+          },
+          {
+            "date": "2026-09-28",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 939043.0,
+            "transactions": 281001
+          },
+          {
+            "date": "2026-09-29",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 874815.0,
+            "transactions": 263033
+          },
+          {
+            "date": "2026-09-30",
+            "selected_contract": "MESZ6",
+            "present_slots": 78,
+            "missing_slots": 0,
+            "longest_missing_run_minutes": 0,
+            "volume_contracts": 886080.0,
+            "transactions": 263645
+          }
+        ]
+      }
+    ],
+    "independent_coverage_recount": "passed",
+    "limitations": "A reduction in missing slots would indicate that the earlier fixed-December-contract result cannot stand in for customary nearby-contract coverage. It would not prove spreads, executable depth, fill probability or broker eligibility."
+  },
+  "additional_verification": {
+    "unit_tests_passed": 57,
+    "m2_saved_default_replay_parity": [
+      "SPY 2025 candidate base",
+      "TQQQ 2026 clock control double variable costs, including latched pause"
+    ],
+    "m2_parity_scope": "Metrics, every trade, equity curve and daily records; regression replays, not new parameter trials.",
+    "roll_boundary_checks": "Sep 11 selects U6, Sep 14 selects Z6 for NES and MES; Oct 1 rejected.",
+    "shared_missing_window": "Both selected U6 contracts lack 24 five-minute bars on 2026-09-11 13:00 through 14:55 America/New_York. Cause unresolved; do not attribute missing aggregates to illiquidity alone.",
+    "fixed_december_result_is_not_nearby_coverage": true
+  },
+  "limits": [
+    "Historical development on previously inspected M2 data, not an untouched holdout.",
+    "Three ETFs share 14 events; 36 scenarios and 42 pairs are not independent samples.",
+    "2026 candidate has zero trades: its -4.5% is entirely the assumed $90 operating cost.",
+    "Paired directional price statistic is not a funded, executable long/short account return.",
+    "No broker account access, margin, actual fees, NBBO/depth or receipt latency verified.",
+    "No strategy validated, no orders submitted, no probability of reaching +1000% estimated."
+  ]
+}
