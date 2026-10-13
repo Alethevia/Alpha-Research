@@ -1,0 +1,76 @@
+{
+  "experiment_family": "M2_OPENING_DRIVE_FIXED_20261013",
+  "evidence_type": "historical_development",
+  "hypothesis": "A positive first-15-minute opening drive ending near its high predicts profitable same-day continuation after a full extra five-minute delay, beyond a clock-only long benchmark.",
+  "selection_status": "Fixed before downloading full histories or calculating this family's performance. No parameter search. Chosen for available aggregate data, not observed strategy returns.",
+  "initial_capital_usd": 2000,
+  "symbols": ["SPY", "QQQ", "TQQQ"],
+  "rules": ["opening_drive_long", "clock_only_long"],
+  "capital_interpretation": "Each symbol, period, rule and cost case is an alternative $2000 cash-account simulation, never summed into a portfolio. Reset each period.",
+  "timeframe": "5Minute",
+  "price_adjustment": "unadjusted actual traded ETF prices; no overnight holdings or cross-day indicators; TQQQ is not synthesized as 3 times QQQ returns",
+  "periods": [
+    {"name": "development_2025", "start": "2025-01-01", "end": "2026-01-01", "full_calendar_year": true},
+    {"name": "chronological_check_2026_Q1_Q3", "start": "2026-01-01", "end": "2026-10-01", "full_calendar_year": false}
+  ],
+  "reserved": "Do not calculate October 2026 performance. The nine-month 2026 period is not annualized into an achieved annual return. Future paper evidence remains necessary.",
+  "data_inspection_disclosure": "Before freezing this design, five SPY premarket one-minute bars on 2025-01-02 and SPY daily bars on 2025-01-02 and 2025-01-03 were seen in access/format probes. No strategy return was calculated. These windows are chronological development checks, not certified blind tests.",
+  "data_provenance": {
+    "provider": "Massive connector /v2/aggs/ticker/{symbol}/range/5/minute/{from}/{to}",
+    "adjusted": false,
+    "sort": "asc",
+    "limit": 50000,
+    "snapshot_format": "connector-exported CSV, with request metadata and SHA-256 manifest; not raw HTTP responses or proof of source truth",
+    "access_limitations": "2023 SPY bars, 2025 SPY historical quotes, Benzinga earnings and NES quotes returned NOT_ENTITLED. 2025 SPY minute bars and NES contract metadata were accessible. An initial NES launch-day bar probe was empty.",
+    "execution_evidence": "Aggregate traded prices only. No NBBO, queue depth, individual fills or point-in-time receipt timestamps. Assumed fills are a price screen, not execution replay."
+  },
+  "strategy": {
+    "timezone": "America/New_York",
+    "opening_bar_times": ["09:30", "09:35", "09:40"],
+    "opening_range": "maximum high minus minimum low of these three completed bars",
+    "minimum_positive_body_fraction": 0.25,
+    "minimum_close_position_in_range": 0.80,
+    "signal": "09:40 bar close > 09:30 bar open; body >= 0.25 * range; last close >= range low + 0.80 * range; range > 0",
+    "clock_benchmark": "Same rules, opening-range stop, costs and sizing but omit the opening-drive filter",
+    "entry_time": "09:50",
+    "entry": "At the 09:50 bar open, five minutes after all signal bars complete. Exact entry bar required. Skip if entry open <= opening-range low.",
+    "stop": "Opening-range low fixed at entry. A completed holding bar closing at or below this stop schedules exit at bar-start + 10 minutes, or the next available regular-session open. No assumed stop-price fill.",
+    "timed_exit": "15:50 regular-session bar open, or next available regular-session open. An unclosed position at session end is an experiment error, never silently dropped.",
+    "risk_exit": "A drawdown pause observed at a bar open schedules liquidation at least five minutes later; a close observation schedules at bar-start + 10 minutes. Low prices are retrospective diagnostics and do not trigger trades before they are observable.",
+    "long_only": true,
+    "one_entry_per_session": true,
+    "overnight_positions": false,
+    "account_borrowing": false,
+    "integer_shares": true,
+    "max_entry_notional_fraction": 0.95,
+    "cash_reserve_months_of_overhead": 3,
+    "position_sizing": "Floor minimum of planned stop-risk quantity (including assumed entry/exit friction and two order fees), 95% marked-equity quantity, and settled cash less overhead reserve and entry fee. Cannot force a minimum share."
+  },
+  "risk": {"risk_per_trade": 0.01, "reduce_drawdown": 0.20, "pause_drawdown": 0.30, "max_drawdown": 0.40},
+  "settlement": {
+    "model": "Conservative T+1 cash availability: sale proceeds unavailable until the next weekday that is neither a listed exchange closure nor a listed bank-only holiday. Settled cash may fund a new trade; unsettled proceeds may not.",
+    "bank_only_holidays": ["2025-10-13", "2025-11-11", "2026-10-12", "2026-11-11"],
+    "limitation": "This deliberately conservative union calendar is not asserted to reproduce all DTC limited settlement services or broker-specific fund availability."
+  },
+  "calendar": {
+    "closed": ["2025-01-01", "2025-01-09", "2025-01-20", "2025-02-17", "2025-04-18", "2025-05-26", "2025-06-19", "2025-07-04", "2025-09-01", "2025-11-27", "2025-12-25", "2026-01-01", "2026-01-19", "2026-02-16", "2026-04-03", "2026-05-25", "2026-06-19", "2026-07-03", "2026-09-07", "2026-11-26", "2026-12-25"],
+    "skip_known_early_close_sessions": ["2025-07-03", "2025-11-28", "2025-12-24", "2026-11-27", "2026-12-24"],
+    "regular_hours": "09:30 inclusive to 16:00 exclusive",
+    "sources": ["https://www.nyse.com/trade/hours-calendars", "https://www.nyse.com/publicdocs/ICE_NYSE_2025_Yearly_Trading_Calendar.pdf", "https://ir.theice.com/press/news-details/2024/The-New-York-Stock-Exchange-Will-Close-Markets-on-January-9-to-Honor-the-Passing-of-Former-President-Jimmy-Carter-on-National-Day-of-Mourning/default.aspx"],
+    "missing_data": "Validate each expected full trading session exists. Do not forward-fill bars. Missing input bars skip the signal; missing exact entry expires it. Missing holding bars reduce risk visibility; an open position with no later exit bar is an error. Never discard a session because of a later missing bar."
+  },
+  "cost_cases": [
+    {"name": "zero_cost_diagnostic", "slippage_bps_per_side": 0, "cash_fee_per_order_usd": 0, "monthly_overhead_usd": 0},
+    {"name": "base_cost_assumption", "slippage_bps_per_side": 5, "cash_fee_per_order_usd": 0.02, "monthly_overhead_usd": 10},
+    {"name": "double_variable_cost_stress", "slippage_bps_per_side": 10, "cash_fee_per_order_usd": 0.04, "monthly_overhead_usd": 10}
+  ],
+  "cost_disclosure": "5/10 bps per side jointly proxy spread and slippage; $0.02/$0.04 per order proxy cash trading charges. These and $10/month overhead are assumptions, not verified historical broker fees or guaranteed executable quotes. Monthly overhead continues during a pause. Actual ETF prices embed fund performance; do not separately subtract an expense ratio.",
+  "primary_metric": "Net period return, observed open/close/low drawdown diagnostic, and candidate return minus clock-only benchmark. Report all 36 cases including failures.",
+  "rejection_rules": [
+    "Opening-drive candidate must be profitable after base costs in BOTH windows AND beat its matching base-cost clock-only benchmark in BOTH windows to advance the selection hypothesis.",
+    "Any observed drawdown above 40% fails the risk condition; losses are never clipped.",
+    "A surviving bar-price screen would require quotes, size, broker permissions and independent forward validation, not immediate trading.",
+    "Assess +1000% only on the full-year 2025 window; do not extrapolate nine months into an achieved annual return."
+  ],
+  "execution_authorized": false
+}
