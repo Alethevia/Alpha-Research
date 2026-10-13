@@ -51,10 +51,18 @@
       "candidate_rule": "Freeze the prior-data regime classifier, deviation threshold, stop and timed exit; include a trend-regime failure test.",
       "required_data": "intraday prices and quotes, realistic marketable-order fills, gap and outage cases",
       "falsification": "Mean reversion depends on retrospective regime labels, averaging down, or unrealistic stop fills."
+    },
+    {
+      "id": "H6",
+      "hypothesis": "Some pre-specified situations may produce a realized price-move distribution that is underpriced by executable option premiums after spreads, fees and event-volatility changes.",
+      "candidate_rule": "Freeze the predictive event/state model before testing any option structure; compare a funded stock/future expression against a long option or intact debit spread on the same signal.",
+      "required_data": "point-in-time option chains including expired contracts, quotes and sizes, underlying quotes, exercise/settlement terms, event timestamps",
+      "falsification": "The forecast does not beat executable premiums and costs, or apparent payoff bounds fail under assignment/legging; leverage alone does not establish an edge.",
+      "status": "DESIGN_DRAFT_NOT_PREREGISTERED_OR_BACKTESTED"
     }
   ],
   "validation_protocol": [
-    "These five hypotheses are a design catalogue, not five completed or fully preregistered trading strategies.",
+    "The six hypotheses are a design catalogue; only one fixed H1 baseline has been frozen and price-screened. The new multi-asset tracks and H6 are not preregistered or backtested.",
     "Freeze economic mechanism, parameters, data hashes, code revision, costs, sample windows, primary metric and rejection rules before each experiment.",
     "Separate chronological development/selection from untouched evaluation; purge or embargo overlapping labels and event groups.",
     "Count all legacy, failed, interrupted and new variants when addressing selection bias; a new journal does not reset the trial count.",
@@ -98,5 +106,25 @@
       "evidence_type": "historical_development",
       "execution_verified": false
     }
-  ]
+  ],
+  "research_universe": {
+    "scope": "Any financial product may be investigated, as clarified by user on 2026-10-12 America/New_York.",
+    "asset_classes": [
+      "crypto_spot",
+      "crypto_derivatives",
+      "stocks",
+      "etfs_including_leveraged_inverse",
+      "equity_commodity_rate_fx_futures",
+      "listed_options",
+      "fx",
+      "bonds",
+      "other_financial_products"
+    ],
+    "account_access_must_be_verified": true,
+    "research_scope_is_not_live_order_authorization": true,
+    "product_choice_must_follow_net_edge_and_executable_unit_size": true,
+    "no_additional_capital_assumed": true,
+    "all_products_share_the_same_account_drawdown_limit": true,
+    "candidate_queue": "multi_asset_queue.json"
+  }
 }

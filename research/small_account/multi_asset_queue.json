@@ -1,0 +1,73 @@
+{
+  "status": "RESEARCH_QUEUE_NO_NEW_PERFORMANCE_RESULTS",
+  "ordering_basis": "Information value, access and implementability; not predicted returns or investment allocation.",
+  "shared_constraints": {
+    "capital_usd": 2000,
+    "maximum_drawdown_from_peak": 0.4,
+    "risk_per_trade_research_default": 0.01,
+    "single_shared_capital_pool": true
+  },
+  "tracks": [
+    {
+      "id": "M1",
+      "priority": 1,
+      "parent_hypothesis": "H3",
+      "products": [
+        "NES",
+        "NNQ",
+        "other_small_equity_index_futures_after_screening"
+      ],
+      "mechanism_to_test": "Continuation after a scheduled macro release, conditional on contemporaneous liquidity and direction.",
+      "first_data_gate": "Exact contract-month trades and executable quotes, receive timestamps, roll/settlement calendar, current IBKR permissions, minimum-equity rules, initial/maintenance margin and all-in fees.",
+      "rejection_before_performance": "A minimum integer contract cannot fit risk/funding constraints, or quotes/depth cannot support delayed entry and exit.",
+      "history_rule": "No NES/NNQ synthetic fills before listing. ES/MES can support signal discovery only; cannot certify nano execution. Short post-launch histories cannot establish one-year returns.",
+      "status": "NOT_PREREGISTERED_AWAITING_DATA"
+    },
+    {
+      "id": "M2",
+      "priority": 1,
+      "parent_hypothesis": "H3",
+      "products": [
+        "US_stocks",
+        "sector_and_index_ETFs"
+      ],
+      "mechanism_to_test": "Post-announcement price continuation after information is public; compare stock and ETF expressions.",
+      "first_data_gate": "Point-in-time event release/receipt times, delisted-inclusive universe, corporate actions, minute quotes, account-specific costs and buying power.",
+      "rejection_before_performance": "The apparent edge requires retrospective event labels, future constituent selection or fills before receipt.",
+      "status": "NOT_PREREGISTERED_AWAITING_DATA"
+    },
+    {
+      "id": "M3",
+      "priority": 2,
+      "parent_hypothesis": "H6",
+      "products": [
+        "long_listed_options",
+        "intact_debit_spreads",
+        "NANOS_if_liquidity_verified"
+      ],
+      "mechanism_to_test": "A separately validated signal may benefit from a convex payoff; test against the same signal in the underlying after premium, IV changes and execution costs.",
+      "first_data_gate": "Actual OPRA or exchange option quotes and sizes, expired chains, per-contract multiplier/deliverable, account option level and exercise/assignment funding.",
+      "rejection_before_performance": "Indicative quotes presented as executable, stale spreads, one contract above risk budget, unmodeled assignment or insufficient close-out depth.",
+      "liquidity_note": "Cboe public NANOS page showed volume 104 and open interest 1296 as of 2026-10-09. One day is not an ADV estimate or a fill test. Keep on watchlist until quotes establish feasibility.",
+      "status": "NOT_PREREGISTERED_AWAITING_DATA"
+    },
+    {
+      "id": "M4",
+      "priority": 2,
+      "parent_hypothesis": "H2",
+      "products": [
+        "crypto_spot",
+        "account_eligible_crypto_derivatives"
+      ],
+      "mechanism_to_test": "Reversal after directly observed temporary sell-pressure decay.",
+      "first_data_gate": "Trade/order-book and receipt timestamps, verified market access and funding/liquidation model for derivatives.",
+      "rejection_before_performance": "Pressure is inferred from future lows, or fees, funding, adverse selection and missed fills erase the effect.",
+      "legacy_result": "The rejected H1 breakout baseline remains rejected; it is not relabeled as H2.",
+      "status": "NOT_PREREGISTERED_AWAITING_DATA"
+    }
+  ],
+  "additional_scope": [
+    "FX, rates, commodity futures, bonds and other products remain admissible after the same access/size/cost/data gates.",
+    "No remote broker API, order router or unattended research schedule has been enabled."
+  ]
+}
