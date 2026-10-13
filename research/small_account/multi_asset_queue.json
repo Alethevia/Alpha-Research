@@ -1,5 +1,5 @@
 {
-  "status": "RESEARCH_QUEUE_NO_NEW_PERFORMANCE_RESULTS",
+  "status": "M2_OPENING_SUBTEST_COMPLETED_OTHER_TRACKS_AWAITING_DATA",
   "ordering_basis": "Information value, access and implementability; not predicted returns or investment allocation.",
   "shared_constraints": {
     "capital_usd": 2000,
@@ -21,7 +21,8 @@
       "first_data_gate": "Exact contract-month trades and executable quotes, receive timestamps, roll/settlement calendar, current IBKR permissions, minimum-equity rules, initial/maintenance margin and all-in fees.",
       "rejection_before_performance": "A minimum integer contract cannot fit risk/funding constraints, or quotes/depth cannot support delayed entry and exit.",
       "history_rule": "No NES/NNQ synthetic fills before listing. ES/MES can support signal discovery only; cannot certify nano execution. Short post-launch histories cannot establish one-year returns.",
-      "status": "NOT_PREREGISTERED_AWAITING_DATA"
+      "status": "NOT_PREREGISTERED_AWAITING_DATA",
+      "access_probe": "NES dated contract metadata was accessible. One launch-day minute-bar query was empty; quote access returned NOT_ENTITLED. Metadata is not a fill or account-permission test."
     },
     {
       "id": "M2",
@@ -34,7 +35,19 @@
       "mechanism_to_test": "Post-announcement price continuation after information is public; compare stock and ETF expressions.",
       "first_data_gate": "Point-in-time event release/receipt times, delisted-inclusive universe, corporate actions, minute quotes, account-specific costs and buying power.",
       "rejection_before_performance": "The apparent edge requires retrospective event labels, future constituent selection or fills before receipt.",
-      "status": "NOT_PREREGISTERED_AWAITING_DATA"
+      "status": "OPENING_DRIVE_SUBTEST_REJECTED_ANNOUNCEMENT_TESTS_PENDING",
+      "subtests": [
+        {
+          "experiment_family": "M2_OPENING_DRIVE_FIXED_20261013",
+          "design": "m2_design.json",
+          "results": "m2_results_20261013.md",
+          "status": "REJECTED_BY_PREDECLARED_TWO_WINDOW_GATE",
+          "scope": "Opening-session price continuation on SPY/QQQ/TQQQ. This does not test earnings or scheduled announcement continuation.",
+          "cases": 36,
+          "data": "Massive actual unadjusted 5-minute ETF aggregates, 2025 and 2026 Q1-Q3. Quotes and earnings endpoints returned NOT_ENTITLED.",
+          "next_requirement": "An independently motivated new event hypothesis needs point-in-time event times and executable quotes; retain this failure and count subsequent revisions."
+        }
+      ]
     },
     {
       "id": "M3",
