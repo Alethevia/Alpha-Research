@@ -1,0 +1,260 @@
+{
+  "evidence_type": "HYPOTHETICAL_SENSITIVITY_ANALYSIS_NOT_A_BACKTEST",
+  "goal": {
+    "initial_capital": 2000,
+    "annual_return_decimal": 10,
+    "terminal_multiple": 11,
+    "terminal_equity": 22000,
+    "net_profit": 20000,
+    "equivalent_constant_compounded_returns": {
+      "monthly_12": 0.22118855031199378,
+      "weekly_52": 0.04719312517256249,
+      "trading_day_252": 0.00956087333353559,
+      "calendar_day_365": 0.006591203088991588
+    }
+  },
+  "limitations": [
+    "Probabilities are conditional on invented model inputs, not estimates of live success.",
+    "Fractional sizing assumes divisible positions and immediate sequential reinvestment.",
+    "No overlapping trades, margin calls, gaps, liquidity limits, or strategy degradation.",
+    "Fixed two-point payoffs do not model actual stop execution or tail losses.",
+    "cost_r is a round-trip cost divided by the pre-trade risk budget; not a broker quote.",
+    "Taxes, infrastructure and data costs, financing and contract rounding are excluded.",
+    "Half-capital crossing is not bankruptcy; this positive-payoff model cannot reach zero.",
+    "Monte Carlo error does not quantify model uncertainty or uncertainty in the inputs."
+  ],
+  "zero_cost_reward_1_5R_target_frontier": [
+    {
+      "trades": 250,
+      "risk_fraction": 0.005,
+      "required_realized_win_fraction": 1.1697750516766285
+    },
+    {
+      "trades": 250,
+      "risk_fraction": 0.01,
+      "required_realized_win_fraction": 0.7876000491760581
+    },
+    {
+      "trades": 250,
+      "risk_fraction": 0.02,
+      "required_realized_win_fraction": 0.5987416513831629
+    },
+    {
+      "trades": 500,
+      "risk_fraction": 0.005,
+      "required_realized_win_fraction": 0.7856372184046021
+    },
+    {
+      "trades": 500,
+      "risk_fraction": 0.01,
+      "required_realized_win_fraction": 0.595298815025374
+    },
+    {
+      "trades": 500,
+      "risk_fraction": 0.02,
+      "required_realized_win_fraction": 0.5023661477440614
+    },
+    {
+      "trades": 1000,
+      "risk_fraction": 0.005,
+      "required_realized_win_fraction": 0.593568301768589
+    },
+    {
+      "trades": 1000,
+      "risk_fraction": 0.01,
+      "required_realized_win_fraction": 0.499148197950032
+    },
+    {
+      "trades": 1000,
+      "risk_fraction": 0.02,
+      "required_realized_win_fraction": 0.45417839592451065
+    }
+  ],
+  "hypothetical_scenarios": {
+    "illustrative_iid_zero_cost": {
+      "assumptions": {
+        "trades": 1000,
+        "win_probability": 0.5,
+        "risk_fraction": 0.01,
+        "reward_r": 1.5,
+        "cost_r": 0.0,
+        "persistence": 0.0
+      },
+      "minimum_realized_win_fraction": 0.499148197950032,
+      "minimum_wins": 500,
+      "attainable_under_assumed_payoffs": true,
+      "exp_expected_log_terminal_multiple": 11.23617315801125,
+      "exp_expected_log_is_not_expected_wealth_or_success_probability": true,
+      "iid_exact_terminal_target_probability": 0.5126125090889674,
+      "simulation": {
+        "paths": 5000,
+        "seed": 20261013,
+        "terminal_target_probability_conditional": 0.526,
+        "monte_carlo_standard_error_target_only": 0.007061501256815012,
+        "terminal_loss_probability_conditional": 0.0,
+        "ever_at_or_below_half_initial_capital_probability_conditional": 0.0,
+        "max_drawdown_exceeds_level_probability_conditional": 0.0002,
+        "terminal_target_and_drawdown_within_level_probability_conditional": 0.526,
+        "drawdown_reporting_level": 0.3,
+        "drawdown_level_is_a_report_threshold_not_a_stop_rule": true,
+        "terminal_multiple_quantiles": {
+          "0.05": 6.023476663310843,
+          "0.5": 11.519914904425766,
+          "0.95": 22.031867445182133
+        },
+        "max_drawdown_quantiles": {
+          "0.5": 0.12801911224698098,
+          "0.95": 0.19389594458693546
+        }
+      }
+    },
+    "illustrative_iid_cost_0_05R": {
+      "assumptions": {
+        "trades": 1000,
+        "win_probability": 0.5,
+        "risk_fraction": 0.01,
+        "reward_r": 1.5,
+        "cost_r": 0.05,
+        "persistence": 0.0
+      },
+      "minimum_realized_win_fraction": 0.5191457077074025,
+      "minimum_wins": 520,
+      "attainable_under_assumed_payoffs": true,
+      "exp_expected_log_terminal_multiple": 6.822207993066741,
+      "exp_expected_log_is_not_expected_wealth_or_success_probability": true,
+      "iid_exact_terminal_target_probability": 0.10872414660204396,
+      "simulation": {
+        "paths": 5000,
+        "seed": 20261013,
+        "terminal_target_probability_conditional": 0.1222,
+        "monte_carlo_standard_error_target_only": 0.004631784969102085,
+        "terminal_loss_probability_conditional": 0.0,
+        "ever_at_or_below_half_initial_capital_probability_conditional": 0.0,
+        "max_drawdown_exceeds_level_probability_conditional": 0.0038,
+        "terminal_target_and_drawdown_within_level_probability_conditional": 0.1222,
+        "drawdown_reporting_level": 0.3,
+        "drawdown_level_is_a_report_threshold_not_a_stop_rule": true,
+        "terminal_multiple_quantiles": {
+          "0.05": 3.656104793191286,
+          "0.5": 6.99457302573638,
+          "0.95": 13.38146868860828
+        },
+        "max_drawdown_quantiles": {
+          "0.5": 0.14723930855784453,
+          "0.95": 0.22671436116161967
+        }
+      }
+    },
+    "illustrative_iid_cost_0_10R": {
+      "assumptions": {
+        "trades": 1000,
+        "win_probability": 0.5,
+        "risk_fraction": 0.01,
+        "reward_r": 1.5,
+        "cost_r": 0.1,
+        "persistence": 0.0
+      },
+      "minimum_realized_win_fraction": 0.5391332374241158,
+      "minimum_wins": 540,
+      "attainable_under_assumed_payoffs": true,
+      "exp_expected_log_terminal_multiple": 4.141172270093446,
+      "exp_expected_log_is_not_expected_wealth_or_success_probability": true,
+      "iid_exact_terminal_target_probability": 0.006222073138584307,
+      "simulation": {
+        "paths": 5000,
+        "seed": 20261013,
+        "terminal_target_probability_conditional": 0.0062,
+        "monte_carlo_standard_error_target_only": 0.0011100954913880157,
+        "terminal_loss_probability_conditional": 0.0004,
+        "ever_at_or_below_half_initial_capital_probability_conditional": 0.0,
+        "max_drawdown_exceeds_level_probability_conditional": 0.0288,
+        "terminal_target_and_drawdown_within_level_probability_conditional": 0.0062,
+        "drawdown_reporting_level": 0.3,
+        "drawdown_level_is_a_report_threshold_not_a_stop_rule": true,
+        "terminal_multiple_quantiles": {
+          "0.05": 2.2186138113835288,
+          "0.5": 4.245853065596215,
+          "0.95": 8.125464721321414
+        },
+        "max_drawdown_quantiles": {
+          "0.5": 0.17383276792959845,
+          "0.95": 0.273137182444706
+        }
+      }
+    },
+    "illustrative_clustered_zero_cost": {
+      "assumptions": {
+        "trades": 1000,
+        "win_probability": 0.5,
+        "risk_fraction": 0.01,
+        "reward_r": 1.5,
+        "cost_r": 0.0,
+        "persistence": 0.4
+      },
+      "minimum_realized_win_fraction": 0.499148197950032,
+      "minimum_wins": 500,
+      "attainable_under_assumed_payoffs": true,
+      "exp_expected_log_terminal_multiple": 11.23617315801125,
+      "exp_expected_log_is_not_expected_wealth_or_success_probability": true,
+      "iid_exact_terminal_target_probability": null,
+      "simulation": {
+        "paths": 5000,
+        "seed": 20261013,
+        "terminal_target_probability_conditional": 0.5166,
+        "monte_carlo_standard_error_target_only": 0.007067169730521547,
+        "terminal_loss_probability_conditional": 0.0,
+        "ever_at_or_below_half_initial_capital_probability_conditional": 0.0002,
+        "max_drawdown_exceeds_level_probability_conditional": 0.1408,
+        "terminal_target_and_drawdown_within_level_probability_conditional": 0.4856,
+        "drawdown_reporting_level": 0.3,
+        "drawdown_level_is_a_report_threshold_not_a_stop_rule": true,
+        "terminal_multiple_quantiles": {
+          "0.05": 4.143663857647262,
+          "0.5": 11.519914904425704,
+          "0.95": 30.468588083904613
+        },
+        "max_drawdown_quantiles": {
+          "0.5": 0.2268003781324647,
+          "0.95": 0.3489921744717492
+        }
+      }
+    },
+    "illustrative_edge_decay_p_0_45": {
+      "assumptions": {
+        "trades": 1000,
+        "win_probability": 0.45,
+        "risk_fraction": 0.01,
+        "reward_r": 1.5,
+        "cost_r": 0.0,
+        "persistence": 0.0
+      },
+      "minimum_realized_win_fraction": 0.499148197950032,
+      "minimum_wins": 500,
+      "attainable_under_assumed_payoffs": true,
+      "exp_expected_log_terminal_multiple": 3.229059449620611,
+      "exp_expected_log_is_not_expected_wealth_or_success_probability": true,
+      "iid_exact_terminal_target_probability": 0.0008465492166188827,
+      "simulation": {
+        "paths": 5000,
+        "seed": 20261013,
+        "terminal_target_probability_conditional": 0.001,
+        "monte_carlo_standard_error_target_only": 0.0004469899327725402,
+        "terminal_loss_probability_conditional": 0.0006,
+        "ever_at_or_below_half_initial_capital_probability_conditional": 0.0,
+        "max_drawdown_exceeds_level_probability_conditional": 0.0504,
+        "terminal_target_and_drawdown_within_level_probability_conditional": 0.001,
+        "drawdown_reporting_level": 0.3,
+        "drawdown_level_is_a_report_threshold_not_a_stop_rule": true,
+        "terminal_multiple_quantiles": {
+          "0.05": 1.7310310161396185,
+          "0.5": 3.310601354914036,
+          "0.95": 6.331533767431301
+        },
+        "max_drawdown_quantiles": {
+          "0.5": 0.18636195423418617,
+          "0.95": 0.3002646601379287
+        }
+      }
+    }
+  }
+}

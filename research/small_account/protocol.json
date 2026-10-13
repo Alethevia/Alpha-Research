@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "DESIGN_DRAFT_NO_EMPIRICAL_STRATEGY_VALIDATED",
+  "target": {
+    "initial_capital_usd": 2000,
+    "one_year_return_decimal": 10,
+    "one_year_terminal_equity_usd": 22000,
+    "cash_inflows_allowed": false,
+    "reporting_basis": "after transaction, financing, data and infrastructure costs; before personal taxes"
+  },
+  "unresolved_before_market_experiment": {
+    "venue_and_account_permissions": null,
+    "instrument_and_contract_or_minimum_order_size": null,
+    "point_in_time_data_source_and_license": null,
+    "broker_fee_margin_and_financing_schedule": null,
+    "user_maximum_drawdown_and_dollar_loss_budget": null,
+    "fixed_training_validation_and_untouched_test_windows": null
+  },
+  "research_questions": [
+    {
+      "id": "H1",
+      "hypothesis": "Volatility compression followed by a price breakout can precede a directional move large enough to exceed costs.",
+      "candidate_rule": "Build a channel from completed bars; trade a subsequent breakout only after the signal is received. Define the compression threshold and exit rules before evaluation.",
+      "required_data": "actual instrument intraday bars, bid/ask quotes, receipt timestamps, contract calendar if applicable",
+      "falsification": "No positive net expectancy in reserved chronological data, or profits vanish with observed execution delay and costs."
+    },
+    {
+      "id": "H2",
+      "hypothesis": "A temporary price displacement after forced selling may revert when observable sell pressure subsides.",
+      "candidate_rule": "Define the pressure event from contemporaneous trade/quote information, and specify entry after pressure decay without using future lows.",
+      "required_data": "timestamped trades and order-book updates; authenticated liquidation feed if liquidation claims are used",
+      "falsification": "Edge requires knowing the eventual low or an unavailable liquidation timestamp, or disappears after adverse-selection costs."
+    },
+    {
+      "id": "H3",
+      "hypothesis": "Some scheduled-event reactions continue after the first tradable response.",
+      "candidate_rule": "Freeze event types, the signal window and the first allowed entry timestamp. Keep entire events in one validation fold.",
+      "required_data": "release and receipt timestamps, revision-aware event data, actual bid/ask spreads around events",
+      "falsification": "Results depend on revised data, immediate pre-reaction fills, or a handful of events."
+    },
+    {
+      "id": "H4",
+      "hypothesis": "A leading liquid market sometimes predicts a slower related market beyond executable latency and costs.",
+      "candidate_rule": "Freeze market pairs and lag definitions using training data; synchronize by receipt time and test delayed execution.",
+      "required_data": "synchronized quote streams with exchange and receive timestamps on both markets",
+      "falsification": "Apparent lead is a timestamp mismatch or the advantage disappears before an order can arrive."
+    },
+    {
+      "id": "H5",
+      "hypothesis": "Short-horizon mean reversion can exist in a range regime defined using only prior observations.",
+      "candidate_rule": "Freeze the prior-data regime classifier, deviation threshold, stop and timed exit; include a trend-regime failure test.",
+      "required_data": "intraday prices and quotes, realistic marketable-order fills, gap and outage cases",
+      "falsification": "Mean reversion depends on retrospective regime labels, averaging down, or unrealistic stop fills."
+    }
+  ],
+  "validation_protocol": [
+    "These five hypotheses are a design catalogue, not five completed or fully preregistered trading strategies.",
+    "Freeze economic mechanism, parameters, data hashes, code revision, costs, sample windows, primary metric and rejection rules before each experiment.",
+    "Separate chronological development/selection from untouched evaluation; purge or embargo overlapping labels and event groups.",
+    "Count all legacy, failed, interrupted and new variants when addressing selection bias; a new journal does not reset the trial count.",
+    "Record gross/net returns, turnover, actual elapsed time, drawdown, minimum tradable capital, exposure and concentration of profits.",
+    "Test baseline and stressed fees, spreads, delay, gaps, financing, rejected and partial fills; document data limitations explicitly.",
+    "For futures use actual contract multipliers, integer contracts, margin schedules and roll prices; never use ETF returns multiplied by leverage as executable evidence.",
+    "For passive orders evaluate profitability conditional on a fill and verify queue assumptions; touching a limit price does not prove a fill.",
+    "Use block/event resampling and a documented multiple-testing method when warranted; neither Monte Carlo nor a p-value proves future returns.",
+    "A short profitable sample must not be promoted as a demonstrated annual return. Include all cash costs and all inactivity.",
+    "Forward paper validation is a separate dataset with locked rules and order-event reconciliation; no live execution is implemented in this prototype."
+  ]
+}
