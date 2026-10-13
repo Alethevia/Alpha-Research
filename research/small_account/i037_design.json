@@ -1,0 +1,180 @@
+{
+  "experiment_family": "I037_RELATIVE_INTRADAY_FIXED_20261013",
+  "evidence_type": "historical_development",
+  "hypothesis": "A QQQ-SPY opening-half-hour residual standardized against the previous 60 complete opening windows predicts same-day reversion; evaluate QQQ-long for negative residual and SPY-long for positive residual separately.",
+  "selection_status": "Fixed before computing this specification. Reuses repeatedly inspected M2/H3 histories: development only. No threshold or lookback sweep.",
+  "initial_capital_usd": 2000,
+  "symbols": [
+    "QQQ",
+    "SPY"
+  ],
+  "rules": [
+    "clock_only_long"
+  ],
+  "capital_interpretation": "Each symbol, period, rule and cost case is an alternative $2000 cash-account simulation, never summed into a portfolio. Reset each period.",
+  "timeframe": "5Minute",
+  "price_adjustment": "Actual unadjusted ETF bars. All model inputs are within-session open-to-10:00 log returns, so overnight splits/dividends do not mechanically create cross-day returns. Intraday corporate-action history and NBBO are not verified; no market-neutral execution claim.",
+  "periods": [
+    {
+      "name": "development_2025",
+      "start": "2025-01-01",
+      "end": "2026-01-01",
+      "full_calendar_year": true
+    },
+    {
+      "name": "chronological_check_2026_Q1_Q3",
+      "start": "2026-01-01",
+      "end": "2026-10-01",
+      "full_calendar_year": false
+    }
+  ],
+  "reserved": "Do not calculate October 2026 performance. The nine-month 2026 period is not annualized into an achieved annual return. Future paper evidence remains necessary.",
+  "data_inspection_disclosure": "All 2025 and 2026 Jan-Sep histories were previously inspected for M2/H3. There is no untouched performance holdout in this run.",
+  "data_provenance": {
+    "provider": "Massive connector /v2/aggs/ticker/{symbol}/range/5/minute/{from}/{to}",
+    "adjusted": false,
+    "sort": "asc",
+    "limit": 50000,
+    "snapshot_format": "connector-exported CSV, with request metadata and SHA-256 manifest; not raw HTTP responses or proof of source truth",
+    "access_limitations": "2023 SPY bars, 2025 SPY historical quotes, Benzinga earnings and NES quotes returned NOT_ENTITLED. 2025 SPY minute bars and NES contract metadata were accessible. An initial NES launch-day bar probe was empty.",
+    "execution_evidence": "Aggregate traded prices only. No NBBO, queue depth, individual fills or point-in-time receipt timestamps. Assumed fills are a price screen, not execution replay."
+  },
+  "strategy": {
+    "timezone": "America/New_York",
+    "opening_bar_times": [
+      "09:30",
+      "09:35",
+      "09:40",
+      "09:45",
+      "09:50",
+      "09:55"
+    ],
+    "opening_range": "maximum high minus minimum low of these three completed bars",
+    "minimum_positive_body_fraction": 0.25,
+    "minimum_close_position_in_range": 0.8,
+    "signal": "External frozen I037 active-date set; engine clock rule supplies only current-day opening-low stop.",
+    "clock_benchmark": "All model-eligible days; additionally previous-eligible-day signal on the same asset, same entry/exit/stop/sizing rules. Trade counts and volatility are not exactly matched.",
+    "entry_time": "10:05",
+    "entry": "10:05 observed open, five minutes after first half-hour closes; skip if entry <= own first-half-hour low.",
+    "stop": "Own first-half-hour low; completed close trigger and an extra five-minute delay, inherited from M2.",
+    "timed_exit": "15:50 regular-session bar open, or next available regular-session open. An unclosed position at session end is an experiment error, never silently dropped.",
+    "risk_exit": "A drawdown pause observed at a bar open schedules liquidation at least five minutes later; a close observation schedules at bar-start + 10 minutes. Low prices are retrospective diagnostics and do not trigger trades before they are observable.",
+    "long_only": true,
+    "one_entry_per_session": true,
+    "overnight_positions": false,
+    "account_borrowing": false,
+    "integer_shares": true,
+    "max_entry_notional_fraction": 0.95,
+    "cash_reserve_months_of_overhead": 3,
+    "position_sizing": "Floor minimum of planned stop-risk quantity (including assumed entry/exit friction and two order fees), 95% marked-equity quantity, and settled cash less overhead reserve and entry fee. Cannot force a minimum share."
+  },
+  "risk": {
+    "risk_per_trade": 0.01,
+    "reduce_drawdown": 0.2,
+    "pause_drawdown": 0.3,
+    "max_drawdown": 0.4
+  },
+  "settlement": {
+    "model": "Conservative T+1 cash availability: sale proceeds unavailable until the next weekday that is neither a listed exchange closure nor a listed bank-only holiday. Settled cash may fund a new trade; unsettled proceeds may not.",
+    "bank_only_holidays": [
+      "2025-10-13",
+      "2025-11-11",
+      "2026-10-12",
+      "2026-11-11"
+    ],
+    "limitation": "This deliberately conservative union calendar is not asserted to reproduce all DTC limited settlement services or broker-specific fund availability."
+  },
+  "calendar": {
+    "closed": [
+      "2025-01-01",
+      "2025-01-09",
+      "2025-01-20",
+      "2025-02-17",
+      "2025-04-18",
+      "2025-05-26",
+      "2025-06-19",
+      "2025-07-04",
+      "2025-09-01",
+      "2025-11-27",
+      "2025-12-25",
+      "2026-01-01",
+      "2026-01-19",
+      "2026-02-16",
+      "2026-04-03",
+      "2026-05-25",
+      "2026-06-19",
+      "2026-07-03",
+      "2026-09-07",
+      "2026-11-26",
+      "2026-12-25"
+    ],
+    "skip_known_early_close_sessions": [
+      "2025-07-03",
+      "2025-11-28",
+      "2025-12-24",
+      "2026-11-27",
+      "2026-12-24"
+    ],
+    "regular_hours": "09:30 inclusive to 16:00 exclusive",
+    "sources": [
+      "https://www.nyse.com/trade/hours-calendars",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2025_Yearly_Trading_Calendar.pdf",
+      "https://ir.theice.com/press/news-details/2024/The-New-York-Stock-Exchange-Will-Close-Markets-on-January-9-to-Honor-the-Passing-of-Former-President-Jimmy-Carter-on-National-Day-of-Mourning/default.aspx"
+    ],
+    "missing_data": "Validate each expected full trading session exists. Do not forward-fill bars. Missing input bars skip the signal; missing exact entry expires it. Missing holding bars reduce risk visibility; an open position with no later exit bar is an error. Never discard a session because of a later missing bar."
+  },
+  "cost_cases": [
+    {
+      "name": "zero_cost_diagnostic",
+      "slippage_bps_per_side": 0,
+      "cash_fee_per_order_usd": 0,
+      "monthly_overhead_usd": 0
+    },
+    {
+      "name": "base_cost_assumption",
+      "slippage_bps_per_side": 5,
+      "cash_fee_per_order_usd": 0.02,
+      "monthly_overhead_usd": 10
+    },
+    {
+      "name": "double_variable_cost_stress",
+      "slippage_bps_per_side": 10,
+      "cash_fee_per_order_usd": 0.04,
+      "monthly_overhead_usd": 10
+    }
+  ],
+  "cost_disclosure": "5/10 bps per side jointly proxy spread and slippage; $0.02/$0.04 per order proxy cash trading charges. These and $10/month overhead are assumptions, not verified historical broker fees or guaranteed executable quotes. Monthly overhead continues during a pause. Actual ETF prices embed fund performance; do not separately subtract an expense ratio.",
+  "primary_metric": "Net account return under costs, versus same-asset same-clock previous-eligible-day-signal and clock-only controls; gross future residual is separately descriptive, never booked as cash PnL.",
+  "rejection_rules": [
+    "For a side to advance even to further research: positive base-cost returns and beat both same-asset controls in BOTH windows; positive double-variable-cost returns in BOTH windows; no observed 40% drawdown breach.",
+    "Mean oriented timed residual must be positive in BOTH windows; this is only a price diagnostic, not a hedge or a statistical proof.",
+    "Any survivor still requires independent data, sector/rate-factor controls, quotes and forward validation. Reject this fixed rule on failure; do not optimize thresholds on these outcomes.",
+    "Report all 36 account scenarios and two period diagnostics, including errors. Accounts are alternatives and returns must not be added.",
+    "2025 alone is a full calendar year target check including warmup and overhead; never annualize 2026 Jan-Sep to a realized annual result."
+  ],
+  "execution_authorized": false,
+  "relative_model": {
+    "x": "SPY",
+    "y": "QQQ",
+    "opening_return": "log(09:55 close / 09:30 open)",
+    "lookback_sessions": 60,
+    "regression": "OLS intercept plus slope on previous 60 synchronized opening returns only",
+    "sigma": "sqrt(sum(previous residual squared)/(60-2))",
+    "z_threshold": 1.5,
+    "positive_beta_required": true,
+    "negative_z_trade": "QQQ",
+    "positive_z_trade": "SPY",
+    "warmup": "No trading before 60 previous complete opening windows. 2026 uses past 2025 model history, but resets account equity. No overnight return enters regression.",
+    "eligibility": "Expected non-early-close sessions, all six opening bars available for both assets, positive beta and nonzero x variance / residual variance. No eligibility test on future holding-window data.",
+    "invalid_fit": "Skip signals; retain reason. Missing expected full session remains an engine error.",
+    "controls": [
+      "relative_laggard",
+      "previous_eligible_signal",
+      "clock_only"
+    ],
+    "lagged_control": "On an eligible session use the candidate flag from the immediately previous eligible session. No future matching or best-date choice. First eligible session has no lagged flag.",
+    "data_quality": "Fail the run for duplicate/invalid OHLC, unmatched full-session timestamps or >20% adjacent within-session open-vs-previous-close discontinuity. This is a whole-dataset integrity gate, not selective deletion of losing dates.",
+    "diagnostic": "For each candidate event calculate timed 10:05-to-15:50 log QQQ return minus that day ex-ante beta times SPY return, orient against opening residual. Ignores stops/costs/sizing; not executable PnL. Report count/mean/median and all daily rows; no significance claim."
+  },
+  "source_data_manifest_sha256": "8e99aa78c906e3346ab3ce1f23a661415c202ecae6112bfb798a1fecc09233b8"
+}

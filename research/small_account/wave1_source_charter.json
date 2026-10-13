@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-13",
+  "evidence_type": "source_feasibility_only",
+  "no_return_study": true,
+  "I010": {
+    "selection": "2025-01-02 first three Form 8-K (exclude 8-K/A) rows after sorting the complete SEC daily master index by numeric CIK then accession path; include all industries and delisted issuers. If the complete index is unavailable, label intake blocked and retain only search-found illustrative examples, never claim consecutive sampling.",
+    "prior_inspection": "Search snippets for APO, CAPR, TSLA, EZFL and VRMMQ were seen before this source-audit charter. No returns inspected or calculated.",
+    "fields": [
+      "filing accession",
+      "acceptance timestamp",
+      "period-of-report",
+      "primary text event date",
+      "attached news stated timestamp",
+      "earlier issuer publication",
+      "first-public-time status",
+      "revision or prior-publication evidence"
+    ],
+    "fail_closed": "Exact first-public time is unknown without contemporaneous evidence. Date-only documents do not yield an intraday entry timestamp. No model scoring or price backtest."
+  },
+  "I019": {
+    "selection": "Continue the Wix historical case already selected in the 100-direction catalogue. Audit original Schedule TO and both numbered amendments plus results. This is a single convenience case, not an opportunity population or profitability sample.",
+    "question": "Did odd-lot priority actually confer an allocation advantage, and what all-in purchase ceiling follows from the original lower price bound?",
+    "calculator": "Pure hypothetical arithmetic: 2000 capital; 20 shares; all-in fee reserves 0/25/50; completion payouts at original 80 floor and actual 92 final as labeled counterfactuals; failed-offer example entry79 exit60 fees25. Include unknown taxes, deadlines, account eligibility as blockers.",
+    "no_historical_pnl": "No contemporaneous market entry quote or account tender evidence; do not claim realized return."
+  }
+}
