@@ -4,8 +4,14 @@
 
 **当前状态：研究工具与固定规则历史筛查，尚无通过验证的交易策略。**
 已完成目标反推、条件情景模拟和实验登记工具；第二阶段加入 40% 峰值回撤
-约束、平台可行性核对及 H1 历史价格筛查程序。具体规则见 `h1_design.json`，
-平台说明见 `broker_feasibility.md`。没有连接私人账户、下单或部署交易服务。
+约束、平台可行性核对及 H1 历史价格筛查程序。BTC/ETH 的 2024/2025 年、
+三档成本共 12 个固定情景全部保留：两个标的在两年基础成本情景均亏损，
+**本次 H1 固定基线被淘汰**。这不等于证明其他规则或整体目标不可能。
+
+[第一轮结果与局限](h1_results_20261013.md) ·
+[机器可读结果](h1_results_20261013.json) ·
+[冻结设计](h1_design.json) · [平台说明](broker_feasibility.md)。
+没有连接私人账户、下单或部署交易服务。
 
 ## 研究问题
 
@@ -111,8 +117,17 @@ OpenAI 在 First Proof 论文附录 A 描述了：生成种子思路、分别尝
 - 检查必要字段与证据类型，不验证字段内容真实、市场可交易或测试集未被看过；
 - 此处的试验计数不含其他日志，统计筛选校正仍需合并相关旧试验。
 
-`protocol.json`：五项候选假说及验证计划。它是设计草案，尚未完成参数、
-市场和数据窗口的冻结，因此不应宣称“五个策略已经预注册/回测”。
+`protocol.json`：五项候选假说及验证计划。只有 H1 的一组明确规则完成冻结
+和历史价格筛查；其余仍是设计草案，不能宣称“五个策略已经预注册/回测”。
+
+`risk_controls.py`：按历史净值峰值计算 40% 回撤限制，20% 回撤降低新仓
+计划风险，30% 锁定暂停并请求退出；不裁剪超限损失，不自动重启。
+20%/30% 阈值和单笔 1% 计划风险是研究默认值，40% 来自用户要求。
+
+`fetch_crypto_bars.py` / `h1_backtest.py`：保存 Alpaca 公开行情快照及哈希，
+用固定规则计算延迟执行、成本、现金和数量约束。遇到零成交/缺失 K 线
+保留数据质量说明；输出每笔交易、净值曲线和实验登记日志。
+它是价格代理筛查，不是盘口重放或已验证的实际成交回测。
 
 ## 运行
 
@@ -121,7 +136,12 @@ OpenAI 在 First Proof 论文附录 A 描述了：生成种子思路、分别尝
 ```bash
 python research/small_account/target_lab.py --paths 5000 --output artifacts/small-account/scenarios.json
 python -m unittest discover -s research/small_account -p 'test_*.py' -v
+python research/small_account/fetch_crypto_bars.py --output artifacts/small-account/alpaca_us_crypto_20231201_20260101.json.gz
+python research/small_account/h1_backtest.py --snapshot artifacts/small-account/alpaca_us_crypto_20231201_20260101.json.gz --output artifacts/small-account/h1_reproduction
 ```
+
+H1 输出使用新的目录，禁止覆盖已有试验。重取行情可能修订；严格复现需用
+相同数据快照，不能仅凭相同日期窗口认为输入一致。29 项确定性测试通过。
 
 已用种子 `20261013` 运行五组、每组 5000 条假设路径，输出为
 `example_hypothetical_results.json`。文件内的概率仅在输入假设成立时适用，
@@ -142,8 +162,8 @@ Spec 的字段见 `register()`；结果 JSON 必须携带与 spec 相同的 `evi
 
 1. 已确认平台候选与 40% 峰值回撤；继续核对具体账户类型、权限和品种。
 2. 核对最小手数、实际保证金、手续费和数据条件，淘汰无法在小账户中执行的品种。
-3. 优先把 H1 变成一条简单、完全可复现的基线规则；先冻结规则再取评估结果。
-4. 使用实际标的的时间序列与报价测试，再逐项检验其他假说。全部失败也是有效结果。
+3. 保留已淘汰的 H1 基线和全部 12 个结果，不将其加杠杆后直接上线。
+4. 获取股票/ETF 的授权行情与报价，在新试验编号下冻结独立假说，再逐项检验。
 5. 对通过开发阶段的候选，做时间隔离、未参与选型的评估及锁定规则的前瞻模拟交易。
 
 账户执行条件未定前不能声称已建成可上线交易系统，也不能据此合理估计十倍收益的现实概率。

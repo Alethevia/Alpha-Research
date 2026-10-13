@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "DESIGN_DRAFT_NO_EMPIRICAL_STRATEGY_VALIDATED",
+  "status": "ONE_FIXED_H1_PRICE_PROXY_BASELINE_REJECTED_NO_STRATEGY_VALIDATED",
   "target": {
     "initial_capital_usd": 2000,
     "one_year_return_decimal": 10,
@@ -87,5 +87,16 @@
     "pause_is_latched": true,
     "overshoot_possible_and_must_be_reported": true,
     "live_execution_authorized": false
-  }
+  },
+  "completed_research": [
+    {
+      "family": "H1_FIRST_FIXED_BASELINE_20261013",
+      "design": "h1_design.json",
+      "results": "h1_results_20261013.json",
+      "cases": 12,
+      "decision": "REJECT_THIS_FROZEN_H1_BASELINE_FOR_BOTH_ASSETS",
+      "evidence_type": "historical_development",
+      "execution_verified": false
+    }
+  ]
 }
