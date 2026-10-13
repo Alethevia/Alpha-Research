@@ -1,5 +1,5 @@
 {
-  "status": "M2_AND_H3_FIXED_RULES_REJECTED_NANO_ROLL_COVERAGE_CHECKED_EXECUTION_UNRESOLVED",
+  "status": "FIRST_100_DIRECTION_WAVE_EVALUATED_NO_VALIDATED_ALPHA",
   "ordering_basis": "Information value, access and implementability; not predicted returns or investment allocation.",
   "shared_constraints": {
     "capital_usd": 2000,
@@ -98,7 +98,7 @@
     "No remote broker API, order router or unattended research schedule has been enabled."
   ],
   "next_candidate": {
-    "status": "BREADTH_SCREEN_COMPLETED_FIRST_WAVE_INTAKE_NOT_PERFORMANCE_READY",
+    "status": "WAVE1_RECORDED_WAVE2_DATA_INTAKE_PENDING",
     "catalogue": "idea_catalogue_100.json",
     "screen_report": "idea_100_directions_20261013.md",
     "intake_details": "idea_validation_queue.json",
@@ -112,9 +112,16 @@
       "I023",
       "I076"
     ],
-    "selection_basis": "Research information value and different mechanisms, not expected-return ranking. All twelve priority directions need data/implementation gates before a separately registered performance test.",
-    "new_performance_backtests": 0,
-    "execution_authorized": false
+    "selection_basis": "Original catalogue preserved as a desk-screen snapshot. Follow-up findings versioned separately. Next wave needs data gates and new frozen performance specs.",
+    "new_performance_backtests": 36,
+    "execution_authorized": false,
+    "progress": "idea_validation_progress_20261013.json",
+    "report": "wave1_results_20261013.md",
+    "first_wave_decisions": {
+      "I037": "FIXED_RULE_REJECTED",
+      "I010": "FIRST_PUBLIC_TIME_UNRESOLVED",
+      "I019": "NO_ALLOCATION_ADVANTAGE_OBSERVED"
+    }
   },
   "retained_h3b_candidate": {
     "id": "H3B",

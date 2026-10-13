@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "H1_M2_H3_FIXED_RULES_REJECTED_NANO_EXECUTION_UNRESOLVED_NO_STRATEGY_VALIDATED",
+  "status": "H1_M2_H3_I037_FIXED_RULES_REJECTED_NO_VALIDATED_PROFITABLE_STRATEGY",
   "target": {
     "initial_capital_usd": 2000,
     "one_year_return_decimal": 10,
@@ -134,6 +134,16 @@
       "decision": "FIXED_DECEMBER_COVERAGE_NOT_REPRESENTATIVE_OF_NEARBY_CONTRACT; QUOTES_AND_SHARED_GAP_UNRESOLVED",
       "evidence_type": "historical_development",
       "execution_verified": false
+    },
+    {
+      "family": "I037_RELATIVE_INTRADAY_FIXED_20261013",
+      "design": "i037_design.json",
+      "results": "i037_results_20261013.json",
+      "cases": 36,
+      "separately_registered_diagnostics": 2,
+      "decision": "REJECT_BOTH_FIXED_CASH_LONG_EXPRESSIONS",
+      "evidence_type": "historical_development",
+      "execution_verified": false
     }
   ],
   "research_universe": {
@@ -173,5 +183,6 @@
       "validated_profitable": 0,
       "not_performance_preregistration": true
     }
-  ]
+  ],
+  "research_progress": "idea_validation_progress_20261013.json"
 }
