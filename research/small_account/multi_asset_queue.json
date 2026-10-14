@@ -35,14 +35,16 @@
       "unresolved": [
         "quote entitlement and receipt latency",
         "same-expiry order-book depth",
-        "broker margin offsets and minimum account equity",
         "package routing or bounded failed-leg unwind",
-        "daily tick rounding and final cash rounding"
+        "daily tick rounding and final cash rounding",
+        "account-specific combined margin, minimum equity and fee confirmation"
       ],
-      "status": "BLOCKED_ON_QUOTES_AND_ACCOUNT_COSTS",
+      "status": "PUBLIC_FEE_GATE_UPDATED_MARGIN_PATHS_PARTLY_BLOCKED_QUOTES_UNAVAILABLE",
       "sources": [
         "CME_NANO"
-      ]
+      ],
+      "current_execution_gate": "execution_cost_gate_20261014.json",
+      "gate_update": "Public fee estimate $13.42 per matched roundtrip. Public single-position margin blocks micro-first and first-five-NNQ paths at $2000; five NES fits only that state, not the full route. Quotes remain NOT_ENTITLED."
     },
     {
       "id": "A02",
@@ -105,16 +107,21 @@
       "hypothesis": "Three executable directional conversion rates may leave more starting currency after fees, rounding and failed-leg liquidation.",
       "first_falsification": "Verify all pairs are simultaneously available to this account and capacity survives the smallest leg; replay actual order-arrival sequencing and full inventory closure.",
       "unresolved": [
-        "pair availability",
-        "three-leg fees and precision",
+        "account-specific pair availability and permissions",
+        "minimum sizes, precision and fee-tier confirmation",
+        "synchronized books and order-event latency",
         "depth after earlier legs",
         "partial-fill residual coins and dust",
         "no assumed atomic execution"
       ],
-      "status": "BLOCKED_ON_PAIR_AND_EXECUTION_VERIFICATION",
+      "status": "PUBLIC_BOOKS_AVAILABLE_FIVE_SNAPSHOTS_FAIL_PRICE_AND_CLOCK_GATES",
       "sources": [
-        "COINBASE_FEES"
-      ]
+        "COINBASE_FEES",
+        "ALPACA_PUBLIC_CRYPTO_DATA",
+        "ALPACA_CRYPTO_FEES"
+      ],
+      "current_execution_gate": "triangle_gate_results_20261014.json",
+      "gate_update": "5 public responses with all three pairs; all 10 route top-price products below 1 before fees, all 30 depth/fee size diagnostics negative, all 5 fail diagnostic clock gates. Reject these snapshots, not all future triangular opportunities."
     }
   ],
   "watchlist": [
@@ -144,7 +151,7 @@
       "A03",
       "A04"
     ],
-    "next_action": "First clear executable-quote, all-in-fee and aggregate-funding gates; no OHLC performance proxy for arbitrage.",
+    "next_action": "A01 needs actual combo/intermediate margin and entitled depth; A04 needs synchronized streaming/order-event evidence before another profitability experiment. A02 package-data gate remains open. No repeat sampling solely to seek a positive snapshot.",
     "execution_authorized": false,
     "new_performance_backtests": 0
   },
@@ -327,5 +334,6 @@
       }
     }
   ],
-  "mathematical_research": "arbitrage_conjectures_20261014.json"
+  "mathematical_research": "arbitrage_conjectures_20261014.json",
+  "execution_gate_report": "execution_gate_20261014.md"
 }

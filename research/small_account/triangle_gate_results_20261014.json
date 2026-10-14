@@ -1,0 +1,548 @@
+{
+  "evidence_type": "ACTUAL_PUBLIC_SNAPSHOTS_OPTIMISTIC_BOUND_NOT_BACKTEST",
+  "design_sha256": "34a100bc40c1e57112ff2ca5651448607ec727bf0cf17cebea97e4c2e74cf611",
+  "observations": [
+    {
+      "raw_file": "alpaca_public_probe.json",
+      "sha256": "2775354b5b35be4a6cae4635397d84120c7bc9f86bcf9bafb7e0615c26de7950",
+      "sample_role": "access_probe_seen_before_design",
+      "sent_utc": "2026-10-14T19:06:49.289188+00:00",
+      "received_utc": "2026-10-14T19:06:59.034817+00:00",
+      "http_status": 200,
+      "elapsed_seconds": 9.745648450999397,
+      "analysis": {
+        "data_valid": true,
+        "max_book_age_seconds": 2.03721,
+        "pair_skew_seconds": 1.516549,
+        "clock_gate_pass": false,
+        "clock_failures": [
+          "BOOK_AGE_EXCEEDS_DIAGNOSTIC_LIMIT",
+          "PAIR_TIMESTAMP_SKEW_EXCEEDS_DIAGNOSTIC_LIMIT"
+        ],
+        "execution_verified": false,
+        "routes": {
+          "USD_BTC_ETH_USD": {
+            "gross_top_ratio": "0.9960488169507682592361847499770140334480",
+            "net_top_ratio": "0.9885971111756925593410199922508617788194",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.42985555878462796705099961254308894094",
+                "net_change_usd": "-0.57014444121537203294900038745691105906",
+                "net_return": "-0.0114028888243074406589800077491382211812",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "494.0693451510838451761810581869234414937",
+                "net_change_usd": "-5.9306548489161548238189418130765585063",
+                "net_return": "-0.0118613096978323096476378836261531170126",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1975.733176767637540172548359287952549967",
+                "net_change_usd": "-24.266823232362459827451640712047450033",
+                "net_return": "-0.0121334116161812299137258203560237250165",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          },
+          "USD_ETH_BTC_USD": {
+            "gross_top_ratio": "0.9959078193303331819495479129680855456010",
+            "net_top_ratio": "0.9884571683959084497956318896825069154866",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.42285841979542248978159448412534577434",
+                "net_change_usd": "-0.57714158020457751021840551587465422566",
+                "net_return": "-0.0115428316040915502043681103174930845132",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "493.9622185670520436913545068767131428232",
+                "net_change_usd": "-6.0377814329479563086454931232868571768",
+                "net_return": "-0.0120755628658959126172909862465737143536",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1975.467424321021317035595004273107464660",
+                "net_change_usd": "-24.532575678978682964404995726892535340",
+                "net_return": "-0.01226628783948934148220249786344626767",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "raw_file": "alpaca_fixed_00.json",
+      "sha256": "951be6fa3a08d7910da0e7331fcf52b12ae0ed2634835507ae7395bf4f358429",
+      "sample_role": "fixed_budget_access_diagnostic",
+      "sent_utc": "2026-10-14T19:11:58.319425+00:00",
+      "received_utc": "2026-10-14T19:12:04.099728+00:00",
+      "http_status": 200,
+      "elapsed_seconds": 5.78030419300012,
+      "analysis": {
+        "data_valid": true,
+        "max_book_age_seconds": 4.148056,
+        "pair_skew_seconds": 3.02833,
+        "clock_gate_pass": false,
+        "clock_failures": [
+          "BOOK_AGE_EXCEEDS_DIAGNOSTIC_LIMIT",
+          "PAIR_TIMESTAMP_SKEW_EXCEEDS_DIAGNOSTIC_LIMIT"
+        ],
+        "execution_verified": false,
+        "routes": {
+          "USD_BTC_ETH_USD": {
+            "gross_top_ratio": "0.9959955596092182481757521355127727705721",
+            "net_top_ratio": "0.9885442522664611652625521621028407218952",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.42721261332305826312760810514203609478",
+                "net_change_usd": "-0.57278738667694173687239189485796390522",
+                "net_return": "-0.0114557477335388347374478378971592781044",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "494.1063540045841489025655076465463938525",
+                "net_change_usd": "-5.8936459954158510974344923534536061475",
+                "net_return": "-0.011787291990831702194868984706907212295",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1975.983350137712547279089693418216154674",
+                "net_change_usd": "-24.016649862287452720910306581783845326",
+                "net_return": "-0.012008324931143726360455153290891922663",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          },
+          "USD_ETH_BTC_USD": {
+            "gross_top_ratio": "0.9955693964124643949783732461230087561980",
+            "net_top_ratio": "0.9881212773097818267786851197383690262687",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.40606386548909133893425598691845131343",
+                "net_change_usd": "-0.59393613451090866106574401308154868657",
+                "net_return": "-0.0118787226902181732213148802616309737314",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "493.8323282418950635281584747219132369299",
+                "net_change_usd": "-6.1676717581049364718415252780867630701",
+                "net_return": "-0.0123353435162098729436830505561735261402",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1974.735390556802095647179609315906562848",
+                "net_change_usd": "-25.264609443197904352820390684093437152",
+                "net_return": "-0.012632304721598952176410195342046718576",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "raw_file": "alpaca_fixed_01.json",
+      "sha256": "d93b49e69ee622239edaa8825d29b1f1ed705a4ab6a529309f85ed9d7576448d",
+      "sample_role": "fixed_budget_access_diagnostic",
+      "sent_utc": "2026-10-14T19:12:30.498721+00:00",
+      "received_utc": "2026-10-14T19:12:34.445213+00:00",
+      "http_status": 200,
+      "elapsed_seconds": 3.946490170999823,
+      "analysis": {
+        "data_valid": true,
+        "max_book_age_seconds": 4.411481,
+        "pair_skew_seconds": 3.884938,
+        "clock_gate_pass": false,
+        "clock_failures": [
+          "BOOK_AGE_EXCEEDS_DIAGNOSTIC_LIMIT",
+          "PAIR_TIMESTAMP_SKEW_EXCEEDS_DIAGNOSTIC_LIMIT"
+        ],
+        "execution_verified": false,
+        "routes": {
+          "USD_BTC_ETH_USD": {
+            "gross_top_ratio": "0.9960699270714844628550052504045094543839",
+            "net_top_ratio": "0.9886180633659883092253265102654636804578",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.43090316829941546126632551327318402290",
+                "net_change_usd": "-0.56909683170058453873367448672681597710",
+                "net_return": "-0.011381936634011690774673489734536319542",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "494.0915351870439707898047075262065964081",
+                "net_change_usd": "-5.9084648129560292101952924737934035919",
+                "net_return": "-0.0118169296259120584203905849475868071838",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1975.838777634202365681952029470699013210",
+                "net_change_usd": "-24.161222365797634318047970529300986790",
+                "net_return": "-0.012080611182898817159023985264650493395",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          },
+          "USD_ETH_BTC_USD": {
+            "gross_top_ratio": "0.9954993356850850586838981933271792166693",
+            "net_top_ratio": "0.9880517407253138960091652380324409864174",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.40258703626569480045826190162204932086",
+                "net_change_usd": "-0.59741296373430519954173809837795067914",
+                "net_return": "-0.0119482592746861039908347619675590135828",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "493.7876623544850478566048387096774193549",
+                "net_change_usd": "-6.2123376455149521433951612903225806451",
+                "net_return": "-0.0124246752910299042867903225806451612902",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1974.709497883406418824346774193548387096",
+                "net_change_usd": "-25.290502116593581175653225806451612904",
+                "net_return": "-0.012645251058296790587826612903225806452",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "raw_file": "alpaca_fixed_02.json",
+      "sha256": "5500f51dc71838bbbf90c738ac75084ad051e8d4ba4210780c5a8fb7c5bfad00",
+      "sample_role": "fixed_budget_access_diagnostic",
+      "sent_utc": "2026-10-14T19:12:58.567252+00:00",
+      "received_utc": "2026-10-14T19:13:02.265676+00:00",
+      "http_status": 200,
+      "elapsed_seconds": 3.6984184960001585,
+      "analysis": {
+        "data_valid": true,
+        "max_book_age_seconds": 3.106744,
+        "pair_skew_seconds": 2.224155,
+        "clock_gate_pass": false,
+        "clock_failures": [
+          "BOOK_AGE_EXCEEDS_DIAGNOSTIC_LIMIT",
+          "PAIR_TIMESTAMP_SKEW_EXCEEDS_DIAGNOSTIC_LIMIT"
+        ],
+        "execution_verified": false,
+        "routes": {
+          "USD_BTC_ETH_USD": {
+            "gross_top_ratio": "0.9957838351498264252550849802938886467684",
+            "net_top_ratio": "0.9883341117739893620951074811743621752378",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.41670558869946810475537405871810876189",
+                "net_change_usd": "-0.58329441130053189524462594128189123811",
+                "net_return": "-0.0116658882260106379048925188256378247622",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "494.0020128204767271582741523312597406534",
+                "net_change_usd": "-5.9979871795232728417258476687402593466",
+                "net_return": "-0.0119959743590465456834516953374805186932",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1975.600186128555931065019849796683295040",
+                "net_change_usd": "-24.399813871444068934980150203316704960",
+                "net_return": "-0.01219990693572203446749007510165835248",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          },
+          "USD_ETH_BTC_USD": {
+            "gross_top_ratio": "0.9958259380151665018133860863831190240682",
+            "net_top_ratio": "0.9883758996566102559347181008902077151332",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.41879498283051279673590504451038575669",
+                "net_change_usd": "-0.58120501716948720326409495548961424331",
+                "net_return": "-0.0116241003433897440652818991097922848662",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "493.9654908768700354834137826751946607343",
+                "net_change_usd": "-6.0345091231299645165862173248053392657",
+                "net_return": "-0.0120690182462599290331724346496106785314",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1975.387976113542901167507219827586206897",
+                "net_change_usd": "-24.612023886457098832492780172413793103",
+                "net_return": "-0.0123060119432285494162463900862068965515",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "raw_file": "alpaca_fixed_03.json",
+      "sha256": "8f1a327c3c910464ca26e084f3ce9cc8b6a0072d0cc1982b9542af99fec19fbe",
+      "sample_role": "fixed_budget_access_diagnostic",
+      "sent_utc": "2026-10-14T19:13:26.850843+00:00",
+      "received_utc": "2026-10-14T19:13:30.859695+00:00",
+      "http_status": 200,
+      "elapsed_seconds": 4.008849511000335,
+      "analysis": {
+        "data_valid": true,
+        "max_book_age_seconds": 3.560652,
+        "pair_skew_seconds": 3.092526,
+        "clock_gate_pass": false,
+        "clock_failures": [
+          "BOOK_AGE_EXCEEDS_DIAGNOSTIC_LIMIT",
+          "PAIR_TIMESTAMP_SKEW_EXCEEDS_DIAGNOSTIC_LIMIT"
+        ],
+        "execution_verified": false,
+        "routes": {
+          "USD_BTC_ETH_USD": {
+            "gross_top_ratio": "0.9955530663857029324051263589913730481549",
+            "net_top_ratio": "0.9881050694522882300654621885880694792982",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.40525347261441150327310942940347396492",
+                "net_change_usd": "-0.59474652738558849672689057059652603508",
+                "net_return": "-0.0118949305477117699345378114119305207016",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "493.8650233864564274928301399333743223686",
+                "net_change_usd": "-6.1349766135435725071698600666256776314",
+                "net_return": "-0.0122699532270871450143397201332513552628",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1975.016669262264139458033266953706288666",
+                "net_change_usd": "-24.983330737735860541966733046293711334",
+                "net_return": "-0.012491665368867930270983366523146855667",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          },
+          "USD_ETH_BTC_USD": {
+            "gross_top_ratio": "0.9954305845592324518943591475898775268076",
+            "net_top_ratio": "0.9879835039448958103756174123676090744683",
+            "no_positive_snapshot_cycle_before_fees": true,
+            "size_cases": [
+              {
+                "input_usd": "50",
+                "output_usd": "49.39917519724479051878087061838045372342",
+                "net_change_usd": "-0.60082480275520948121912938161954627658",
+                "net_return": "-0.0120164960551041896243825876323909255316",
+                "levels_consumed_each_leg": [
+                  1,
+                  1,
+                  1
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "500",
+                "output_usd": "493.7910977036836921636692715669014084507",
+                "net_change_usd": "-6.2089022963163078363307284330985915493",
+                "net_return": "-0.0124178045926326156726614568661971830986",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              },
+              {
+                "input_usd": "2000",
+                "output_usd": "1974.671856973124025570359412411971830987",
+                "net_change_usd": "-25.328143026875974429640587588028169013",
+                "net_return": "-0.0126640715134379872148202937940140845065",
+                "levels_consumed_each_leg": [
+                  3,
+                  1,
+                  3
+                ],
+                "depth_sufficient": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "performance_backtests": 0,
+  "trades_placed": 0
+}

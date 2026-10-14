@@ -1,0 +1,95 @@
+{
+  "as_of_utc_date": "2026-10-14",
+  "evidence_type": "PUBLIC_SCHEDULE_AND_SINGLE_POSITION_GATES_NOT_ACCOUNT_QUOTES",
+  "capital_usd": 2000,
+  "sources": {
+    "IBKR_COMMISSION": "https://www.interactivebrokers.com/en/pricing/commissions-futures.php?region=americas",
+    "IBKR_CME_FEES": "https://www.interactivebrokers.com/en/accounts/fees/CME.php",
+    "IBKR_MARGIN": "https://www.interactivebrokers.com/en/trading/margin-futures-fops.php?ex=us&hm=us&pm=0&rgt=0&rsk=1&rst=101004110808",
+    "ALPACA_FEES": "https://docs.alpaca.markets/us/docs/crypto-fees",
+    "ALPACA_DATA": "https://docs.alpaca.markets/us/docs/crypto-pricing-data"
+  },
+  "micro_nano_roundtrip": {
+    "assumptions": "Direct IBKR nonmember, public fixed/lowest-volume commission; IBKR is prime and executing broker; no special account discounts. Excludes tax, data, infrastructure, bid/ask slippage and failed-leg unwind.",
+    "contract_side_executions": 22,
+    "commission_usd_per_contract_side": "0.25",
+    "exchange_recovery_usd_per_contract_side": "0.35",
+    "regulatory_recovery_usd_per_contract_side": "0.01",
+    "roundtrip_usd": "13.42",
+    "MES_NES_fee_only_spread_compression_points": "2.684",
+    "MNQ_NNQ_fee_only_spread_compression_points": "6.71",
+    "old_hypothetical_fee_usd": "8",
+    "replaces_old_assumption_for_current_public_schedule_screen_only": true
+  },
+  "public_intraday_initial_margin_per_contract_usd": {
+    "MES": "2247.06",
+    "NES": "224.539",
+    "MNQ": "4194.14",
+    "NNQ": "419.519"
+  },
+  "path_checks": [
+    {
+      "route_state": "micro_first_sp500",
+      "contracts": 1,
+      "symbol": "MES",
+      "margin_usd": "2247.06",
+      "entry_fee_usd": "0.61",
+      "margin_plus_entry_fee_usd": "2247.67",
+      "fails_2000_at_this_state": true,
+      "whole_route_approved": false
+    },
+    {
+      "route_state": "micro_first_nasdaq",
+      "contracts": 1,
+      "symbol": "MNQ",
+      "margin_usd": "4194.14",
+      "entry_fee_usd": "0.61",
+      "margin_plus_entry_fee_usd": "4194.75",
+      "fails_2000_at_this_state": true,
+      "whole_route_approved": false
+    },
+    {
+      "route_state": "middle_insertion_first_five_sp500",
+      "contracts": 5,
+      "symbol": "NES",
+      "margin_usd": "1122.695",
+      "entry_fee_usd": "3.05",
+      "margin_plus_entry_fee_usd": "1125.745",
+      "fails_2000_at_this_state": false,
+      "whole_route_approved": false
+    },
+    {
+      "route_state": "middle_insertion_first_five_nasdaq",
+      "contracts": 5,
+      "symbol": "NNQ",
+      "margin_usd": "2097.595",
+      "entry_fee_usd": "3.05",
+      "margin_plus_entry_fee_usd": "2100.645",
+      "fails_2000_at_this_state": true,
+      "whole_route_approved": false
+    }
+  ],
+  "margin_limitations": [
+    "Public US non-IRA indicative schedule; time-sensitive and not account verification.",
+    "No combo offset inferred; commission, loss reserve, minimum account equity and later states still matter.",
+    "Exposure reduction does not prove margin reduction."
+  ],
+  "alpaca": {
+    "lowest_volume_taker_fee": "0.0025",
+    "lowest_volume_maker_fee": "0.0015",
+    "fee_currency": "received asset",
+    "fee_posting_doc": "Calculated/posted end of day; reserve liabilities rather than spend them again.",
+    "three_taker_gross_ratio_required": "1.007537656837995139229031240",
+    "three_taker_gross_edge_required": "0.007537656837995139229031240",
+    "account_fee_tier_verified": false
+  },
+  "data_access": {
+    "massive_futures_quote": "NOT_ENTITLED",
+    "massive_crypto_book": "HTTP_404",
+    "massive_unified_crypto_snapshot": "NOT_ENTITLED",
+    "alpaca_public_orderbooks": "HTTP_200_FIVE_REQUESTS_THREE_PAIRS",
+    "source_switch_explicit": true
+  },
+  "performance_backtests": 0,
+  "execution_authorized": false
+}
