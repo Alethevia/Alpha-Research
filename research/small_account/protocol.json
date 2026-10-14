@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "status": "H1_M2_H3_I037_FIXED_RULES_REJECTED_NO_VALIDATED_PROFITABLE_STRATEGY",
+  "target": {
+    "initial_capital_usd": 2000,
+    "one_year_return_decimal": 10,
+    "one_year_terminal_equity_usd": 22000,
+    "cash_inflows_allowed": false,
+    "reporting_basis": "after transaction, financing, data and infrastructure costs; before personal taxes"
+  },
+  "unresolved_before_market_experiment": {
+    "venue_and_account_permissions": null,
+    "instrument_and_contract_or_minimum_order_size": null,
+    "point_in_time_data_source_and_license": null,
+    "broker_fee_margin_and_financing_schedule": null,
+    "user_maximum_drawdown_and_dollar_loss_budget": "40% peak-to-trough drawdown confirmed; no deposits assumed. Initial reference loss $800; floor ratchets upward with equity peak.",
+    "fixed_training_validation_and_untouched_test_windows": null
+  },
+  "research_questions": [
+    {
+      "id": "H1",
+      "hypothesis": "Volatility compression followed by a price breakout can precede a directional move large enough to exceed costs.",
+      "candidate_rule": "Build a channel from completed bars; trade a subsequent breakout only after the signal is received. Define the compression threshold and exit rules before evaluation.",
+      "required_data": "actual instrument intraday bars, bid/ask quotes, receipt timestamps, contract calendar if applicable",
+      "falsification": "No positive net expectancy in reserved chronological data, or profits vanish with observed execution delay and costs."
+    },
+    {
+      "id": "H2",
+      "hypothesis": "A temporary price displacement after forced selling may revert when observable sell pressure subsides.",
+      "candidate_rule": "Define the pressure event from contemporaneous trade/quote information, and specify entry after pressure decay without using future lows.",
+      "required_data": "timestamped trades and order-book updates; authenticated liquidation feed if liquidation claims are used",
+      "falsification": "Edge requires knowing the eventual low or an unavailable liquidation timestamp, or disappears after adverse-selection costs."
+    },
+    {
+      "id": "H3",
+      "hypothesis": "Some scheduled-event reactions continue after the first tradable response.",
+      "candidate_rule": "Freeze event types, the signal window and the first allowed entry timestamp. Keep entire events in one validation fold.",
+      "required_data": "release and receipt timestamps, revision-aware event data, actual bid/ask spreads around events",
+      "falsification": "Results depend on revised data, immediate pre-reaction fills, or a handful of events."
+    },
+    {
+      "id": "H4",
+      "hypothesis": "A leading liquid market sometimes predicts a slower related market beyond executable latency and costs.",
+      "candidate_rule": "Freeze market pairs and lag definitions using training data; synchronize by receipt time and test delayed execution.",
+      "required_data": "synchronized quote streams with exchange and receive timestamps on both markets",
+      "falsification": "Apparent lead is a timestamp mismatch or the advantage disappears before an order can arrive."
+    },
+    {
+      "id": "H5",
+      "hypothesis": "Short-horizon mean reversion can exist in a range regime defined using only prior observations.",
+      "candidate_rule": "Freeze the prior-data regime classifier, deviation threshold, stop and timed exit; include a trend-regime failure test.",
+      "required_data": "intraday prices and quotes, realistic marketable-order fills, gap and outage cases",
+      "falsification": "Mean reversion depends on retrospective regime labels, averaging down, or unrealistic stop fills."
+    },
+    {
+      "id": "H6",
+      "hypothesis": "Some pre-specified situations may produce a realized price-move distribution that is underpriced by executable option premiums after spreads, fees and event-volatility changes.",
+      "candidate_rule": "Freeze the predictive event/state model before testing any option structure; compare a funded stock/future expression against a long option or intact debit spread on the same signal.",
+      "required_data": "point-in-time option chains including expired contracts, quotes and sizes, underlying quotes, exercise/settlement terms, event timestamps",
+      "falsification": "The forecast does not beat executable premiums and costs, or apparent payoff bounds fail under assignment/legging; leverage alone does not establish an edge.",
+      "status": "DESIGN_DRAFT_NOT_PREREGISTERED_OR_BACKTESTED"
+    }
+  ],
+  "validation_protocol": [
+    "Latest active scope is ultra-short arbitrage; original broad-universe catalogue and prior performance trials remain historical evidence. No profitability conclusion changes solely because the scope changed.",
+    "H1 fixed crypto baseline, M2 opening-drive subtest and H3 positive FOMC subtest completed historical price screening. Original and roll-aware nano coverage diagnostics completed. Other catalogue hypotheses remain drafts unless separately frozen; H3B is not preregistered or backtested.",
+    "Freeze economic mechanism, parameters, data hashes, code revision, costs, sample windows, primary metric and rejection rules before each experiment.",
+    "Separate chronological development/selection from untouched evaluation; purge or embargo overlapping labels and event groups.",
+    "Count all legacy, failed, interrupted and new variants when addressing selection bias; a new journal does not reset the trial count.",
+    "Record gross/net returns, turnover, actual elapsed time, drawdown, minimum tradable capital, exposure and concentration of profits.",
+    "Test baseline and stressed fees, spreads, delay, gaps, financing, rejected and partial fills; document data limitations explicitly.",
+    "For futures use actual contract multipliers, integer contracts, margin schedules and roll prices; never use ETF returns multiplied by leverage as executable evidence.",
+    "For passive orders evaluate profitability conditional on a fill and verify queue assumptions; touching a limit price does not prove a fill.",
+    "Use block/event resampling and a documented multiple-testing method when warranted; neither Monte Carlo nor a p-value proves future returns.",
+    "A short profitable sample must not be promoted as a demonstrated annual return. Include all cash costs and all inactivity.",
+    "Forward paper validation is a separate dataset with locked rules and order-event reconciliation; no live execution is implemented in this prototype."
+  ],
+  "account_constraints": {
+    "user_reported_brokers": [
+      "moomoo",
+      "IBKR",
+      "Alpaca",
+      "Fidelity"
+    ],
+    "maximum_drawdown_from_high_watermark": 0.4,
+    "initial_reference_floor_usd": 1200,
+    "account_types_and_permissions_verified": false,
+    "aggregate_research_capital_usd": 2000,
+    "do_not_treat_each_broker_as_additional_capital": true
+  },
+  "research_risk_policy": {
+    "risk_per_trade": 0.01,
+    "reduce_new_entry_risk_at_drawdown": 0.2,
+    "pause_and_request_flatten_at_drawdown": 0.3,
+    "maximum_tolerated_drawdown": 0.4,
+    "pause_is_latched": true,
+    "overshoot_possible_and_must_be_reported": true,
+    "live_execution_authorized": false
+  },
+  "completed_research": [
+    {
+      "family": "H1_FIRST_FIXED_BASELINE_20261013",
+      "design": "h1_design.json",
+      "results": "h1_results_20261013.json",
+      "cases": 12,
+      "decision": "REJECT_THIS_FROZEN_H1_BASELINE_FOR_BOTH_ASSETS",
+      "evidence_type": "historical_development",
+      "execution_verified": false
+    },
+    {
+      "family": "M2_OPENING_DRIVE_FIXED_20261013",
+      "design": "m2_design.json",
+      "results": "m2_results_20261013.json",
+      "cases": 36,
+      "decision": "REJECT_THIS_FIXED_OPENING_RULE_BY_TWO_WINDOW_GATE",
+      "evidence_type": "historical_development",
+      "execution_verified": false
+    },
+    {
+      "family": "H3_FOMC_CONTINUATION_20261013",
+      "design": "h3_design.json",
+      "results": "h3_results_20261013.json",
+      "cases": 36,
+      "separately_registered_diagnostics": 2,
+      "decision": "REJECT_THIS_FIXED_POSITIVE_FOMC_RULE; NANO_EXECUTION_UNRESOLVED",
+      "evidence_type": "historical_development",
+      "execution_verified": false
+    },
+    {
+      "family": "M1_NANO_ROLL_COVERAGE_FOLLOWUP_20261013",
+      "design": "nano_roll_design.json",
+      "results": "h3_results_20261013.json",
+      "coverage_diagnostics": 1,
+      "posthoc_followup": true,
+      "decision": "FIXED_DECEMBER_COVERAGE_NOT_REPRESENTATIVE_OF_NEARBY_CONTRACT; QUOTES_AND_SHARED_GAP_UNRESOLVED",
+      "evidence_type": "historical_development",
+      "execution_verified": false
+    },
+    {
+      "family": "I037_RELATIVE_INTRADAY_FIXED_20261013",
+      "design": "i037_design.json",
+      "results": "i037_results_20261013.json",
+      "cases": 36,
+      "separately_registered_diagnostics": 2,
+      "decision": "REJECT_BOTH_FIXED_CASH_LONG_EXPRESSIONS",
+      "evidence_type": "historical_development",
+      "execution_verified": false
+    }
+  ],
+  "research_universe": {
+    "scope": "Broad equity indexes and major crypto; ultra-short arbitrage research per user instruction on 2026-10-14.",
+    "asset_classes": [
+      "broad_equity_index_futures",
+      "broad_equity_index_options",
+      "major_crypto_spot",
+      "account_eligible_major_crypto_futures_and_options"
+    ],
+    "priority_underlyings": [
+      "S&P 500",
+      "Nasdaq-100",
+      "BTC",
+      "ETH"
+    ],
+    "account_access_must_be_verified": true,
+    "research_scope_is_not_live_order_authorization": true,
+    "product_choice_must_follow_net_edge_and_executable_unit_size": true,
+    "no_additional_capital_assumed": true,
+    "all_products_share_the_same_account_drawdown_limit": true,
+    "candidate_queue": "multi_asset_queue.json",
+    "scope_specification": "ultrashort_arbitrage_scope_20261014.json"
+  },
+  "research_catalogues": [
+    {
+      "id": "IDEA_100_MECHANISM_SCREEN_20261013",
+      "catalogue": "idea_catalogue_100.json",
+      "report": "idea_100_directions_20261013.md",
+      "validation_intake": "idea_validation_queue.json",
+      "arithmetic_and_checks": "idea_screen_results_20261013.json",
+      "scope": "20 correlated families / 100 distinguishable questions, not independent alphas or completed performance experiments",
+      "initial_desk_screen": {
+        "priority_minimum_falsification": 12,
+        "evidence_required": 61,
+        "park_current_constraints": 27
+      },
+      "new_performance_backtests": 0,
+      "validated_profitable": 0,
+      "not_performance_preregistration": true
+    }
+  ],
+  "research_progress": "idea_validation_progress_20261013.json",
+  "scope_history": [
+    {
+      "superseded_on": "2026-10-14",
+      "reason": "Latest user narrowed to broad markets, ultra-short arbitrage, futures/options/crypto.",
+      "previous_research_universe": {
+        "scope": "Any financial product may be investigated, as clarified by user on 2026-10-12 America/New_York.",
+        "asset_classes": [
+          "crypto_spot",
+          "crypto_derivatives",
+          "stocks",
+          "etfs_including_leveraged_inverse",
+          "equity_commodity_rate_fx_futures",
+          "listed_options",
+          "fx",
+          "bonds",
+          "other_financial_products"
+        ],
+        "account_access_must_be_verified": true,
+        "research_scope_is_not_live_order_authorization": true,
+        "product_choice_must_follow_net_edge_and_executable_unit_size": true,
+        "no_additional_capital_assumed": true,
+        "all_products_share_the_same_account_drawdown_limit": true,
+        "candidate_queue": "multi_asset_queue.json"
+      }
+    }
+  ],
+  "research_questions_scope_note": "H1-H6 below are retained historical conjectures, not the active queue. Active A01-A04 and separately classified watchlist are defined in ultrashort_arbitrage_scope_20261014.json",
+  "active_research_scope": "ultrashort_arbitrage_scope_20261014.json",
+  "mathematical_research": "arbitrage_conjectures_20261014.json",
+  "latest_execution_gate": {
+    "as_of": "2026-10-14",
+    "report": "execution_gate_20261014.md",
+    "costs": "execution_cost_gate_20261014.json",
+    "snapshot_results": "triangle_gate_results_20261014.json",
+    "data_access_diagnostics": 5,
+    "snapshot_size_cases": 30,
+    "performance_backtests": 0,
+    "execution_ready": false
+  }
+}

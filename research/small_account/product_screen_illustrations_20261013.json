@@ -1,0 +1,283 @@
+{
+  "evidence_type": "synthetic_product_arithmetic_not_backtest",
+  "input_sha256": "a2d82b6ae4f973458dab08c95590daf35f3f52e328db65b6d02e51ff4770f3bb",
+  "assumptions": [
+    "This is a unit-size comparison, not market signals or recommended orders.",
+    "The $20 risk budget (1%) and $300 unallocated cash reserve are research assumptions, not additional user requirements.",
+    "Every price, stop, premium and all-in execution cost in these examples is hypothetical. Public multipliers/margin references are separately identified.",
+    "Public initial margin is a dated reference, not verified account buying power; fees, margin changes, minimum account equity and liquidation buffers still need verification.",
+    "Each row is an alternative standalone proposal. No simultaneous portfolio or target return is inferred.",
+    "All verification flags remain false; none of these rows authorizes execution."
+  ],
+  "results": [
+    {
+      "id": "NES_20_POINT_STOP_ILLUSTRATION",
+      "kind": "future",
+      "status": "ARITHMETIC_FITS_BUT_UNVERIFIED",
+      "risk_basis": "planned_stop_not_max_loss",
+      "risk_budget_usd": "20",
+      "minimum_trade_loss_including_cost_usd": "12",
+      "risk_sized_quantity": "1",
+      "capital_sized_quantity": "4",
+      "provisional_quantity": "1",
+      "provisional_planned_loss_usd": "12",
+      "provisional_capital_usd": "355.70",
+      "arithmetic_blockers": [],
+      "unverified_requirements": [
+        "account_permission",
+        "account_minimum_equity",
+        "contract_terms",
+        "all_in_costs",
+        "capital_requirement",
+        "executable_quotes",
+        "exercise_delivery_funding",
+        "portfolio_risk_headroom"
+      ],
+      "execution_authorized": false,
+      "limitations": [
+        "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+        "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+        "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+        "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+        "Independent alternatives must not be summed into a simultaneous portfolio.",
+        "No return estimate, fill simulation, or brokerage order is produced."
+      ]
+    },
+    {
+      "id": "MES_20_POINT_STOP_ILLUSTRATION",
+      "kind": "future",
+      "status": "ARITHMETIC_BLOCKED_OR_INCOMPLETE",
+      "risk_basis": "planned_stop_not_max_loss",
+      "risk_budget_usd": "20",
+      "minimum_trade_loss_including_cost_usd": "102",
+      "risk_sized_quantity": "0",
+      "capital_sized_quantity": "0",
+      "provisional_quantity": "0",
+      "provisional_planned_loss_usd": "0",
+      "provisional_capital_usd": "0",
+      "arithmetic_blockers": [
+        "minimum_trade_exceeds_planned_risk_budget",
+        "minimum_trade_exceeds_available_funds_after_reserve"
+      ],
+      "unverified_requirements": [
+        "account_permission",
+        "account_minimum_equity",
+        "contract_terms",
+        "all_in_costs",
+        "capital_requirement",
+        "executable_quotes",
+        "exercise_delivery_funding",
+        "portfolio_risk_headroom"
+      ],
+      "execution_authorized": false,
+      "limitations": [
+        "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+        "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+        "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+        "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+        "Independent alternatives must not be summed into a simultaneous portfolio.",
+        "No return estimate, fill simulation, or brokerage order is produced."
+      ]
+    },
+    {
+      "id": "NNQ_50_POINT_STOP_ILLUSTRATION",
+      "kind": "future",
+      "status": "ARITHMETIC_FITS_BUT_UNVERIFIED",
+      "risk_basis": "planned_stop_not_max_loss",
+      "risk_budget_usd": "20",
+      "minimum_trade_loss_including_cost_usd": "12",
+      "risk_sized_quantity": "1",
+      "capital_sized_quantity": "2",
+      "provisional_quantity": "1",
+      "provisional_planned_loss_usd": "12",
+      "provisional_capital_usd": "647.998",
+      "arithmetic_blockers": [],
+      "unverified_requirements": [
+        "account_permission",
+        "account_minimum_equity",
+        "contract_terms",
+        "all_in_costs",
+        "capital_requirement",
+        "executable_quotes",
+        "exercise_delivery_funding",
+        "portfolio_risk_headroom"
+      ],
+      "execution_authorized": false,
+      "limitations": [
+        "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+        "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+        "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+        "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+        "Independent alternatives must not be summed into a simultaneous portfolio.",
+        "No return estimate, fill simulation, or brokerage order is produced."
+      ]
+    },
+    {
+      "id": "STANDARD_LONG_OPTION_1_DOLLAR_QUOTE",
+      "kind": "long_option",
+      "status": "ARITHMETIC_BLOCKED_OR_INCOMPLETE",
+      "risk_basis": "entire_premium_at_risk_before_exercise",
+      "risk_budget_usd": "20",
+      "minimum_trade_loss_including_cost_usd": "102",
+      "risk_sized_quantity": "0",
+      "capital_sized_quantity": "16",
+      "provisional_quantity": "0",
+      "provisional_planned_loss_usd": "0",
+      "provisional_capital_usd": "0",
+      "arithmetic_blockers": [
+        "minimum_trade_exceeds_planned_risk_budget"
+      ],
+      "unverified_requirements": [
+        "account_permission",
+        "account_minimum_equity",
+        "contract_terms",
+        "all_in_costs",
+        "capital_requirement",
+        "executable_quotes",
+        "exercise_delivery_funding",
+        "portfolio_risk_headroom"
+      ],
+      "execution_authorized": false,
+      "limitations": [
+        "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+        "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+        "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+        "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+        "Independent alternatives must not be summed into a simultaneous portfolio.",
+        "No return estimate, fill simulation, or brokerage order is produced."
+      ]
+    },
+    {
+      "id": "NANOS_LONG_OPTION_8_DOLLAR_QUOTE",
+      "kind": "long_option",
+      "status": "ARITHMETIC_FITS_BUT_UNVERIFIED",
+      "risk_basis": "entire_premium_at_risk_cash_settled",
+      "risk_budget_usd": "20",
+      "minimum_trade_loss_including_cost_usd": "8.50",
+      "risk_sized_quantity": "2",
+      "capital_sized_quantity": "200",
+      "provisional_quantity": "2",
+      "provisional_planned_loss_usd": "17.00",
+      "provisional_capital_usd": "17.00",
+      "arithmetic_blockers": [],
+      "unverified_requirements": [
+        "account_permission",
+        "account_minimum_equity",
+        "contract_terms",
+        "all_in_costs",
+        "capital_requirement",
+        "executable_quotes",
+        "exercise_delivery_funding",
+        "portfolio_risk_headroom"
+      ],
+      "execution_authorized": false,
+      "limitations": [
+        "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+        "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+        "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+        "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+        "Independent alternatives must not be summed into a simultaneous portfolio.",
+        "No return estimate, fill simulation, or brokerage order is produced."
+      ]
+    },
+    {
+      "id": "DEBIT_SPREAD_015_QUOTE_ILLUSTRATION",
+      "kind": "option_spread",
+      "status": "ARITHMETIC_FITS_BUT_UNVERIFIED",
+      "risk_basis": "expiry_payoff_bound_conditional_on_intact_legs",
+      "risk_budget_usd": "20",
+      "minimum_trade_loss_including_cost_usd": "19",
+      "risk_sized_quantity": "1",
+      "capital_sized_quantity": "89",
+      "provisional_quantity": "1",
+      "provisional_planned_loss_usd": "19",
+      "provisional_capital_usd": "19",
+      "arithmetic_blockers": [],
+      "unverified_requirements": [
+        "account_permission",
+        "account_minimum_equity",
+        "contract_terms",
+        "all_in_costs",
+        "capital_requirement",
+        "executable_quotes",
+        "exercise_delivery_funding",
+        "portfolio_risk_headroom"
+      ],
+      "execution_authorized": false,
+      "limitations": [
+        "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+        "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+        "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+        "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+        "Independent alternatives must not be summed into a simultaneous portfolio.",
+        "No return estimate, fill simulation, or brokerage order is produced."
+      ]
+    },
+    {
+      "id": "STOCK_50_PRICE_050_STOP_ILLUSTRATION",
+      "kind": "stock",
+      "status": "ARITHMETIC_FITS_BUT_UNVERIFIED",
+      "risk_basis": "planned_stop_not_max_loss",
+      "risk_budget_usd": "20",
+      "minimum_trade_loss_including_cost_usd": "2.52",
+      "risk_sized_quantity": "34",
+      "capital_sized_quantity": "33",
+      "provisional_quantity": "33",
+      "provisional_planned_loss_usd": "19.16",
+      "provisional_capital_usd": "1652.66",
+      "arithmetic_blockers": [],
+      "unverified_requirements": [
+        "account_permission",
+        "account_minimum_equity",
+        "contract_terms",
+        "all_in_costs",
+        "capital_requirement",
+        "executable_quotes",
+        "exercise_delivery_funding",
+        "portfolio_risk_headroom"
+      ],
+      "execution_authorized": false,
+      "limitations": [
+        "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+        "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+        "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+        "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+        "Independent alternatives must not be summed into a simultaneous portfolio.",
+        "No return estimate, fill simulation, or brokerage order is produced."
+      ]
+    },
+    {
+      "id": "CRYPTO_100000_PRICE_1000_STOP_ILLUSTRATION",
+      "kind": "crypto_spot",
+      "status": "ARITHMETIC_FITS_BUT_UNVERIFIED",
+      "risk_basis": "planned_stop_not_max_loss",
+      "risk_budget_usd": "20",
+      "minimum_trade_loss_including_cost_usd": "0.1700",
+      "risk_sized_quantity": "0.01176470",
+      "capital_sized_quantity": "0.01688182",
+      "provisional_quantity": "0.01176470",
+      "provisional_planned_loss_usd": "19.99999000",
+      "provisional_capital_usd": "1184.70529000",
+      "arithmetic_blockers": [],
+      "unverified_requirements": [
+        "account_permission",
+        "account_minimum_equity",
+        "contract_terms",
+        "all_in_costs",
+        "capital_requirement",
+        "executable_quotes",
+        "exercise_delivery_funding",
+        "portfolio_risk_headroom"
+      ],
+      "execution_authorized": false,
+      "limitations": [
+        "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+        "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+        "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+        "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+        "Independent alternatives must not be summed into a simultaneous portfolio.",
+        "No return estimate, fill simulation, or brokerage order is produced."
+      ]
+    }
+  ]
+}

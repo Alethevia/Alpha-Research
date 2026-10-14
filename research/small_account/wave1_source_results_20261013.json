@@ -1,0 +1,153 @@
+{
+  "charter_commit": "16d03f6124041424f29dbcc9a1f439a72faa44b6",
+  "source_feasibility_only": true,
+  "performance_backtests": 0,
+  "execution_authorized": false,
+  "source_intake": {
+    "date": "2025-01-02",
+    "population_8k_count": 156,
+    "selected_count": 3,
+    "selection": "first three by numeric CIK then accession path",
+    "coverage_limit": "One date, low-CIK convenience ordering; not representative or a return study.",
+    "records": [
+      {
+        "cik": "8818",
+        "company": "Avery Dennison Corp",
+        "acceptance_et_compact": "20250102064533",
+        "url": "https://www.sec.gov/Archives/edgar/data/8818/0000008818-25-000001.txt",
+        "sha256": "0f479f1e6d2d6056873439925c6fcc843dbd5a7b2b90490fa1620c323124b596",
+        "first_public_timestamp_verified": false,
+        "event_date": "2024-12-27",
+        "effective_date": "2024-12-31",
+        "category": "director resignation",
+        "attached_news": false,
+        "earlier_publication_found": null,
+        "conclusion": "Internal notification/effective dates do not establish earlier public availability. First public time unknown."
+      },
+      {
+        "cik": "20520",
+        "company": "Frontier Communications Parent, Inc.",
+        "acceptance_et_compact": "20250102161029",
+        "url": "https://www.sec.gov/Archives/edgar/data/20520/0001140361-25-000077.txt",
+        "sha256": "82dd862fefa014743ae9ea88058241fc70bf36a32ac54a3fa94c34c41200b50b",
+        "first_public_timestamp_verified": false,
+        "event_date": "2024-12-31",
+        "category": "credit agreement",
+        "attached_news": false,
+        "earlier_publication_found": null,
+        "conclusion": "Agreement effective date is not publication time. SEC acceptance recovered; not proven first public."
+      },
+      {
+        "cik": "22444",
+        "company": "COMMERCIAL METALS Co",
+        "acceptance_et_compact": "20250102083213",
+        "url": "https://www.sec.gov/Archives/edgar/data/22444/0000022444-25-000002.txt",
+        "sha256": "a9dc2b0c4eeb133f9b3fb04be90931e243c01876a9503300bd27829229e37b7e",
+        "first_public_timestamp_verified": false,
+        "event_date": "2025-01-02",
+        "category": "regular dividend",
+        "attached_news": true,
+        "attachment_has_intraday_timestamp": false,
+        "issuer_wire_timestamp_et": "2025-01-02T08:47:00-05:00",
+        "sec_acceptance_et": "2025-01-02T08:32:13-05:00",
+        "wire_minus_acceptance_seconds": 887,
+        "conclusion": "Wire timestamp is later than SEC acceptance; do not assume wire-first ordering. Original receipt time and earlier channels unknown. Dividend amount alone is not surprise or alpha."
+      }
+    ]
+  },
+  "tender_synthetic_arithmetic": {
+    "evidence_type": "synthetic",
+    "capital": 2000,
+    "shares": 20,
+    "fee_ceiling_cases": [
+      {
+        "assumed_all_in_cost_usd": 0,
+        "conditional_80_dollar_payout_max_entry_per_share": 80.0,
+        "retrospective_92_dollar_payout_max_entry_per_share": 92.0
+      },
+      {
+        "assumed_all_in_cost_usd": 25,
+        "conditional_80_dollar_payout_max_entry_per_share": 78.75,
+        "retrospective_92_dollar_payout_max_entry_per_share": 90.75
+      },
+      {
+        "assumed_all_in_cost_usd": 50,
+        "conditional_80_dollar_payout_max_entry_per_share": 77.5,
+        "retrospective_92_dollar_payout_max_entry_per_share": 89.5
+      }
+    ],
+    "assumed_entry_79_fee_25_cases": [
+      {
+        "disposition_price": 80,
+        "net_pnl_usd": -5.0,
+        "total_account_return": -0.0025
+      },
+      {
+        "disposition_price": 92,
+        "net_pnl_usd": 235.0,
+        "total_account_return": 0.1175
+      },
+      {
+        "disposition_price": 60,
+        "net_pnl_usd": -405.0,
+        "total_account_return": -0.2025
+      }
+    ],
+    "taxes_and_holding_cost_assumed_for_calculator_only": 0,
+    "prices_are_hypothetical_not_market_observations": true,
+    "limits": "80 is conditional on completion under unchanged original terms, not a capital guarantee. 92 was learned after expiry. Account fees, tax status, aggregate holdings and broker deadline remain unverified. No recommendation or historical PnL."
+  },
+  "I019_terms_audit": {
+    "case": "Wix March-April 2026 expired historical tender",
+    "convenience_case_not_population": true,
+    "original_range": [
+      80,
+      92
+    ],
+    "original_date": "2026-03-05",
+    "expiry_as_written": "one minute after 11:59 p.m., New York City time, April 1, 2026",
+    "amendments": [
+      {
+        "number": 1,
+        "date": "2026-04-02",
+        "role": "preliminary results"
+      },
+      {
+        "number": 2,
+        "date": "2026-04-03",
+        "role": "final results"
+      }
+    ],
+    "final_price_usd": 92,
+    "preliminary_shares": 18718009,
+    "final_accepted_shares": 17577250,
+    "final_all_valid_tenders_accepted": true,
+    "odd_lot_allocation_increment_observed": false,
+    "why": "Final valid tenders all accepted. No extra odd-lot allocation shown. Not all guaranteed deliveries reached the required settlement period.",
+    "qualification": "Fewer than 100 aggregate beneficial/record shares, all properly tendered at/below final price and not withdrawn, odd-lot certification complete. Separate accounts do not evade aggregate ownership.",
+    "payment_priority": "Same payment time as other shares, not faster settlement.",
+    "unresolved": [
+      "Executable entry quote after public announcement",
+      "User-specific broker deadline and fees",
+      "Aggregate beneficial holding/eligibility",
+      "Tax documentation/withholding and release date",
+      "Consecutive offer population including cancellations and oversubscription"
+    ],
+    "decision": "Mechanism verified, no account execution approval, historical PnL or validated alpha."
+  },
+  "sources": {
+    "daily_master_index": "https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250102.idx",
+    "cmc_primary_wire": "https://www.prnewswire.com/news-releases/cmc-announces-quarterly-dividend-of-0-18-per-share-302341246.html",
+    "wix_original_offer": "https://www.sec.gov/Archives/edgar/data/1576789/000117891326000759/exhibit_99a-1a.htm",
+    "wix_instructions": "https://www.sec.gov/Archives/edgar/data/1576789/000117891326000759/exhibit_99a-1e.htm",
+    "wix_amendment1": "https://www.sec.gov/Archives/edgar/data/1576789/000117891326001974/zk2635013.htm",
+    "wix_amendment2": "https://www.sec.gov/Archives/edgar/data/1576789/000117891326001986/zk2635022.htm",
+    "wix_final": "https://www.sec.gov/Archives/edgar/data/1576789/000117891326001986/exhibit_99a-5d.htm"
+  },
+  "retrieval_limitations": [
+    "Search tool could not open octet-stream index and some HTML; direct normal public downloads succeeded and are hashed.",
+    "Present-day archive pages are not contemporaneous feed captures.",
+    "Limited search found no earlier AVY/FYBR issuer announcement; that does not prove absence.",
+    "No NLP directional scoring or price backtest. Search accidentally exposed a third-party CMC one-day return snippet, which was not used; no future CMC return can be called an unseen holdout."
+  ]
+}

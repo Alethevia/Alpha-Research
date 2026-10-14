@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-14",
+  "scope": "ultrashort_arbitrage_scope_20261014.json",
+  "status": "CONJECTURES_ALGEBRA_AND_SYNTHETIC_COUNTEREXAMPLES_ONLY",
+  "new_performance_backtests": 0,
+  "novelty_verified": false,
+  "validated_profitable": 0,
+  "live_execution_authorized": false,
+  "priority_joint_application": [
+    "N01",
+    "N02",
+    "N03"
+  ],
+  "not_independent_alphas": true,
+  "performance_preregistration": false,
+  "report": "arbitrage_conjectures_20261014.md",
+  "code": "arbitrage_math_lab.py",
+  "results": "arbitrage_math_results_20261014.json",
+  "hypotheses": [
+    {
+      "id": "N01",
+      "topic": "Integer interleaving of micro/nano futures fills",
+      "conditional_result": "Peak common-factor exposure is minimized by the middle insertion. Under fixed size-independent waits, the variance-minimizing split is the nearest feasible integer to r*t_after/(t_before+t_after).",
+      "attack": "Peak exposure reduction does not imply lower time-integrated risk, fees, margin or higher profit.",
+      "decision": "RETAIN_NARROW_APPLICATION_FOR_DATA_TEST",
+      "novelty_status": "EXISTING_SEQUENCING_MATH_SPECIFIC_CME_APPLICATION_NOT_MATCHED_IN_LIMITED_SEARCH",
+      "prior_art": [
+        "S1",
+        "S4"
+      ]
+    },
+    {
+      "id": "N02",
+      "topic": "Dependence-aware failed-leg screening",
+      "conditional_result": "A union bound gives a conditional lower expected-value bound.",
+      "attack": "Marginal fill rates do not determine joint execution PnL; a stop order does not prove a finite loss cap.",
+      "decision": "RETAIN_AS_SCENARIO_SCREEN_NOT_RISK_FREE_ALPHA",
+      "novelty_status": "KNOWN_PROBABILITY_AND_EXECUTION_RISK_TOOLS_NO_NOVEL_THEOREM_CLAIM",
+      "prior_art": [
+        "S3"
+      ]
+    },
+    {
+      "id": "N03",
+      "topic": "Capital-feasible paths with adverse fill branches",
+      "conditional_result": "Deterministic minimum starting capital is a bottleneck path problem.",
+      "attack": "An affordable terminal portfolio or one successful path is not a robust execution policy.",
+      "decision": "RETAIN_PATH_AND_POLICY_APPLICATION",
+      "novelty_status": "KNOWN_GRAPH_AND_DYNAMIC_PROGRAMMING_TOOLS_SPECIFIC_APPLICATION_NOVELTY_UNRESOLVED",
+      "prior_art": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "N04",
+      "topic": "Coarse/fine quote-grid phase arbitrage",
+      "conditional_result": "Outward rounding around a shared simultaneous value cannot make an executable crossing.",
+      "attack": "Last trades and midpoints are not executable bid/ask prices.",
+      "decision": "REJECT_GRID_ROUNDING_ONLY_CLAIM",
+      "novelty_status": "TICK_SIZE_LITERATURE_EXISTS_NOT_ORIGINAL_ALPHA",
+      "prior_art": [
+        "S5"
+      ]
+    },
+    {
+      "id": "N05",
+      "topic": "Reverse cross-venue cycle without transfers",
+      "conditional_result": "Four confirmed equal-quantity fills restore per-venue coin units and have an exact incremental cash identity.",
+      "attack": "Reverse opportunity need not arrive by the deadline; seed inventory keeps directional exposure.",
+      "decision": "REJECT_GUARANTEED_RESET_RETAIN_ONLY_FULLY_ACCOUNTED_STATISTICAL_VERSION",
+      "novelty_status": "INVENTORY_ARBITRAGE_ALREADY_STUDIED",
+      "prior_art": [
+        "S6"
+      ]
+    },
+    {
+      "id": "N06",
+      "topic": "Option payoff certificate implies fast cashout",
+      "conditional_result": "A maturity payoff inequality does not bound the interim executable bid.",
+      "attack": "A cash-payoff package can gain at maturity but lose on mandatory short-horizon liquidation.",
+      "decision": "REJECT_MATURITY_TO_INTRADAY_INFERENCE",
+      "novelty_status": "STANDARD_HORIZON_AND_LIQUIDITY_DISTINCTION_NO_NOVEL_THEOREM_CLAIM",
+      "prior_art": []
+    }
+  ],
+  "novelty_search": {
+    "queries": [
+      "arbitrage integer constraints minimum lot size transaction costs research paper",
+      "cryptocurrency arbitrage inventory rebalancing latency settlement risk paper",
+      "tick size price discreteness arbitrage futures micro e mini nano research",
+      "robust arbitrage transaction costs consistent price systems model uncertainty paper",
+      "multi leg arbitrage execution risk optimal ordering legs paper",
+      "option arbitrage bid ask linear programming constraints convexity executable quotes paper",
+      "arbitrage temporary hedge leg capital margin execution sequencing",
+      "arbitrage \"prefix\" \"solvency\"",
+      "arbitrage quote lifetime joint survival partial fill robust bound",
+      "arbitrage \"inventory\" \"reverse\" \"rebalancing\" cycle",
+      "\"micro\" \"nano\" futures \"execution\" \"sequence\" arbitrage",
+      "futures hedge \"interleaving\" \"integer\"",
+      "\"arbitrage\" \"Fréchet\" execution",
+      "\"arbitrage\" \"partial fills\" \"union bound\"",
+      "stock size problem minimize maximum partial sums sequencing paper",
+      "arbitrage execution temporary hedges margin sequence capital constraint paper",
+      "\"Execution Risk in High-Frequency Arbitrage\" author"
+    ],
+    "query_count": 17,
+    "coverage": "Public web search, retrieved abstracts and selected full-text sections. Not exhaustive journals, theses, patents, non-English or unpublished work.",
+    "negative_result_rule": "No direct match among retrieved results is not proof of absence. Highly specific queries also returned unrelated results.",
+    "first_publication_correction": "Nordén et al. DOI 10.1002/fut.70044 first online 2025-10-03; 2026 volume date is not first publication.",
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://link.springer.com/article/10.1007/s00780-018-0369-3",
+        "reviewed": "abstract and selected full-text introduction/definitions"
+      },
+      {
+        "id": "S2",
+        "url": "https://thaijmath.com/index.php/thaijmath/article/view/1883",
+        "reviewed": "abstract and publication metadata only"
+      },
+      {
+        "id": "S3",
+        "url": "https://pure.eur.nl/en/publications/execution-risk-high-frequency-arbitrage/",
+        "doi": "10.1287/mnsc.1120.1541",
+        "reviewed": "author institutional record/abstract; not full proof audit"
+      },
+      {
+        "id": "S4",
+        "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2016.71",
+        "reviewed": "conference abstract/problem statement; different constraints from our simple special case"
+      },
+      {
+        "id": "S5",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/fut.70044",
+        "reviewed": "abstract, metadata and introduction"
+      },
+      {
+        "id": "S6",
+        "url": "https://academic.oup.com/rof/article/28/4/1345/7609678",
+        "reviewed": "abstract and selected inventory discussion returned in retrieval"
+      }
+    ]
+  },
+  "next_empirical_requirements": [
+    "Exact same-expiry bid/ask/depth and order receipt/acknowledgment timestamps.",
+    "Actual account margin by intermediate position, collateral and full per-contract/per-order charges.",
+    "Same frozen signal and candidate events across route comparisons; all missed and aborted cycles retained.",
+    "Conditional joint outcome distribution, latency, basis markouts and residual/unwind losses, not unconditional fill averages.",
+    "Seed-coin inventory mark-to-market, hedge or session-end liquidation and total-capital accounting.",
+    "Independent chronological evaluation and future paper data; no model proof substituted for observed edge."
+  ]
+}

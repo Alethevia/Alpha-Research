@@ -1,0 +1,67 @@
+{
+  "evidence_type": "synthetic_exact_arithmetic_and_counterexamples",
+  "market_data_used": false,
+  "new_performance_backtests": 0,
+  "novelty_verified": false,
+  "profitable_strategy_validated": false,
+  "N01": {
+    "ratios_checked": 100,
+    "arrangements_checked": 5150,
+    "ratio_10_peak_units_by_insertion": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "MES_NES_peak_usd_per_point_first_micro": 5,
+    "MES_NES_peak_usd_per_point_middle_micro": 2.5,
+    "synthetic_variance_coeff_naive": "1/10",
+    "synthetic_variance_coeff_split": "50",
+    "fixed_latency_optimality_cases_checked": 1760,
+    "asymmetric_latency_unconstrained_split": 1,
+    "asymmetric_latency_unconstrained_variance_coeff": "9",
+    "asymmetric_latency_peak_5_split": 5,
+    "asymmetric_latency_peak_5_variance_coeff": "25",
+    "meaning": "Peak position exposure only; not a margin, total-risk or profit bound."
+  },
+  "N02": {
+    "joint_distributions_checked": 1001,
+    "independent_expected_usd": "13/40",
+    "worst_dependent_expected_usd": "-1/8",
+    "meaning": "Same marginal fill rates permit opposite expected-PnL signs."
+  },
+  "N03": {
+    "original_minimum_capital": 2500,
+    "hypothetical_added_route_capital": 1800,
+    "added_path": [
+      "start",
+      "protected",
+      "hedged",
+      "flat_goal"
+    ],
+    "adverse_branch_optimal_action": "abstain",
+    "meaning": "All graph states, prices, collateral and outcomes are fictional."
+  },
+  "N04": {
+    "grid_inequalities_checked": 4002,
+    "decision": "Reject grid-rounding-only executable arbitrage under common-value assumptions."
+  },
+  "N05": {
+    "first_trade_incremental_cash_usd": "1/10",
+    "forced_reset_cycle_cash_usd": "-1/10",
+    "favorable_reset_cycle_cash_usd": "1/4",
+    "decision": "Reject guaranteed finite-time reset; full account still carries seed inventory risk."
+  },
+  "N06": {
+    "maturity_pnl_usd": 5,
+    "short_horizon_liquidation_pnl_usd": -5,
+    "decision": "Reject inference from maturity payoff to intraday cashout."
+  }
+}

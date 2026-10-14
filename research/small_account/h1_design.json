@@ -1,0 +1,49 @@
+{
+  "experiment_family": "H1_FIRST_FIXED_BASELINE_20261013",
+  "evidence_type": "historical_development",
+  "selection_status": "Rules fixed before first performance calculation; no parameter search",
+  "initial_capital_usd": 2000,
+  "symbols": ["BTC/USD", "ETH/USD"],
+  "capital_interpretation": "Each symbol is a separate alternative $2000 account simulation, never added together",
+  "timeframe": "1Hour",
+  "periods": [
+    {"name": "development_2024", "start": "2024-01-01T00:00:00Z", "end": "2025-01-01T00:00:00Z"},
+    {"name": "chronological_check_2025", "start": "2025-01-01T00:00:00Z", "end": "2026-01-01T00:00:00Z"}
+  ],
+  "reserved": "No 2026 performance calculation in this experiment; independent forward collection still required",
+  "data_inspection_disclosure": "Five hourly bars per symbol on 2025-01-01 were inspected for API response structure before this design; 2025 is not represented as a fully blinded test",
+  "strategy": {
+    "channel_hours": 20,
+    "atr_hours": 14,
+    "compression_reference_hours": 120,
+    "compression_ratio": 0.8,
+    "compression_recent_hours": 6,
+    "entry": "close exceeds previous 20 completed highs, and compression occurred within previous 6 completed bars",
+    "signal_to_open_bar_offset": 2,
+    "exit_channel_hours": 10,
+    "stop_atr_multiple": 2,
+    "maximum_hold_hours": 48,
+    "exit": "close crosses entry-price-minus-2ATR, previous 10-bar low, or maximum holding time; exit at a later open",
+    "long_only": true,
+    "leverage": 1,
+    "max_entry_notional_fraction": 0.95,
+    "quantity_step_research_assumption": 0.00000001,
+    "minimum_entry_usd_research_assumption": 10,
+    "broker_asset_precision_verified": false
+  },
+  "risk": {"risk_per_trade": 0.01, "reduce_drawdown": 0.20, "pause_drawdown": 0.30, "max_drawdown": 0.40},
+  "cost_cases": [
+    {"name": "zero_cost_diagnostic", "fee_per_side": 0, "slippage_per_side": 0, "monthly_overhead_usd": 0},
+    {"name": "alpaca_tier1_cost_assumption", "fee_per_side": 0.0025, "slippage_per_side": 0.001, "monthly_overhead_usd": 10},
+    {"name": "double_variable_cost_stress", "fee_per_side": 0.005, "slippage_per_side": 0.002, "monthly_overhead_usd": 10}
+  ],
+  "cost_disclosure": "Current Alpaca tier-1 taker fee used as a forward-cost assumption on historical prices, not asserted as the historical fee schedule. Slippage and $10/month overhead are assumed. Fees modeled in credited assets. No fee-tier optimization.",
+  "primary_metric": "One-calendar-year net return together with observed marked-equity drawdown",
+  "rejection_rules": [
+    "If both chronological windows lose after assumed costs, do not advance this frozen baseline to paper trading.",
+    "If only gross performance is positive, treat cost sensitivity as a mechanism failure for this route.",
+    "A 40% observed drawdown breach fails the risk condition; never clip losses to the threshold.",
+    "Even profitable bars cannot certify executable returns without quotes, sizes, receipt times and permission checks."
+  ],
+  "baseline_status": "Price-proxy falsification screen; not an execution replay or deployment approval"
+}

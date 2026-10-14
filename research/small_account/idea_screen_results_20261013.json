@@ -1,0 +1,304 @@
+{
+  "evidence_type": "desk_screen_and_analytic_or_synthetic_arithmetic_not_backtest",
+  "catalogue_sha256": "a2d9dc414a35a72e13602c9477a7679af75c7520f770f50238e74cdeb8d5c68d",
+  "validation_queue_sha256": "0f88a38b83b38290599cd543c3ca25650ef9440d7e3f7d0321d7cf68f7b8cbdb",
+  "counts": {
+    "B": 61,
+    "C": 27,
+    "P": 12
+  },
+  "ideas": 100,
+  "families": 20,
+  "source_anchors": 20,
+  "new_performance_backtests": 0,
+  "validated_profitable": 0,
+  "execution_authorized": false,
+  "priority_order": [
+    "I037",
+    "I010",
+    "I019",
+    "I001",
+    "I023",
+    "I076",
+    "I002",
+    "I006",
+    "I015",
+    "I017",
+    "I049",
+    "I095"
+  ],
+  "equal_growth_hurdles": [
+    {
+      "opportunities": 8,
+      "equal_net_equity_growth_per_opportunity": 0.3495037187195417,
+      "equal_net_R_per_opportunity_at_risk_fraction": 34.95037187195417
+    },
+    {
+      "opportunities": 12,
+      "equal_net_equity_growth_per_opportunity": 0.22118855031199378,
+      "equal_net_R_per_opportunity_at_risk_fraction": 22.118855031199377
+    },
+    {
+      "opportunities": 50,
+      "equal_net_equity_growth_per_opportunity": 0.049126491893648525,
+      "equal_net_R_per_opportunity_at_risk_fraction": 4.912649189364853
+    },
+    {
+      "opportunities": 100,
+      "equal_net_equity_growth_per_opportunity": 0.024268759600549628,
+      "equal_net_R_per_opportunity_at_risk_fraction": 2.426875960054963
+    },
+    {
+      "opportunities": 250,
+      "equal_net_equity_growth_per_opportunity": 0.00963772772683695,
+      "equal_net_R_per_opportunity_at_risk_fraction": 0.963772772683695
+    },
+    {
+      "opportunities": 500,
+      "equal_net_equity_growth_per_opportunity": 0.00480730875468703,
+      "equal_net_R_per_opportunity_at_risk_fraction": 0.48073087546870297
+    },
+    {
+      "opportunities": 1000,
+      "equal_net_equity_growth_per_opportunity": 0.0024007725229899433,
+      "equal_net_R_per_opportunity_at_risk_fraction": 0.24007725229899432
+    }
+  ],
+  "friction_examples": [
+    {
+      "round_trips": 8,
+      "variable_usd_per_round_trip": 1.94,
+      "fixed_allocation_usd_per_round_trip": 15.0,
+      "total_usd_per_round_trip": 16.94,
+      "fraction_of_initial_20_usd_risk": 0.8470000000000001
+    },
+    {
+      "round_trips": 50,
+      "variable_usd_per_round_trip": 1.94,
+      "fixed_allocation_usd_per_round_trip": 2.4,
+      "total_usd_per_round_trip": 4.34,
+      "fraction_of_initial_20_usd_risk": 0.217
+    },
+    {
+      "round_trips": 250,
+      "variable_usd_per_round_trip": 1.94,
+      "fixed_allocation_usd_per_round_trip": 0.48,
+      "total_usd_per_round_trip": 2.42,
+      "fraction_of_initial_20_usd_risk": 0.121
+    },
+    {
+      "round_trips": 1000,
+      "variable_usd_per_round_trip": 1.94,
+      "fixed_allocation_usd_per_round_trip": 0.12,
+      "total_usd_per_round_trip": 2.06,
+      "fraction_of_initial_20_usd_risk": 0.10300000000000001
+    }
+  ],
+  "synthetic_product_examples": [
+    {
+      "input": {
+        "currency": "USD",
+        "quantity_step": 1,
+        "minimum_quantity": 1,
+        "verified": {},
+        "risk_basis": "Illustrative planned amount, not a guaranteed stop or verified account funding",
+        "id": "SYNTHETIC_ETF_100_PRICE_1_5_STOP",
+        "kind": "etf",
+        "loss_before_cost_per_unit_usd": 1.5,
+        "capital_per_unit_usd": 100,
+        "variable_round_trip_cost_per_unit_usd": 0.1,
+        "fixed_round_trip_cost_usd": 0.04
+      },
+      "result": {
+        "id": "SYNTHETIC_ETF_100_PRICE_1_5_STOP",
+        "kind": "etf",
+        "status": "ARITHMETIC_FITS_BUT_UNVERIFIED",
+        "risk_basis": "Illustrative planned amount, not a guaranteed stop or verified account funding",
+        "risk_budget_usd": "20",
+        "minimum_trade_loss_including_cost_usd": "1.64",
+        "risk_sized_quantity": "12",
+        "capital_sized_quantity": "18",
+        "provisional_quantity": "12",
+        "provisional_planned_loss_usd": "19.24",
+        "provisional_capital_usd": "1201.24",
+        "arithmetic_blockers": [],
+        "unverified_requirements": [
+          "account_permission",
+          "account_minimum_equity",
+          "contract_terms",
+          "all_in_costs",
+          "capital_requirement",
+          "executable_quotes",
+          "exercise_delivery_funding",
+          "portfolio_risk_headroom"
+        ],
+        "execution_authorized": false,
+        "limitations": [
+          "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+          "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+          "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+          "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+          "Independent alternatives must not be summed into a simultaneous portfolio.",
+          "No return estimate, fill simulation, or brokerage order is produced."
+        ]
+      }
+    },
+    {
+      "input": {
+        "currency": "USD",
+        "quantity_step": 1,
+        "minimum_quantity": 1,
+        "verified": {},
+        "risk_basis": "Illustrative planned amount, not a guaranteed stop or verified account funding",
+        "id": "SYNTHETIC_OPTION_018_PREMIUM_X100",
+        "kind": "long_option",
+        "loss_before_cost_per_unit_usd": 18,
+        "capital_per_unit_usd": 18,
+        "variable_round_trip_cost_per_unit_usd": 2,
+        "fixed_round_trip_cost_usd": 0
+      },
+      "result": {
+        "id": "SYNTHETIC_OPTION_018_PREMIUM_X100",
+        "kind": "long_option",
+        "status": "ARITHMETIC_FITS_BUT_UNVERIFIED",
+        "risk_basis": "Illustrative planned amount, not a guaranteed stop or verified account funding",
+        "risk_budget_usd": "20",
+        "minimum_trade_loss_including_cost_usd": "20",
+        "risk_sized_quantity": "1",
+        "capital_sized_quantity": "95",
+        "provisional_quantity": "1",
+        "provisional_planned_loss_usd": "20",
+        "provisional_capital_usd": "20",
+        "arithmetic_blockers": [],
+        "unverified_requirements": [
+          "account_permission",
+          "account_minimum_equity",
+          "contract_terms",
+          "all_in_costs",
+          "capital_requirement",
+          "executable_quotes",
+          "exercise_delivery_funding",
+          "portfolio_risk_headroom"
+        ],
+        "execution_authorized": false,
+        "limitations": [
+          "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+          "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+          "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+          "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+          "Independent alternatives must not be summed into a simultaneous portfolio.",
+          "No return estimate, fill simulation, or brokerage order is produced."
+        ]
+      }
+    },
+    {
+      "input": {
+        "currency": "USD",
+        "quantity_step": 1,
+        "minimum_quantity": 1,
+        "verified": {},
+        "risk_basis": "Illustrative planned amount, not a guaranteed stop or verified account funding",
+        "id": "SYNTHETIC_OPTION_025_PREMIUM_X100",
+        "kind": "long_option",
+        "loss_before_cost_per_unit_usd": 25,
+        "capital_per_unit_usd": 25,
+        "variable_round_trip_cost_per_unit_usd": 2,
+        "fixed_round_trip_cost_usd": 0
+      },
+      "result": {
+        "id": "SYNTHETIC_OPTION_025_PREMIUM_X100",
+        "kind": "long_option",
+        "status": "ARITHMETIC_BLOCKED_OR_INCOMPLETE",
+        "risk_basis": "Illustrative planned amount, not a guaranteed stop or verified account funding",
+        "risk_budget_usd": "20",
+        "minimum_trade_loss_including_cost_usd": "27",
+        "risk_sized_quantity": "0",
+        "capital_sized_quantity": "70",
+        "provisional_quantity": "0",
+        "provisional_planned_loss_usd": "0",
+        "provisional_capital_usd": "0",
+        "arithmetic_blockers": [
+          "minimum_trade_exceeds_planned_risk_budget"
+        ],
+        "unverified_requirements": [
+          "account_permission",
+          "account_minimum_equity",
+          "contract_terms",
+          "all_in_costs",
+          "capital_requirement",
+          "executable_quotes",
+          "exercise_delivery_funding",
+          "portfolio_risk_headroom"
+        ],
+        "execution_authorized": false,
+        "limitations": [
+          "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+          "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+          "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+          "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+          "Independent alternatives must not be summed into a simultaneous portfolio.",
+          "No return estimate, fill simulation, or brokerage order is produced."
+        ]
+      }
+    },
+    {
+      "input": {
+        "currency": "USD",
+        "quantity_step": 1,
+        "minimum_quantity": 1,
+        "verified": {},
+        "risk_basis": "Illustrative planned amount, not a guaranteed stop or verified account funding",
+        "id": "SYNTHETIC_NES_20_POINT_STOP_UNKNOWN_MARGIN",
+        "kind": "future",
+        "loss_before_cost_per_unit_usd": 10,
+        "capital_per_unit_usd": null,
+        "variable_round_trip_cost_per_unit_usd": 2.5,
+        "fixed_round_trip_cost_usd": 0
+      },
+      "result": {
+        "id": "SYNTHETIC_NES_20_POINT_STOP_UNKNOWN_MARGIN",
+        "kind": "future",
+        "status": "ARITHMETIC_BLOCKED_OR_INCOMPLETE",
+        "risk_basis": "Illustrative planned amount, not a guaranteed stop or verified account funding",
+        "risk_budget_usd": "20",
+        "minimum_trade_loss_including_cost_usd": "12.5",
+        "risk_sized_quantity": "1",
+        "capital_sized_quantity": null,
+        "provisional_quantity": null,
+        "provisional_planned_loss_usd": null,
+        "provisional_capital_usd": null,
+        "arithmetic_blockers": [
+          "capital_requirement_unknown"
+        ],
+        "unverified_requirements": [
+          "account_permission",
+          "account_minimum_equity",
+          "contract_terms",
+          "all_in_costs",
+          "capital_requirement",
+          "executable_quotes",
+          "exercise_delivery_funding",
+          "portfolio_risk_headroom"
+        ],
+        "execution_authorized": false,
+        "limitations": [
+          "A planned stop loss is not a maximum loss; gaps and failed exits can exceed it.",
+          "Capital inputs require full margin, premium, funding and liquidity-buffer treatment upstream.",
+          "Flags are caller declarations; this tool does not verify evidence, buying power, or account state.",
+          "Portfolio risk and latched drawdown pauses must limit the supplied risk budget upstream.",
+          "Independent alternatives must not be summed into a simultaneous portfolio.",
+          "No return estimate, fill simulation, or brokerage order is produced."
+        ]
+      }
+    }
+  ],
+  "multiple_search_illustration": {
+    "independent_null_tests": 100,
+    "nominal_false_positive_rate_each": 0.05,
+    "probability_at_least_one_false_positive_under_independence": 0.994079470779666,
+    "bonferroni_alpha_for_exactly_100_prespecified_valid_tests": 0.0005,
+    "not_project_estimates": true,
+    "limits": "Actual ideas are dependent and legacy variants, directions, metrics and parameter searches extend the testing family; no actual p-values or correction have been calculated."
+  },
+  "checks": "IDs, text uniqueness, family counts, nonempty falsifiers/blockers, source references, priority-card consistency and no invented performance. Semantic independence and source truth require substantive review."
+}

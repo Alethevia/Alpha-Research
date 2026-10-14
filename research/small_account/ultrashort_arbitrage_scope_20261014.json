@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-14",
+  "status": "SCOPE_AND_MECHANISM_INTAKE_ONLY_NO_NEW_PERFORMANCE_EVIDENCE",
+  "user_instruction": "只做大盘，超短线套利，期货，期权，虚拟货币",
+  "scope_interpretation": {
+    "priority_underlyings": [
+      "S&P 500",
+      "Nasdaq-100",
+      "BTC",
+      "ETH"
+    ],
+    "other_broad_indexes_or_major_crypto": "May be admitted by the same gates; these four are initial research priorities, not an inferred exhaustive user ban.",
+    "instruments": [
+      "broad_equity_index_futures",
+      "broad_equity_index_options",
+      "major_crypto_spot",
+      "account_eligible_major_crypto_futures_and_options"
+    ],
+    "reference_or_hedge_only": [
+      "broad_index_ETFs"
+    ],
+    "excluded_from_active_queue": [
+      "single_stock_events",
+      "small_cap_stock_selection",
+      "commodity_rate_and_FX_directional_trading",
+      "directional_breakouts",
+      "unhedged_option_premium_selling",
+      "multi_day_carry",
+      "illiquid_altcoins"
+    ],
+    "holding_convention": {
+      "seconds_to_minutes": true,
+      "maximum_planned_seconds": 1800,
+      "flat_each_session": true,
+      "crypto_day_boundary": "00:00 UTC",
+      "status": "PROVISIONAL_RESEARCH_CONVENTION_NOT_USER_SPECIFIED",
+      "forced_exit_execution_not_guaranteed": true
+    }
+  },
+  "constraints": {
+    "aggregate_capital_usd": 2000,
+    "one_year_return_target_decimal": 10,
+    "terminal_equity_target_usd": 22000,
+    "maximum_drawdown_from_peak": 0.4,
+    "risk_policy": "protocol.json#research_risk_policy",
+    "account_access_verified": false,
+    "live_execution_authorized": false
+  },
+  "classification_rule": "A payoff identity at maturity is not guaranteed convergence within 30 minutes. A price inequality is not an executable fill. Statistical convergence is reported separately from locked-payoff arbitrage.",
+  "active_candidates": [
+    {
+      "id": "A01",
+      "priority": 1,
+      "name": "Same-expiry micro/nano index-futures parity",
+      "products": [
+        "MES/NES",
+        "MNQ/NNQ"
+      ],
+      "classification": "MATCHED_FINAL_SETTLEMENT_WITH_UNPROVEN_INTRADAY_CONVERGENCE",
+      "hedge_contract_ratio": {
+        "micro": 1,
+        "nano": 10
+      },
+      "multipliers_usd_per_index_point": {
+        "MES": 5,
+        "NES": 0.5,
+        "MNQ": 2,
+        "NNQ": 0.2
+      },
+      "contract_side_executions_per_round_trip": 22,
+      "hypothesis": "Executable cross-size price divergence may exceed all costs and compress before the fixed intraday exit. Matching final SOQ motivates parity but does not prove that horizon.",
+      "first_falsification": "Test exact same-expiry synchronized books with size for all 10 nanos; reject if fee break-even exceeds executable spread compression, or combined margin/unwind reserve cannot fit.",
+      "unresolved": [
+        "quote entitlement and receipt latency",
+        "same-expiry order-book depth",
+        "broker margin offsets and minimum account equity",
+        "package routing or bounded failed-leg unwind",
+        "daily tick rounding and final cash rounding"
+      ],
+      "status": "BLOCKED_ON_QUOTES_AND_ACCOUNT_COSTS",
+      "sources": [
+        "CME_NANO"
+      ]
+    },
+    {
+      "id": "A02",
+      "priority": 2,
+      "name": "Index-option same-expiry payoff-bound violations",
+      "products": [
+        "XSP first",
+        "SPX as reference or only if unit fits",
+        "major-crypto options only after verified specifications/access"
+      ],
+      "classification": "STATIC_PAYOFF_BOUND_CANDIDATE_INTRADAY_EXIT_UNPROVEN",
+      "hypothesis": "An intact executable vertical or butterfly package may violate a verified payoff bound after fees; a separate closing package must realize the edge inside the holding cap.",
+      "first_falsification": "Use actual package pricing or conservatively executable leg books with matching settlement; reject stale theoretical-mid violations, unaffordable collateral or profits requiring holding beyond the horizon.",
+      "xsp_multiplier_usd_per_point": 100,
+      "unresolved": [
+        "expired-series quotes and complex-order liquidity",
+        "broker multi-leg routing and permissions",
+        "full opening/closing package fees",
+        "cash collateral and settlement timing",
+        "short-leg and timeout handling"
+      ],
+      "status": "BLOCKED_ON_PACKAGE_QUOTES_AND_ACCOUNT_COSTS",
+      "sources": [
+        "XSP_SPECS",
+        "CBOE_COMPLEX"
+      ]
+    },
+    {
+      "id": "A03",
+      "priority": 3,
+      "name": "Prefunded same-asset cross-venue crypto price difference",
+      "products": [
+        "BTC spot",
+        "ETH spot"
+      ],
+      "classification": "CROSS_VENUE_NONATOMIC_ARBITRAGE_CANDIDATE_WITH_INVENTORY",
+      "hypothesis": "A funded buy at venue A and equal-unit sell of existing inventory at B may retain positive edge after fees, latency, failure handling and inventory restoration.",
+      "first_falsification": "Require accessible venues and synchronized depth, $2000 total across cash and coins, and a complete inventory-reset cycle; reject opportunities erased by executable fee tiers or rebalancing.",
+      "unresolved": [
+        "actual eligible venue/account access",
+        "both fee tiers and fee currency",
+        "minimum sizes and inventory allocation",
+        "nonatomic leg risk",
+        "rebalance costs and residual exposure"
+      ],
+      "status": "BLOCKED_ON_VENUE_FEE_AND_BOOK_VERIFICATION",
+      "sources": [
+        "COINBASE_FEES"
+      ],
+      "seed_inventory_accounting": "Seed coins carry market exposure. Incremental round-trip cash is not whole-account PnL. Include seed acquisition, mark-to-market and funded hedge or session-end liquidation; fees and capital share the same $2000 pool."
+    },
+    {
+      "id": "A04",
+      "priority": 4,
+      "name": "Same-venue triangular spot conversion",
+      "products": [
+        "USD to BTC to ETH to USD if all three pairs exist"
+      ],
+      "classification": "THREE_LEG_CONVERSION_CANDIDATE_NONATOMIC_UNLESS_PROVEN",
+      "hypothesis": "Three executable directional conversion rates may leave more starting currency after fees, rounding and failed-leg liquidation.",
+      "first_falsification": "Verify all pairs are simultaneously available to this account and capacity survives the smallest leg; replay actual order-arrival sequencing and full inventory closure.",
+      "unresolved": [
+        "pair availability",
+        "three-leg fees and precision",
+        "depth after earlier legs",
+        "partial-fill residual coins and dust",
+        "no assumed atomic execution"
+      ],
+      "status": "BLOCKED_ON_PAIR_AND_EXECUTION_VERIFICATION",
+      "sources": [
+        "COINBASE_FEES"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "A05",
+      "name": "Same-index calendar spread",
+      "classification": "STATISTICAL_RELATIVE_VALUE_NOT_LOCKED_ARBITRAGE",
+      "promotion_gate": "Account margin plus native-spread quotes; a frozen intraday convergence model must survive actual carry, roll, delay and time-stop exits."
+    },
+    {
+      "id": "A06",
+      "name": "BTC/ETH spot versus eligible derivative intraday basis",
+      "classification": "STATISTICAL_RELATIVE_VALUE_UNLESS_MATCHED_TERMINAL_PAYOFF_PROVEN",
+      "promotion_gate": "Verify actual legal/account access, settlement, margin, funding, borrow, liquidation and hedge sizing. Holding to maturity or through funding cycles is not automatically ultra-short."
+    },
+    {
+      "id": "A07",
+      "name": "Option synthetic forward versus future",
+      "classification": "PARITY_ONLY_AFTER_CASHFLOW_MATCHING",
+      "promotion_gate": "Same underlying scale, expiry instant, settlement index and currency; model discounting/dividends/variation margin. XSP closing settlement and quarterly futures opening SOQ are not interchangeable."
+    }
+  ],
+  "parked_priorities": [
+    {
+      "id": "I010",
+      "reason": "Single-stock filing event is outside narrowed scope."
+    },
+    {
+      "id": "I019",
+      "reason": "Single-stock tender is outside narrowed scope."
+    },
+    {
+      "id": "I001",
+      "reason": "Directional macro-event response is not active arbitrage research."
+    },
+    {
+      "id": "I023",
+      "reason": "Directional response to leveraged ETF reset demand is not locked arbitrage."
+    },
+    {
+      "id": "I076",
+      "reason": "Liquidation reversal is statistical direction risk, not a price-parity trade."
+    },
+    {
+      "id": "I037",
+      "reason": "Rejected fixed cash-long ETF residual rule remains rejected; no new evidence from scope change."
+    },
+    {
+      "id": "I067",
+      "reason": "Box financing normally locks capital until maturity; an intraday resale requires separate executable evidence."
+    },
+    {
+      "id": "H3B",
+      "reason": "Directional negative/two-sided FOMC continuation is parked."
+    }
+  ],
+  "shared_data_and_execution_gates": [
+    "Freeze exact contracts, economic identity, fee convention, quantities, development/evaluation windows and rejection rules before a performance trial.",
+    "Collect bid, ask, size, exchange timestamp, receive timestamp and sequence continuity for every leg. Historical exchange timestamps alone do not establish our receipt latency.",
+    "Reject stale or asynchronous apparent crossings, zero/insufficient displayed size, missing intervals and unverified trade-cancellation effects. Never interpolate an executable book from five-minute bars.",
+    "Charge entry and exit on every leg, actual fee tier, exchange/clearing costs, financing/funding, inventory reset and total data/infrastructure costs. Do not double-count a spread already embedded in bid/ask fills.",
+    "Use integer contracts and actual minimum increments; reserve capital for inventory, collateral, fees, adverse marking and failed-leg unwind. Aggregate capital across venues is at most $2000.",
+    "Simulate measured delay, partial/rejected fills and quote withdrawal. Native package support must be verified at both exchange and broker; no independent-leg midpoint fills.",
+    "Record every attempted cycle, no-fills, incomplete cycles, timeout unwinds, residual inventory and peak funding. Daily equity marks all assets; a cash receipt is not by itself profit.",
+    "Report all-in net P&L, opportunity lifetime, fill probability conditional on latency/size, adverse markout, full-cycle throughput, drawdown and concentration. Fees or delays removing the edge reject the tested rule.",
+    "Only advance after chronological selection-adjusted evaluation and locked-rule forward paper reconciliation. Preserve all previous failed trials."
+  ],
+  "current_evidence": {
+    "new_performance_backtests": 0,
+    "validated_profitable_candidates": 0,
+    "quote_access": "Prior futures quote probe returned NOT_ENTITLED; current endpoint documentation is not entitlement or fill evidence. Historical five-minute futures bars do not satisfy ultra-short gates.",
+    "options_and_crypto_execution": "No verified synchronized executable multi-leg dataset or account-specific funding/fee schedule for these new candidates.",
+    "historical_catalogue": "idea_catalogue_100.json and idea_validation_queue.json remain unchanged historical snapshots.",
+    "scope_change_is_not_preregistration": true
+  },
+  "cost_arithmetic_examples": {
+    "evidence_type": "HYPOTHETICAL_ARITHMETIC_NOT_MARKET_FEES_OR_RETURNS",
+    "A01_MES_NES": {
+      "assumed_micro_fee_usd_per_contract_side": 1.0,
+      "assumed_nano_fee_usd_per_contract_side": 0.3,
+      "round_trip_fees_usd": 8.0,
+      "matched_usd_per_index_point": 5,
+      "fee_only_break_even_spread_compression_points": 1.6,
+      "gross_pnl_for_half_point_compression_usd": 2.5,
+      "excluded_costs": "Additional execution slippage, failed-leg unwind, financing, data and infrastructure; bid/ask effects must be incorporated in executable spread change."
+    },
+    "A03_equal_quantity_quote_currency_fees": {
+      "formula": "minimum_bid_B_over_ask_A_minus_1 = (1+buy_fee)/(1-sell_fee)-1",
+      "fee_convention": "Both proportional fees charged in quote currency; no rebates. Other fee currencies require a different quantity/cash calculation.",
+      "examples": [
+        {
+          "assumed_fee_bps_per_leg": 10,
+          "fee_only_minimum_gross_gap_bps": 20.02002002002002
+        },
+        {
+          "assumed_fee_bps_per_leg": 40,
+          "fee_only_minimum_gross_gap_bps": 80.32128514056225
+        }
+      ],
+      "excluded_costs": "Inventory reset, additional slippage, failed legs, funding and overhead."
+    }
+  },
+  "sources": [
+    {
+      "id": "CME_NANO",
+      "url": "https://www.cmegroup.com/articles/faqs/faq-e-nano-equity-index-futures.html",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "XSP_SPECS",
+      "url": "https://www.cboe.com/tradable_products/sp_500/mini_spx_options/specifications",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "CBOE_COMPLEX",
+      "url": "https://www.cboe.com/markets/us/options/trading/complex-orders",
+      "checked": "2026-10-14"
+    },
+    {
+      "id": "COINBASE_FEES",
+      "url": "https://help.coinbase.com/en-gb/coinbase/trading-and-funding/advanced-trade/advanced-trade-fees",
+      "checked": "2026-10-14"
+    }
+  ]
+}

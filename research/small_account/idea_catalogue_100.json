@@ -1,0 +1,2076 @@
+{
+  "schema_version": 1,
+  "catalogue_id": "IDEA_100_MECHANISM_SCREEN_20261013",
+  "date": "2026-10-13",
+  "timezone": "America/New_York",
+  "status": "100_HYPOTHESES_DESK_SCREENED_ZERO_VALIDATED_STRATEGIES",
+  "scope": "20 correlated mechanism families, 100 distinguishable research questions; not 100 statistically independent alphas and not a claim of academic novelty. No new performance backtest in this catalogue.",
+  "constraints": {
+    "initial_capital_usd": 2000,
+    "target_full_year_net_return": 10,
+    "target_terminal_equity_usd": 22000,
+    "maximum_drawdown_from_peak": 0.4,
+    "research_default_planned_trade_risk": 0.01,
+    "no_new_money": true,
+    "single_shared_capital_pool": true,
+    "live_execution_authorized": false,
+    "paid_data_purchase_authorized": false,
+    "account_permissions_verified": false
+  },
+  "screening_labels": {
+    "P": "优先做最小证伪/补数检查；不是已通过收益或执行验证",
+    "B": "保留，但先补关键证据；不是判定不可行",
+    "C": "当前资金/权限/设施下不推进；不是证明所有账户永久不可行"
+  },
+  "global_gates": [
+    "机制与具体捕获路径，不以换参数或杠杆生成新编号",
+    "事前可观测数据、实际发布时间与接收延迟",
+    "实际可交易工具、整数/最小单位、保证金及共享资金",
+    "全部摩擦、资金费、固定运行费及不可成交情形",
+    "新规则冻结、完整失败记录、时间隔离与多重搜索控制",
+    "压力路径和前瞻订单核对；回测中的40%以内不是未来保证"
+  ],
+  "evidence_policy": {
+    "catalogue_is_not_preregistration": true,
+    "all_profitability_unverified": true,
+    "all_live_execution_unverified": true,
+    "source_scope": "Primary references support data/contract/market mechanics only. Rows with no source anchor have unverified specific data access. No systematic literature review or direct profitability evidence is claimed for all 100.",
+    "selection_basis": "Analyst judgment about cost of learning, causal specificity, possible small-account expression and mechanism diversity; not expected return ranking, success probabilities or fitted scores.",
+    "legacy": "Retain H1/M2/H3 failures, 84 account scenarios, three H3/nano diagnostics, and all relevant older repository exploration. Current M2 histories and the 14 H3 event dates remain development data."
+  },
+  "families": [
+    {
+      "id": "F01",
+      "name": "宏观信息再定价",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F02",
+      "name": "公司公开信息消化",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F03",
+      "name": "财务计量与经营网络",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F04",
+      "name": "公司特殊事件",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F05",
+      "name": "规则驱动的资金流",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F06",
+      "name": "资金与持有人的日历约束",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F07",
+      "name": "市场微观结构服务",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F08",
+      "name": "持仓行为与价格持续性",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F09",
+      "name": "经营现金流的跨资产传导",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F10",
+      "name": "权利与份额的相对价格",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F11",
+      "name": "商品供给链与期限结构",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F12",
+      "name": "利率信用与融资分割",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F13",
+      "name": "波动保险的相对定价",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F14",
+      "name": "期权现金流与对冲反馈",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F15",
+      "name": "加密兑换和融资关系",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F16",
+      "name": "加密供给与持有人流量",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F17",
+      "name": "链上金融服务",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F18",
+      "name": "跨市场交易与制度分割",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F19",
+      "name": "地理与实物活动信息",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    },
+    {
+      "id": "F20",
+      "name": "注意力、偏好与拥挤",
+      "independence": "Not established; sibling and cross-family dependence must be assessed on portfolio losses, not names."
+    }
+  ],
+  "sources": [
+    {
+      "id": "SEC",
+      "title": "SEC EDGAR API",
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "web_ref": "turn34view0",
+      "checked_on": "2026-10-13",
+      "verified_scope": "公开申报与XBRL接口存在；这不提供完整历史一致预期、股票池或真实成交。"
+    },
+    {
+      "id": "NANO",
+      "title": "CME E-nano FAQ",
+      "url": "https://www.cmegroup.com/articles/faqs/faq-e-nano-equity-index-futures.html",
+      "web_ref": "turn34view1",
+      "checked_on": "2026-10-13",
+      "verified_scope": "NES/NNQ等合约规格、tick、季度月份和可变保证金；不代表用户账户获准。"
+    },
+    {
+      "id": "OPTIONS",
+      "title": "OCC/OIC 指派说明",
+      "url": "https://www.optionseducation.org/referencelibrary/faq/options-assignment",
+      "web_ref": "turn34view2",
+      "checked_on": "2026-10-13",
+      "verified_scope": "美式短期权存在提前指派风险；多腿理论限损不能替代实际交割与退出建模。"
+    },
+    {
+      "id": "LETF",
+      "title": "FINRA 杠杆与反向ETP",
+      "url": "https://www.finra.org/investors/insights/lowdown-leveraged-and-inverse-exchange-traded-products",
+      "web_ref": "turn40view5",
+      "checked_on": "2026-10-13",
+      "verified_scope": "每日目标重置与跨期路径依赖；并不验证尾盘可预测流量或反向策略利润。"
+    },
+    {
+      "id": "BLS",
+      "title": "BLS 发布日历",
+      "url": "https://www.bls.gov/schedule/news_release/",
+      "web_ref": "turn34view4",
+      "checked_on": "2026-10-13",
+      "verified_scope": "官方发布日历入口；历史实验仍须逐次确认实际首发及异常改期。"
+    },
+    {
+      "id": "VINTAGE",
+      "title": "FRED/ALFRED vintage dates",
+      "url": "https://fred.stlouisfed.org/docs/api/fred/series_vintagedates.html",
+      "web_ref": "turn34view5",
+      "checked_on": "2026-10-13",
+      "verified_scope": "可查询版本日期；版本日期不是精确的行情接收时间，也不是调查预期。"
+    },
+    {
+      "id": "EIA",
+      "title": "EIA 信息发布入口",
+      "url": "https://ir.eia.gov/index.html",
+      "web_ref": "turn34view6",
+      "checked_on": "2026-10-13",
+      "verified_scope": "能源报告与发布时点入口；不是即时免费可成交盘口。"
+    },
+    {
+      "id": "TREASURY",
+      "title": "TreasuryDirect 拍卖资料",
+      "url": "https://www.treasurydirect.gov/auctions/announcements-data-results/",
+      "web_ref": "turn34view7",
+      "checked_on": "2026-10-13",
+      "verified_scope": "官方拍卖公告和结果入口；不提供用户实际融资或when-issued盘口。"
+    },
+    {
+      "id": "COINBASE",
+      "title": "Coinbase WebSocket说明",
+      "url": "https://help.coinbase.com/en/developer-platform/websocket-feeds/advanced-trade",
+      "web_ref": "turn37view0",
+      "checked_on": "2026-10-13",
+      "verified_scope": "存在报价、逐笔和level2数据通道；未证明本账户权限、历史完整性或清算标签可用。"
+    },
+    {
+      "id": "AAVE",
+      "title": "Aave 清算说明",
+      "url": "https://aave.com/help/borrowing/liquidations",
+      "web_ref": "turn37view1",
+      "checked_on": "2026-10-13",
+      "verified_scope": "协议清算由健康因子/具体版本约束，竞争与处置风险不能忽略。"
+    },
+    {
+      "id": "AMM",
+      "title": "Uniswap 流动性损失说明",
+      "url": "https://support.uniswap.org/hc/en-us/articles/20904453751693-What-is-Impermanent-Loss",
+      "web_ref": "turn37view2",
+      "checked_on": "2026-10-13",
+      "verified_scope": "手续费之外有库存相对损失风险；不引用推广性回报为收益证据。"
+    },
+    {
+      "id": "COT",
+      "title": "CFTC COT 发布日历",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm",
+      "web_ref": "turn37view3",
+      "checked_on": "2026-10-13",
+      "verified_scope": "通常周五发布前一周二持仓；具体节假日按真实发布日期处理。"
+    },
+    {
+      "id": "USDA",
+      "title": "USDA 报告日历及资料",
+      "url": "https://www.nass.usda.gov/Publications/Reports_By_Date/",
+      "web_ref": "turn37view4",
+      "checked_on": "2026-10-13",
+      "verified_scope": "农业报告、历史及地理数据入口；发布日历会变化，历史必须按当时版本。"
+    },
+    {
+      "id": "FIRMS",
+      "title": "NASA FIRMS 延迟FAQ",
+      "url": "https://forum.earthdata.nasa.gov/viewtopic.php?t=5195",
+      "web_ref": "turn39view0",
+      "checked_on": "2026-10-13",
+      "verified_scope": "卫星观测时间与可用时间不同；不以观测时刻代替下载/处理后到达时刻。"
+    },
+    {
+      "id": "AUCTION",
+      "title": "Nasdaq 开收盘竞价",
+      "url": "https://www.nasdaqtrader.com/Trader.aspx?id=OpenClose",
+      "web_ref": "turn39view1",
+      "checked_on": "2026-10-13",
+      "verified_scope": "竞价和失衡信息机制、订阅条件存在；不假设普通K线包含消息或保证成交。"
+    },
+    {
+      "id": "OVERFIT",
+      "title": "Bailey等：回测过拟合",
+      "url": "https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf",
+      "web_ref": "turn37view7",
+      "checked_on": "2026-10-13",
+      "verified_scope": "重复搜索同一历史会制造假阳性；论文不是对本项目任何策略盈利的认证。"
+    },
+    {
+      "id": "FED",
+      "title": "美联储FOMC日历",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "web_ref": "turn40view3",
+      "checked_on": "2026-10-13",
+      "verified_scope": "已公布会议与声明入口；少数事件不可当高频独立样本。"
+    },
+    {
+      "id": "ODDLOT",
+      "title": "Wix历史要约文件：零股条款示例",
+      "url": "https://www.sec.gov/Archives/edgar/data/1576789/000117891326000759/exhibit_99a-1e.htm",
+      "web_ref": "turn40view0",
+      "checked_on": "2026-10-13",
+      "verified_scope": "原文件写有少于100股且全部有效提交的优先条款，原截止为2026-04-01；仅作历史机制示例，不声称仍可参与或一定获利。"
+    },
+    {
+      "id": "SPINOFF",
+      "title": "Middleby分拆披露：可能卖压",
+      "url": "https://www.sec.gov/Archives/edgar/data/2088281/000119312526202395/d14360dex991.htm",
+      "web_ref": "turn40view1",
+      "checked_on": "2026-10-13",
+      "verified_scope": "发行人披露部分原股东/指数跟踪持有人可能出售分拆股；这是风险披露，不是反弹收益证明。"
+    },
+    {
+      "id": "FORM4",
+      "title": "SEC历史Form 4字段示例",
+      "url": "https://www.sec.gov/Archives/edgar/data/1805608/000119312526084035/xslF345X03/ownership.xml",
+      "web_ref": "turn40view2",
+      "checked_on": "2026-10-13",
+      "verified_scope": "原表展示交易日期、代码P、数量与价格等字段；尚未证明其披露后的预测力。"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "I001",
+      "family": "F01",
+      "title": "FOMC负向反应后的延续",
+      "mechanism": "政策信息进入不同投资者决策存在时差，负向首反应可能继续传导；不同于上一轮强正向做多。",
+      "expression": "反向ETF的真实价格或获准的NES；日内",
+      "required_data": "逐次官方发布时间、反向ETF/实际合约历史与报价、接收时间",
+      "falsifier": "延迟入场扣费后不优于同事件时钟对照，或收益依赖单一事件。",
+      "screen": "P",
+      "blocker": "先补真实负向交易工具；旧14次事件仅开发资料，事件频率低，尚无单独支撑目标的证据。",
+      "source_ids": [
+        "FED",
+        "NANO",
+        "LETF"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": "H3B new negative-expression idea; positive H3 rule remains rejected."
+    },
+    {
+      "id": "I002",
+      "family": "F01",
+      "title": "CPI分项冲突消解",
+      "mechanism": "总指数与核心/服务分项冲突时，最初方向可能随信息整合而改变；检验消解后的再定价。",
+      "expression": "流动ETF；日内至数日",
+      "required_data": "初次发布的CPI分项、当时预期快照、分钟报价",
+      "falsifier": "没有可验证的当时预期/接收时间，或简单首反应已解释全部效果。",
+      "screen": "P",
+      "blocker": "官方分项可定位，但历史一致预期尚无；不能用修订值或现今预测替代。",
+      "source_ids": [
+        "BLS",
+        "VINTAGE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I003",
+      "family": "F01",
+      "title": "就业报告内部矛盾",
+      "mechanism": "就业人数、工资、失业率的不同政策含义产生逐步再定价，而非仅追随非农头条。",
+      "expression": "股债ETF；日内",
+      "required_data": "初值、修订说明、发布时点、预期与股债报价",
+      "falsifier": "加入首反应与利率变化对照后无增量预测，或只在一段宏观环境成立。",
+      "screen": "B",
+      "blocker": "需要完整原始报告和预期；与002共享宏观事件风险。",
+      "source_ids": [
+        "BLS",
+        "VINTAGE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I004",
+      "family": "F01",
+      "title": "国债拍卖意外需求",
+      "mechanism": "拍卖获配需求相对拍卖前可成交价格的偏离，可能预示交易商后续库存调整。",
+      "expression": "短久期/长久期债券ETF；小时至数日",
+      "required_data": "官方拍卖结果及发布时间、拍卖前when-issued报价、ETF报价",
+      "falsifier": "只有使用事后拍卖前价格或不扣久期风险时才盈利。",
+      "screen": "B",
+      "blocker": "公开结果可得不等于拍卖前报价可得；利率跳空和时点对齐未解决。",
+      "source_ids": [
+        "TREASURY"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I005",
+      "family": "F01",
+      "title": "央行政策路径分歧",
+      "mechanism": "两经济体预期政策路径的变化可能持续改变汇率，而不是只收取静态利差。",
+      "expression": "账户合规的外汇或货币ETF；数日至数周",
+      "required_data": "两国原始公告、政策预期曲线、FX点差与隔夜资金费",
+      "falsifier": "扣除carry与美元共同因子后没有独立效果。",
+      "screen": "B",
+      "blocker": "外汇权限、融资和预期历史未核实；不假定可使用离岸高杠杆。",
+      "source_ids": [
+        "VINTAGE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I006",
+      "family": "F02",
+      "title": "盈利意外后的缓慢消化",
+      "mechanism": "已公开盈利与事前预期的差距可能未被一次性定价，形成后续漂移。",
+      "expression": "流动普通股现金做多；数日至数周",
+      "required_data": "原始财报首次发布时间、历史一致预期、退市股票和公司行动",
+      "falsifier": "延迟到信息可接收后效果消失，或收益仅来自幸存股/市场beta。",
+      "screen": "P",
+      "blocker": "SEC提供申报基础但不提供完整历史一致预期；缺失则暂停，不偷偷改成跳空策略。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I007",
+      "family": "F02",
+      "title": "业绩指引与当期业绩背离",
+      "mechanism": "市场可能过度关注刚公布的利润而低估公司同时更新的未来指引。",
+      "expression": "普通股；数日",
+      "required_data": "原始指引、旧指引、当时预期及发布时戳",
+      "falsifier": "控制盈利意外后指引差异无增量效果，或抽取依赖未来语义。",
+      "screen": "B",
+      "blocker": "指引口径不统一，文本抽取需盲标复核；与006同事件不能当独立样本。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I008",
+      "family": "F02",
+      "title": "分析师修正扩散网络",
+      "mechanism": "一个分析师改预测后其他分析师的跟进可能逐步改变市场共识。",
+      "expression": "普通股；数周",
+      "required_data": "带首次分发时间和版本的分析师预测/覆盖网络",
+      "falsifier": "只在修正已广泛传播后才能识别，或共识供应商回填造成收益。",
+      "screen": "B",
+      "blocker": "需要有许可的历史预测版本，不以当前共识重建过去。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I009",
+      "family": "F02",
+      "title": "电话会回答回避程度",
+      "mechanism": "管理层回答具体问题的回避程度可能含有数字报告未覆盖的信息。",
+      "expression": "普通股；数日",
+      "required_data": "原始音频/逐字稿的真实可用时间、盲标、预先冻结文本模型",
+      "falsifier": "去除未来事实/公司名字后不能重现，或只在事后整理稿中成立。",
+      "screen": "B",
+      "blocker": "文本供应和标注成本、模型训练污染都未解决。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I010",
+      "family": "F02",
+      "title": "8-K新信息与模板区分",
+      "mechanism": "低关注的重大申报中真正新增内容可能比重复模板更慢被理解。",
+      "expression": "流动普通股现金做多；数日至数周",
+      "required_data": "EDGAR acceptance时间、当时8-K原文及更早公告、历史股票池",
+      "falsifier": "信息已先在新闻发布，或模型只是读到后来价格/结果。",
+      "screen": "P",
+      "blocker": "先核验首次公开时间及旧文本差分；不能把SEC收到文件时间一律当新闻首次出现。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I011",
+      "family": "F03",
+      "title": "现金利润与应计利润分离",
+      "mechanism": "投资者可能给持续性不同的现金收益和应计收益相近估值。",
+      "expression": "普通股多头筛选；数月至一年",
+      "required_data": "按实际提交日可用的财报、重述版本、退市回报",
+      "falsifier": "使用原始可得版本并匹配行业/规模后差额消失。",
+      "screen": "B",
+      "blocker": "可研究但低频、分散持仓占资本；作为慢速基准而非十倍收益承诺。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I012",
+      "family": "F03",
+      "title": "净股本发行与融资时机",
+      "mechanism": "净增发相对回购反映管理层融资选择及供给压力，可能有后续定价影响。",
+      "expression": "股票多头组合；数月",
+      "required_data": "发行与回购完成数据、摊薄股数、原始申报和公司行动",
+      "falsifier": "控制估值/规模后无增量，或把授权回购误当已完成回购。",
+      "screen": "B",
+      "blocker": "基本面版本及完整横截面未备齐，方向必须事先固定。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I013",
+      "family": "F03",
+      "title": "研发费用化的计量错配",
+      "mechanism": "会计费用化可能让持续研发投资与短期利润的经济含义被混淆。",
+      "expression": "研发密集行业股票；数月",
+      "required_data": "历史财报、研发定义、专利/产品公告当时版本",
+      "falsifier": "行业内估值/盈利控制后无效果，或研发资本化参数为追收益而调整。",
+      "screen": "B",
+      "blocker": "慢周期和模型不确定性高；不能把会计重算等同可交易优势。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I014",
+      "family": "F03",
+      "title": "客户到供应商的信息传导",
+      "mechanism": "主要客户公开的需求变化可能尚未完全反映在较低关注的供应商估值中。",
+      "expression": "上市供应商普通股；数日",
+      "required_data": "当时已知供应链关系、客户公告首发时戳、两边报价",
+      "falsifier": "只有用今天的供应链映射才成立，或收益被行业共同冲击解释。",
+      "screen": "B",
+      "blocker": "历史供应链关系和客户收入依赖度缺失。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I015",
+      "family": "F03",
+      "title": "内部人公开自购聚集",
+      "mechanism": "多个内部人自愿以现金购股的公开披露可能含有公司估值信息。",
+      "expression": "普通股现金做多；数周",
+      "required_data": "原始Form 4、交易代码、首次公开时间、计划交易标识和股价",
+      "falsifier": "误把授予/行权当自购，或从内部人交易日而非披露日开始回测。",
+      "screen": "P",
+      "blocker": "先检查披露后的可交易性，不能利用非公开内部信息。",
+      "source_ids": [
+        "SEC",
+        "FORM4"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I016",
+      "family": "F04",
+      "title": "现金并购交易完成价差",
+      "mechanism": "市场为交易失败、监管与等待风险要求补偿；检验是否相对可观测完成概率过度折价。",
+      "expression": "现金收购标的股票；数月至完成",
+      "required_data": "原始交易条款、终止案例、公告时间、报价及资金占用",
+      "falsifier": "纳入失败交易/延期后扣费期望不正或尾部损失不容纳。",
+      "screen": "B",
+      "blocker": "价差不是无风险；$20计划风险可能被隔夜终止跳空大幅突破。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I017",
+      "family": "F04",
+      "title": "分拆股的非自愿出售",
+      "mechanism": "母公司持有人可能因授权范围或仓位太小出售收到的分拆股，造成暂时价格压力。",
+      "expression": "实际分拆股现金做多；数日至数周",
+      "required_data": "分拆公告、分配/交易日、历史持有人限制、退市与报价",
+      "falsifier": "剔除行业跌幅后没有恢复，或没有证据区分被迫出售与坏基本面。",
+      "screen": "P",
+      "blocker": "事件稀少且新股流动性未必好，先做完整事件列表和时点审查。",
+      "source_ids": [
+        "SEC",
+        "SPINOFF"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I018",
+      "family": "F04",
+      "title": "配股权稀释与行权摩擦",
+      "mechanism": "认购权与正股的价格可能因操作限制偏离实际可实现的稀释后价值。",
+      "expression": "可交易认购权/正股；数日至截止",
+      "required_data": "发行条款、可转让性、行权费、实际截止时间与可成交价",
+      "falsifier": "无法按时行权/对冲，或全部费用和未获配风险吞没价差。",
+      "screen": "B",
+      "blocker": "券商是否处理、最小金额和截止时间未知，理论平价不能当成交。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I019",
+      "family": "F04",
+      "title": "零股优先收购容量",
+      "mechanism": "某些自愿要约可能对符合条款的零股持有人优先收购，小账户可能有容量优势。",
+      "expression": "符合具体条款的股票要约；数周",
+      "required_data": "每份Schedule TO、修订、资格条款、券商处理费与获配记录",
+      "falsifier": "标的没有该条款、成本超过价差，或资金上限买不起合格持仓。",
+      "screen": "P",
+      "blocker": "每个要约独立核实；不假定现有机会，不拆账户规避条款，不把优先当保证。",
+      "source_ids": [
+        "SEC",
+        "ODDLOT"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I020",
+      "family": "F04",
+      "title": "清算分配折价",
+      "mechanism": "已公布资产处置与清算安排的公司/基金价格可能对剩余分配过度折价。",
+      "expression": "可交易清算实体；数月至数年",
+      "required_data": "正式清算计划、负债优先级、费用、分配和终止报价",
+      "falsifier": "忽略隐藏负债或剩余分配延迟后收益消失。",
+      "screen": "B",
+      "blocker": "资金长期锁定、估值与退出不确定，不适合当年度高频主引擎。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I021",
+      "family": "F05",
+      "title": "指数调仓的机械需求",
+      "mechanism": "公布的成分变更使被动资金在规定时点产生不以短期估值为目标的交易。",
+      "expression": "实际成分股；数日至数周",
+      "required_data": "原始指数公告及发布时间、当时权重/AUM、成分历史、竞价报价",
+      "falsifier": "只有提前使用未来成分才盈利，或公告后可执行收益被拥挤和冲击耗尽。",
+      "screen": "B",
+      "blocker": "需要指数供应商公告历史；纳入和剔除是同一方向的两种表达，不另凑数量。",
+      "source_ids": [
+        "AUCTION"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I022",
+      "family": "F05",
+      "title": "ETF申赎到成分股的传导",
+      "mechanism": "基金真实申赎流与篮子执行可能带来短暂库存压力，而非价格上涨造成的AUM增加。",
+      "expression": "ETF或篮子中流动股票；日内至数日",
+      "required_data": "当时份额变化、创建篮子、现金/实物申赎口径、报价",
+      "falsifier": "把价格变化误算流入，或数据次日发布却在当日使用。",
+      "screen": "B",
+      "blocker": "份额发布延迟与参与人执行不可见；不能用当日最终份额当实时信号。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I023",
+      "family": "F05",
+      "title": "杠杆ETF再平衡需求",
+      "mechanism": "每日目标杠杆重置可能产生可预测的同向名义需求；检验需求规模而不是简单追涨。",
+      "expression": "SPY/QQQ等实际ETF；日内尾盘",
+      "required_data": "当时基金AUM、目标杠杆、对冲说明、盘中收益、尾盘报价",
+      "falsifier": "控制当日动量后无增量，或AUM/调仓时间不可知，或收盘后才可观测。",
+      "screen": "P",
+      "blocker": "已有ETF价格仅能开发，必须补当时基金规模及执行证据；不把需求公式当真实订单。",
+      "source_ids": [
+        "LETF",
+        "AUCTION"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I024",
+      "family": "F05",
+      "title": "目标波动资金被迫减仓",
+      "mechanism": "按风险预算调仓的资金在波动突增后可能继续减仓，形成跨日供给。",
+      "expression": "流动股债ETF；数日",
+      "required_data": "仅历史可用的波动、公开策略约束、实际或可验证流量代理",
+      "falsifier": "收益全部由普通动量解释，或资金规模/调仓速度只能事后拟合。",
+      "screen": "B",
+      "blocker": "隐含机构仓位不等于已知事实；不能凭波动率计算真实抛盘量。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I025",
+      "family": "F05",
+      "title": "养老金股债比例回拨",
+      "mechanism": "固定股债目标的资金在季度相对涨跌后可能进行反向再平衡。",
+      "expression": "股债ETF；季度末附近",
+      "required_data": "事前配置规则、相对表现、真实基金流量或明确代理",
+      "falsifier": "随机匹配季度末得到同样结果，或利率与月末季节性已解释效果。",
+      "screen": "B",
+      "blocker": "季度样本少、真实资金流不可直接观测，不能仅靠日历编故事。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I026",
+      "family": "F06",
+      "title": "税损实现造成的年末供给",
+      "mechanism": "部分持有人为实现税损集中出售亏损资产，卖压可能在相关期限后消退。",
+      "expression": "普通股现金做多；数周",
+      "required_data": "历史价格、税年日历、持有人类型代理、退市和公司行动",
+      "falsifier": "控制困境风险与季节性后无恢复，或只挑后来反弹的股票。",
+      "screen": "B",
+      "blocker": "税制/持有人结构需逐市场核对；年度样本少，不提供个人税务操作建议。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I027",
+      "family": "F06",
+      "title": "工资与退休金定投到账",
+      "mechanism": "固定日历的长期净申购可能改变基金的短期买入需求。",
+      "expression": "广泛股票ETF；数日",
+      "required_data": "基金净流入首次可得时间、交易日历、实际申购节奏",
+      "falsifier": "仅有月初价格效应而无流量支撑，或扣费后与随机日无区别。",
+      "screen": "B",
+      "blocker": "不是单独搜索最赚钱的每月日期；需要独立流量证据。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I028",
+      "family": "F06",
+      "title": "报告期末融资资产负债表稀缺",
+      "mechanism": "中介在报告期末收缩融资供给，可能改变回购与现金替代品的相对价格。",
+      "expression": "回购/融资相关价差；数日",
+      "required_data": "可交易融资报价、抵押品折扣、结算和历史资产负债表约束",
+      "falsifier": "只有用机构融资利率或假定零折扣才能取得收益。",
+      "screen": "C",
+      "blocker": "当前没有机构融资渠道与多腿结算条件；不因存在价差就假定2000美元可捕获。",
+      "source_ids": [
+        "TREASURY"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I029",
+      "family": "F06",
+      "title": "保证金上调导致的持仓压缩",
+      "mechanism": "交易所已公告的保证金变化可能迫使受约束账户降低仓位，形成短期卖压。",
+      "expression": "符合账户权限的实际合约；数日",
+      "required_data": "保证金公告的发布/生效时间、持仓与报价、历史券商附加保证金",
+      "falsifier": "只在价格先跌后公告时成立，或无法区分风险信息与机械减仓。",
+      "screen": "B",
+      "blocker": "真实历史保证金及整数风险单位未核实，无法把低日内保证金当全时可用。",
+      "source_ids": [
+        "NANO"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I030",
+      "family": "F06",
+      "title": "分红现金再投资的需求时差",
+      "mechanism": "现金到账与自动再投资之间可能形成可预测但很小的买入需求。",
+      "expression": "派息股票/ETF；数日",
+      "required_data": "除息与派息/到账日、再投资安排、总回报和报价",
+      "falsifier": "把除息价格调整当损失/盈利，或收益只是分红现金的重复计入。",
+      "screen": "B",
+      "blocker": "不能把收股息等同免费收益；数据精度与成本可能使效果不可捕获。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I031",
+      "family": "F07",
+      "title": "收盘竞价订单失衡",
+      "mechanism": "已公开的竞价供需失衡可能预示竞价到连续交易的价格变化。",
+      "expression": "流动股票/ETF竞价订单；分钟",
+      "required_data": "带接收时戳的失衡消息、竞价规则/截止、订单响应和盘口",
+      "falsifier": "使用最终失衡或最终竞价价作事前信号，或订单无法在截止前到达。",
+      "screen": "B",
+      "blocker": "五分钟K线不足；需获准竞价数据与真实订单时序。",
+      "source_ids": [
+        "AUCTION"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I032",
+      "family": "F07",
+      "title": "大单冲击后的流动性补充",
+      "mechanism": "非信息型主动成交耗尽局部深度后，报价补充可能带来价格恢复。",
+      "expression": "流动证券盘口；秒至分钟",
+      "required_data": "逐笔订单簿、交易方向、接收时间、撤单与排队位置",
+      "falsifier": "盈利集中在未成交订单，或真实成交后价格继续不利移动。",
+      "screen": "C",
+      "blocker": "当前无逐笔重放、队列和低延迟设施；K线无法区分信息交易与暂时冲击。",
+      "source_ids": [
+        "COINBASE",
+        "AUCTION"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I033",
+      "family": "F07",
+      "title": "做市库存风险补偿",
+      "mechanism": "双边限价提供即时成交服务获得点差，但承担库存与逆向选择。",
+      "expression": "可用市场的被动双边报价；秒至分钟",
+      "required_data": "L2/逐笔成交、手续费返佣、订单ack、撤单延迟、部分成交",
+      "falsifier": "把触价等同成交，或真实成交条件下点差小于后续不利价格变化。",
+      "screen": "C",
+      "blocker": "2000美元库存与账户限制未过关，当前设施不能验证排队成交。",
+      "source_ids": [
+        "COINBASE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I034",
+      "family": "F07",
+      "title": "最小报价单位造成的离散价格",
+      "mechanism": "报价粒度可能使某些价格长期被动拥挤，影响队列价值与可成交价差。",
+      "expression": "大tick产品；秒级",
+      "required_data": "准确tick规则、逐笔队列、费率和订单延迟",
+      "falsifier": "改用可实现队列位置后超额收益归零。",
+      "screen": "C",
+      "blocker": "策略依赖微秒/队列价值，不把小本金灵活误认为速度优势。",
+      "source_ids": [
+        "NANO",
+        "AUCTION"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I035",
+      "family": "F07",
+      "title": "停牌后重开价格发现",
+      "mechanism": "公开消息停牌后的集合竞价与重开限制可能使价格发现分阶段完成。",
+      "expression": "重开股票；分钟至数小时",
+      "required_data": "停牌原因/首发时刻、重开消息、竞价报价与拒单记录",
+      "falsifier": "假设能在停牌时或不存在的价格成交，或跳空风险超过可容忍资金。",
+      "screen": "B",
+      "blocker": "事件尾部风险高；先确认停牌/恢复状态和可成交窗口。",
+      "source_ids": [
+        "AUCTION"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I036",
+      "family": "F08",
+      "title": "隔夜库存溢价消退",
+      "mechanism": "隔夜承担风险的报价可能与白天流动性恢复后的价格不同；检验非新信息部分的回归。",
+      "expression": "股指ETF；开盘后日内",
+      "required_data": "前收盘与开盘盘口、当时新闻/事件过滤、隔夜市场报价",
+      "falsifier": "只有提前知道当天无新闻才有效，或跳空只是基本面消息。",
+      "screen": "B",
+      "blocker": "不同于已失败的开盘强势追随，但共享开盘风险；需要当时新闻标签。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I037",
+      "family": "F08",
+      "title": "相关ETF的暂时相对价格偏离",
+      "mechanism": "相近风险暴露ETF受到不同短期资金压力后，其风险调整残差可能收敛。",
+      "expression": "实际SPY/QQQ等，先仅研究落后者现金多头；小时至数日",
+      "required_data": "同步实际行情、只用过去估计的beta、公司行动、报价",
+      "falsifier": "控制科技/利率暴露后无回归，或关系断裂、扣费后不优于简单持有。",
+      "screen": "P",
+      "blocker": "已有三只ETF只能做受污染开发集；多头版本不等于市场中性，需扩大未用资产和时段。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I038",
+      "family": "F08",
+      "title": "持有人盈亏参考点的处置效应",
+      "mechanism": "投资者相对估计持仓成本的盈亏状态可能改变卖出倾向，而非普通超买超卖。",
+      "expression": "股票；数日至数周",
+      "required_data": "逐日换手与可验证成本分布模型、拆股、历史股票池",
+      "falsifier": "换手成本模型不能样本外识别卖压，或动量/估值完全解释信号。",
+      "screen": "B",
+      "blocker": "参考成本只是模型估计，不可当真实持仓；阈值不能事后筛选。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I039",
+      "family": "F08",
+      "title": "横截面相对动量",
+      "mechanism": "信息在不同公司间扩散速度不同，过去相对赢家可能继续相对领先。",
+      "expression": "流动股票/行业ETF多头排名；数周至数月",
+      "required_data": "退市包含的当时股票池、总回报、完整行业与成本",
+      "falsifier": "剔除市场/行业beta和坏流动性后无超额，或仅在当前成分股成立。",
+      "screen": "B",
+      "blocker": "需要完整横截面；三个相关ETF不足以验证，且不是100个独立趋势信号。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I040",
+      "family": "F08",
+      "title": "跨资产绝对趋势与调整迟滞",
+      "mechanism": "资金对持续宏观变化调整缓慢，多个市场可能产生绝对方向持续性。",
+      "expression": "现金ETF或获准小合约；数周至数月",
+      "required_data": "真实各产品价格/合约、换月与资金费、历史权限和风险单位",
+      "falsifier": "只在单一资产牛市成立，或真实合约/费用后趋势收益被耗尽。",
+      "screen": "B",
+      "blocker": "属于H1相邻趋势家族，不把更换均线包装成新发现；已失败H1仍保留。",
+      "source_ids": [
+        "NANO"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": "H1-adjacent trend family; rejected fixed H1 baseline remains rejected."
+    },
+    {
+      "id": "I041",
+      "family": "F09",
+      "title": "信用压力向股票传导",
+      "mechanism": "公司融资条件恶化可能先体现在信用资产，再进入股东剩余价值定价。",
+      "expression": "信用敏感股票/ETF；数日",
+      "required_data": "同步可交易信用价格、久期与违约暴露、股票报价",
+      "falsifier": "信用报价陈旧或债券不活跃导致虚假领先，控制市场风险后无增量。",
+      "screen": "B",
+      "blocker": "仅有债券ETF价格未必代表同一信用风险，必须避免时间戳错位。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I042",
+      "family": "F09",
+      "title": "金属现货冲击到矿企利润",
+      "mechanism": "金属价格与生产成本的变化可能未同步体现在不同套保程度矿企的利润预期中。",
+      "expression": "矿业股票；数日至数周",
+      "required_data": "当时商品价格、企业产量/成本/套保披露与股票报价",
+      "falsifier": "用未来成本或当前套保结构才能预测，或只是金属beta。",
+      "screen": "B",
+      "blocker": "需企业级敏感度而非简单追铜买矿；数据口径不齐。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I043",
+      "family": "F09",
+      "title": "收益率曲线到银行净息差",
+      "mechanism": "存贷款重定价期限不同，使曲线变化对不同银行的盈利影响不同。",
+      "expression": "银行股票；数日至数月",
+      "required_data": "当时期限结构、银行资产负债期限/存款成本、申报数据",
+      "falsifier": "控制信用损失与久期后无差异，或将曲线变陡一律当利好。",
+      "screen": "B",
+      "blocker": "简单行业ETF不能识别资产负债差异，模型风险较大。",
+      "source_ids": [
+        "SEC",
+        "TREASURY"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I044",
+      "family": "F09",
+      "title": "汇率到跨国公司盈利折算",
+      "mechanism": "收入成本币种和套保不同，使同一汇率变化对企业利润的影响并不相同。",
+      "expression": "跨国公司股票；数周",
+      "required_data": "历史地区/币种收入成本、套保、FX和财报发布日期",
+      "falsifier": "只有使用未来地域收入结构才成立，或美元因子已解释效果。",
+      "screen": "B",
+      "blocker": "披露粒度与套保不可见部分限制识别，非机械外汇替代交易。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I045",
+      "family": "F09",
+      "title": "燃油成本到航空票价传导",
+      "mechanism": "油价冲击、套保和票价调整速度不一致，可能形成成本利润再定价迟滞。",
+      "expression": "航空相关股票；数日",
+      "required_data": "燃油价格、当时套保、运力/票价数据、首次发布时间",
+      "falsifier": "需求衰退同时解释油价与股价，或控制需求后关系消失。",
+      "screen": "B",
+      "blocker": "成本与需求混杂；不与042机械视作两份独立商品alpha。",
+      "source_ids": [
+        "SEC",
+        "EIA"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I046",
+      "family": "F10",
+      "title": "ETF与可交割篮子的申赎价差",
+      "mechanism": "ETF价格和可实际交割篮子净值之间的差异可由申赎流程收敛。",
+      "expression": "ETF加完整股票篮子；日内",
+      "required_data": "实际申赎资格、篮子、融资、两边同步盘口与所有费用",
+      "falsifier": "用过时NAV产生虚假折价，或无法执行创建/赎回链条。",
+      "screen": "C",
+      "blocker": "当前未具备授权参与人/篮子资金和结算能力；零售折价投机不等于复制套利。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I047",
+      "family": "F10",
+      "title": "ADR与本土股票转换平价",
+      "mechanism": "存托凭证和本土股可转换关系、汇率与结算时差可能产生偏离。",
+      "expression": "ADR、本土股及FX多腿；日内至数日",
+      "required_data": "转换条款/费用、两地同步报价、借券、结算与节假日",
+      "falsifier": "非同步报价/转换延误/借券成本解释全部价差。",
+      "screen": "C",
+      "blocker": "跨境多腿、借券与资金拆分不符合当前已确认能力。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I048",
+      "family": "F10",
+      "title": "SPAC赎回选择权的价格",
+      "mechanism": "信托支持的赎回权与二级市场交易价格可能因手续、期限和流动性折价。",
+      "expression": "逐案核实的SPAC普通股；至赎回日",
+      "required_data": "信托/赎回条款、修订、截止、券商处理费和结算",
+      "falsifier": "交易时已无赎回资格、现金不等于预期或处理费吞没价差。",
+      "screen": "B",
+      "blocker": "现金底线仅在满足具体程序时成立；不得把并购后股票视作仍有同样保障。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I049",
+      "family": "F10",
+      "title": "封闭式基金折价的治理催化",
+      "mechanism": "已公开要约、转型或回购等措施可能推动价格折价收窄，而非赌折价自然回归。",
+      "expression": "封闭式基金现金多头；数周至数月",
+      "required_data": "实际NAV及发布时间、资产估值质量、催化公告、报价与分配",
+      "falsifier": "NAV陈旧/不可变现，或公告不具约束力、折价未收敛。",
+      "screen": "P",
+      "blocker": "先查真实NAV与催化机制；久期、信用和杠杆仍需归因。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I050",
+      "family": "F10",
+      "title": "可转债隐含期权错价",
+      "mechanism": "可转债拆分后的信用与转股期权价格可能不同于可对冲的股票/期权价格。",
+      "expression": "可转债、借券/期权多腿；数周",
+      "required_data": "实际债券报价、条款、信用曲线、借券和整数交易单位",
+      "falsifier": "采用估值而非成交价，或无法实现对冲/借券时收益消失。",
+      "screen": "C",
+      "blocker": "最小交易量、融资和信用尾部无法按现有证据装入小账户。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I051",
+      "family": "F11",
+      "title": "商品跨期的库存便利收益",
+      "mechanism": "现货稀缺、仓储与持有实物的便利性使期限价差可能偏离可解释库存状态。",
+      "expression": "实际同商品不同月份合约；数日至数周",
+      "required_data": "合约逐月行情、库存首发数据、仓储与保证金、交割规则",
+      "falsifier": "只用回溯调整连续合约有收益，或交割/展期成本吞没价差。",
+      "screen": "C",
+      "blocker": "多腿整数风险、交割管理和保证金尚不适合已确认的2000美元方案。",
+      "source_ids": [
+        "EIA"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I052",
+      "family": "F11",
+      "title": "炼油利润与裂解价差",
+      "mechanism": "原油投入和成品油产出的供需错配可能通过炼厂调整产量而收敛。",
+      "expression": "原油/成品油实际价差或相关企业；数周",
+      "required_data": "炼厂检修产能、产品库存首发、合约配比和报价",
+      "falsifier": "配比/等级不匹配，或仅使用事后已知检修造成收益。",
+      "screen": "C",
+      "blocker": "直接多腿合约资金复杂；改用炼化股是另一个有基差的表达，不能冒充套利。",
+      "source_ids": [
+        "EIA"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I053",
+      "family": "F11",
+      "title": "电力与燃气火花价差",
+      "mechanism": "电厂燃料成本、效率和电价的短期偏离可能受到调度约束而恢复。",
+      "expression": "电力/天然气合约；小时至数日",
+      "required_data": "区域电价、燃料、机组热耗、输电约束与合约可达性",
+      "falsifier": "没有匹配地点/时段/效率的可交易对冲，或输电约束长期存在。",
+      "screen": "C",
+      "blocker": "批发电力接入、合约单位和结算条件不在当前零售能力内。",
+      "source_ids": [
+        "EIA"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I054",
+      "family": "F11",
+      "title": "农业面积与库存报告再定价",
+      "mechanism": "官方首次公布的种植面积或库存意外改变供给约束，而非单纯追价格动量。",
+      "expression": "农业ETF或符合风险的实际合约；日内至数日",
+      "required_data": "USDA初次报告、当时预期、相关合约与ETF报价",
+      "falsifier": "修订/发布延迟消除信号，或无法用目标工具捕获对应农产品冲击。",
+      "screen": "B",
+      "blocker": "官方日历可定位，历史一致预期和小资金风险单位未确认。",
+      "source_ids": [
+        "USDA"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I055",
+      "family": "F11",
+      "title": "海运运价到出口商现金流",
+      "mechanism": "运力与运价变化影响不同合同结构运输企业的未来收入确认。",
+      "expression": "航运/出口相关股票；数周",
+      "required_data": "实际运价指数发布时间、船队/长短约比例、公司披露",
+      "falsifier": "现货运价不对应公司合同，或未来运价回填导致领先。",
+      "screen": "B",
+      "blocker": "运价数据许可、企业合同敏感度和行业周期需先核对。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I056",
+      "family": "F12",
+      "title": "国债现券期货基差",
+      "mechanism": "现券、交割转换因子、融资与期货之间的关系可能因资金约束偏离。",
+      "expression": "国债现券、期货及融资；数日",
+      "required_data": "可交割篮子、最便宜券、回购与保证金、实际盘口",
+      "falsifier": "使用零融资成本或忽略转换/交割选择权才能盈利。",
+      "screen": "C",
+      "blocker": "机构融资与整数合约的资本需求未满足，不用高杠杆填补资金差。",
+      "source_ids": [
+        "TREASURY"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I057",
+      "family": "F12",
+      "title": "新老国债流动性价差",
+      "mechanism": "新券流动性需求可能使相近现金流的老券出现流动性补偿。",
+      "expression": "久期匹配的两只国债；数周",
+      "required_data": "可成交买卖价、久期/凸性、融资和借券",
+      "falsifier": "票息/期限/流动性成本解释价差，或只能按中间价建立组合。",
+      "screen": "C",
+      "blocker": "双边借券与精确久期配比不适合现有小资金设施。",
+      "source_ids": [
+        "TREASURY"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I058",
+      "family": "F12",
+      "title": "掉期与国债的资产负债表价差",
+      "mechanism": "掉期清算和现券融资的不同资本消耗可能造成期限匹配价差。",
+      "expression": "利率掉期与国债多腿；数日",
+      "required_data": "可执行掉期、清算条款、融资曲线、交易对手条件",
+      "falsifier": "无法取得同样融资和清算条件，或价差只是信用/抵押品差异。",
+      "screen": "C",
+      "blocker": "无掉期准入、清算和融资安排；保留学理研究，暂停实现。",
+      "source_ids": [
+        "TREASURY"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I059",
+      "family": "F12",
+      "title": "评级越界后的强制出售",
+      "mechanism": "资产评级跌出持仓授权时，受约束基金可能集中卖出造成暂时折价。",
+      "expression": "可交易债券基金/发行人股票；数日至数周",
+      "required_data": "评级公告首发、债券真实报价、基金授权和持仓",
+      "falsifier": "坏基本面解释全部折价，或假设授权基金必定同日全部卖出。",
+      "screen": "B",
+      "blocker": "违约和流动性风险不能省略，股票代理也不是债券价差复制。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I060",
+      "family": "F12",
+      "title": "通胀保值债的隐含预期偏离",
+      "mechanism": "名义债与通胀债价格包含预期通胀、流动性与风险补偿，检验可分解部分是否错价。",
+      "expression": "TIPS/名义债久期匹配；数月",
+      "required_data": "真实收益率、通胀指数滞后、流动性、融资与报价",
+      "falsifier": "将流动性/通胀风险溢价全部误作可预测通胀。",
+      "screen": "C",
+      "blocker": "精确匹配和融资未就绪；ETF相对交易不能宣称严格盈亏平价。",
+      "source_ids": [
+        "TREASURY",
+        "VINTAGE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I061",
+      "family": "F13",
+      "title": "方差保险溢价",
+      "mechanism": "投资者支付波动保险，卖方获得补偿但承担跳跃和尾部风险；只检验完整限损表达。",
+      "expression": "获准的完整限损期权组合；数日至数周",
+      "required_data": "历史逐腿可成交报价、实值结算、保证金、指派和完整亏损事件",
+      "falsifier": "隐含-实现差额扣执行/尾部损失不正，或最低一组风险超过预算。",
+      "screen": "B",
+      "blocker": "不做裸卖、不用高胜率掩盖尾亏；期权链和账户权限缺失。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I062",
+      "family": "F13",
+      "title": "事件实际波动超过期权定价",
+      "mechanism": "独立冻结的事件分布预测可能识别被低估的波动，而不是因期权便宜就买。",
+      "expression": "长跨式/长单腿期权；事件前后",
+      "required_data": "原始事件预测、完整期权链、到期/退出报价和波动率变化",
+      "falsifier": "无法超过实际买入权利金与价差，或预测从事件结果反推。",
+      "screen": "B",
+      "blocker": "买方风险明确不等于正期望，最低保费可能已超过20美元。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I063",
+      "family": "F13",
+      "title": "远近月隐含方差配置",
+      "mechanism": "事件在不同到期合约中的定价可能不一致，形成前向方差相对价值问题。",
+      "expression": "期权日历组合；数日",
+      "required_data": "同时点不同期限报价、事件日历、指派和Vega/Delta风险",
+      "falsifier": "未建模的gamma/指派或不同成交时点解释利润。",
+      "screen": "B",
+      "blocker": "多腿价差与资金占用必须逐案核实，不以理论中间价成交。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I064",
+      "family": "F13",
+      "title": "尾部偏斜定价与实际尾概率",
+      "mechanism": "不同行权价保护需求可能使尾部保险相对价格偏离独立预测的跳跃分布。",
+      "expression": "限损垂直价差；数日",
+      "required_data": "同刻全行权价报价、尾部样本、执行与指派记录",
+      "falsifier": "样本无法支持极端概率估计，或手续费和尾亏消除优势。",
+      "screen": "B",
+      "blocker": "大量平稳日不能证明尾部安全；零价/零买价期权不得视作可退出。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I065",
+      "family": "F13",
+      "title": "指数与成分股相关性定价",
+      "mechanism": "指数期权和成分股期权包含不同隐含相关性，可能存在风险补偿偏差。",
+      "expression": "指数/多成分期权分散组合；数周",
+      "required_data": "同步完整期权链、权重、公司行动和相关性风险",
+      "falsifier": "非同步报价、个股跳跃、动态对冲费解释差额。",
+      "screen": "C",
+      "blocker": "多腿分散与最低合约数量明显超出现有实施能力；不缩成一只股就称分散套利。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I066",
+      "family": "F14",
+      "title": "看涨看跌平价执行检验",
+      "mechanism": "同标的同到期的看涨、看跌、现货与融资现金流原则上有平价联系。",
+      "expression": "期权、现货、融资/借券；至到期",
+      "required_data": "同刻可成交报价、股息、融资、借券及合约条款",
+      "falsifier": "可成交两边价而非中间价下无违约平价，或美式提前行权改变现金流。",
+      "screen": "C",
+      "blocker": "当前无同步多腿/融资证据，理论恒等式不等于可获利价差。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I067",
+      "family": "F14",
+      "title": "箱式价差隐含融资",
+      "mechanism": "特定期权组合的到期现金流可能给出不同于账户资金成本的隐含融资率。",
+      "expression": "合规现金结算期权多腿；至到期",
+      "required_data": "实际报价、保证金、费用、结算方式和提前平仓成本",
+      "falsifier": "用错结算/美式条款或忽略买卖价后融资优势消失。",
+      "screen": "C",
+      "blocker": "四腿费用和最低合约资金不匹配；不是创造收益的免费借贷机器。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I068",
+      "family": "F14",
+      "title": "除息与提前行权经济性",
+      "mechanism": "股息、剩余时间价值与融资共同决定美式期权持有人是否应提前行权。",
+      "expression": "持有期权/股票的限定结构；除息附近",
+      "required_data": "实际股息、期权报价、行权截止、借券和费用",
+      "falsifier": "收益完全由应有除息调整抵消，或指派导致无法承担的股票交割。",
+      "screen": "C",
+      "blocker": "研究现金流恒等式可行，但现账户无法承诺处理突然交割；不自动裸露短腿。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I069",
+      "family": "F14",
+      "title": "期权对冲反馈改变现货动态",
+      "mechanism": "期权交易商净gamma若可被可靠识别，可能改变冲击后的对冲需求。",
+      "expression": "现货ETF；日内",
+      "required_data": "可审计的持仓方向估计、期权成交分类、OI真实发布时间、报价",
+      "falsifier": "把全部OI都假设为交易商卖出后才有效，或简单波动/动量解释结果。",
+      "screen": "B",
+      "blocker": "公开OI不能直接识别真实净gamma；仅有GEX网站数字不能过关。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I070",
+      "family": "F14",
+      "title": "到期行权聚集与价格钉住",
+      "mechanism": "临近到期时集中行权和对冲解除可能使价格分布相对非到期日改变。",
+      "expression": "现货或获准限损期权；日内",
+      "required_data": "当时OI、到期合约、报价、行权/结算规则和匹配对照",
+      "falsifier": "事后挑最接近收盘的行权价才成立，或手续费超过效应。",
+      "screen": "B",
+      "blocker": "不能用到期后OI或未来收盘选择目标，接近行权价也不保证回归。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I071",
+      "family": "F15",
+      "title": "永续资金费与对冲成本",
+      "mechanism": "永续多空需求不均可能通过资金费补偿对侧，但净收入需超过对冲和清算风险。",
+      "expression": "获准永续与现货等额对冲；小时至数日",
+      "required_data": "实际资金费规则/支付、两边盘口、借款/保证金和权限",
+      "falsifier": "只用已知最终资金费择时，或基差变化/费率反转/清算吞没收入。",
+      "screen": "B",
+      "blocker": "不假定美国账户可用任意离岸永续，不绕过地区限制；双边资本待核实。",
+      "source_ids": [
+        "COINBASE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I072",
+      "family": "F15",
+      "title": "加密定期期货到期基差",
+      "mechanism": "未来交割价与现货资金成本可能存在可执行的现金持有价差。",
+      "expression": "获准定期期货与现货；至到期",
+      "required_data": "真实合约规格、交割、两边报价、现金占用和保证金路径",
+      "falsifier": "把年化基差当已赚现金，或追加保证金先耗尽账户。",
+      "screen": "B",
+      "blocker": "两边共享2000美元，不能各按2000美元模拟；规则和最小合约仍未知。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I073",
+      "family": "F15",
+      "title": "跨交易所的分割价格",
+      "mechanism": "不同交易所资金与库存分布可能使同币价格短暂偏离。",
+      "expression": "预先双边备资现货；秒至分钟",
+      "required_data": "同步L2、实际账户费率、转账限制、到账/提现故障和报价",
+      "falsifier": "扣双边价差、转账/再平衡费和不同时成交风险后差额消失。",
+      "screen": "C",
+      "blocker": "没有双边资金和可核验执行；搬砖价差不能假定资金可瞬移。",
+      "source_ids": [
+        "COINBASE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I074",
+      "family": "F15",
+      "title": "稳定币赎回与市场折价",
+      "mechanism": "市场价格与真正可行使的赎回权可能因流动性压力分离。",
+      "expression": "有明确合法赎回资格的稳定币；数日至赎回",
+      "required_data": "发行人条款、最低赎回、储备/银行状态、全额费用和可交易报价",
+      "falsifier": "无直接赎回权，或折价来自真实信用/冻结风险而非暂时流动性。",
+      "screen": "B",
+      "blocker": "未核实任何发行人当前资格与下限；不能把锚定一美元当保本。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I075",
+      "family": "F15",
+      "title": "质押凭证与退出队列折价",
+      "mechanism": "流动质押凭证的折价可能补偿退出等待、罚没与协议风险。",
+      "expression": "现货与可赎回质押凭证；数日至数周",
+      "required_data": "协议版本、实际提款队列、罚没条款、兑换率和报价",
+      "falsifier": "忽略退出等待/罚没/兑换率差异后才看似套利。",
+      "screen": "B",
+      "blocker": "承诺收益率不是无风险收益；协议与托管风险可能超过策略止损。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I076",
+      "family": "F16",
+      "title": "清算卖压衰减后的反转",
+      "mechanism": "有证据的被动清算冲击结束后，流动性折价可能恢复；不同于普通下跌抄底。",
+      "expression": "账户允许的加密现货；分钟至数小时",
+      "required_data": "可验证清算事件/强制卖单、逐笔与L2、接收时间、手续费",
+      "falsifier": "只能从后来最低点确认衰竭，或实际买入后逆向选择超过恢复幅度。",
+      "screen": "P",
+      "blocker": "现有小时K线不够；必须补真实清算标记及盘口，不能凭大阴线贴标签。",
+      "source_ids": [
+        "COINBASE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": "H2/M4 sell-pressure hypothesis; not a renamed H1 breakout."
+    },
+    {
+      "id": "I077",
+      "family": "F16",
+      "title": "代币解锁与可出售供给",
+      "mechanism": "已披露的锁仓释放可能改变自由流通供给，但持有人出售意愿取决于结构。",
+      "expression": "获准交易的现货；数日至数周",
+      "required_data": "原始锁仓合约/公告、实际到账区块、持有人身份与报价",
+      "falsifier": "使用后来修订日程，或代币数量增加不对应真正可卖供给。",
+      "screen": "B",
+      "blocker": "不可自动做空无权限代币；失败/退市项目也必须包含。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I078",
+      "family": "F16",
+      "title": "交易所入金的出售压力",
+      "mechanism": "被可靠识别的外部持有人入金可能先于现货出售，区别于交易所内部钱包迁移。",
+      "expression": "流动加密现货；小时至数日",
+      "required_data": "当时钱包标签版本、区块最终性、交易所内部迁移标签、L2",
+      "falsifier": "钱包归属事后才知，或所谓入金只是内部整理而非外部卖压。",
+      "screen": "B",
+      "blocker": "地址标签和可见时间不足；链上转账不自动等于卖出。",
+      "source_ids": [
+        "COINBASE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I079",
+      "family": "F16",
+      "title": "矿工经营现金压力",
+      "mechanism": "生产成本、现金支付周期与储备变化可能迫使矿工出售，而非普通技术趋势。",
+      "expression": "流动加密现货或矿企；数日至数周",
+      "required_data": "当时矿工披露、可靠钱包标签、算力/难度与成本代理",
+      "falsifier": "只有事后准确的矿工地址或电费才能识别，或市场因子完全解释。",
+      "screen": "B",
+      "blocker": "地址和成本估计误差大，不把哈希率机械等同币价方向。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I080",
+      "family": "F16",
+      "title": "协议收入到持币现金流传导",
+      "mechanism": "协议收费增长只有在真实回购/销毁或分配机制下才可能改变持币价值。",
+      "expression": "法律和账户允许的代币；数周",
+      "required_data": "固定协议版本、真实收入/补贴分离、销毁/分配和治理生效时间",
+      "falsifier": "把补贴循环交易当收入，或代币并无获得现金流的权利。",
+      "screen": "B",
+      "blocker": "协议收入不等于股东利润，治理和技术风险需逐案检查。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I081",
+      "family": "F17",
+      "title": "AMM流动性服务的净补偿",
+      "mechanism": "提供池内流动性获得手续费，但要扣相对持币的损失、逆向选择和再平衡成本。",
+      "expression": "获准链上流动性仓位；数日至数周",
+      "required_data": "逐区块池状态、真实fee、区间内外时段、gas与退出报价",
+      "falsifier": "只算手续费忽略库存损失，或gas/MEV/退出成本后不如直接持币。",
+      "screen": "C",
+      "blocker": "当前无可验证链上执行和安全模型；集中流动性不等于低风险高收益。",
+      "source_ids": [
+        "AMM"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I082",
+      "family": "F17",
+      "title": "借贷池利用率稀缺补偿",
+      "mechanism": "资金短缺时出借人可能获得较高利息，回报须扣违约、冻结、退出等待与币价风险。",
+      "expression": "获准协议的非杠杆出借；数日",
+      "required_data": "历史真实利率/利用率、可提款流动性、坏账和资产价格",
+      "falsifier": "把瞬时APY当全年收益，或退出受限/坏账后净回报不成立。",
+      "screen": "B",
+      "blocker": "可作为研究基准，不视为1000%引擎；不追加循环杠杆。",
+      "source_ids": [
+        "AAVE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I083",
+      "family": "F17",
+      "title": "链上清算折扣",
+      "mechanism": "符合协议条件的清算奖励补偿即时还款和处置抵押物的风险与竞争成本。",
+      "expression": "协议清算交易；区块级",
+      "required_data": "具体协议版本、预执行模拟、优先费用、失败交易和处置深度",
+      "falsifier": "胜出的交易利润被费用耗尽，或忽略失败提交和抵押物跳价。",
+      "screen": "C",
+      "blocker": "当前缺少合约工程与竞争执行基础，不以闪电贷名义跳过风险和准入。",
+      "source_ids": [
+        "AAVE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I084",
+      "family": "F17",
+      "title": "批量拍卖撮合的求解服务",
+      "mechanism": "公开订单批次可能允许更优净额撮合，服务者获取规则明确的结算报酬。",
+      "expression": "获准的批量拍卖求解/结算；秒至分钟",
+      "required_data": "协议/拍卖规则、完整订单批次、奖励、保证金和失败成本",
+      "falsifier": "无法在可用时间完成并获得奖励，或净额收益已被竞争/成本耗尽。",
+      "screen": "C",
+      "blocker": "需专用求解与结算基础设施；不包含抢跑、夹击或操纵用户订单。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I085",
+      "family": "F17",
+      "title": "跨链最终性与桥接等待",
+      "mechanism": "同一经济资产跨链兑换等待和退出限制可能形成时间/信用折价。",
+      "expression": "有明确赎回链条的跨链资产；数日至数周",
+      "required_data": "桥协议与资产权利、真实退出队列、gas、可成交报价和故障历史",
+      "falsifier": "折价代表真实不能兑付的信用风险，或等待使资金占用超过利润。",
+      "screen": "C",
+      "blocker": "当前无跨链安全与故障恢复条件，不假定桥资产永远一比一兑付。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I086",
+      "family": "F18",
+      "title": "周末加密信息到交易所基金",
+      "mechanism": "加密现货持续交易，而证券基金交易窗口有限，信息可能在重新开市时分阶段吸收。",
+      "expression": "实际加密现货ETF；开盘后日内",
+      "required_data": "现货实时数据、基金实际开市报价、NAV/费用与时间戳",
+      "falsifier": "收益只存在于买不到的前收盘价到开盘价，开市后已无可捕获部分。",
+      "screen": "B",
+      "blocker": "交易时间错配不能变成免费隔夜收益；需真实开盘后的可执行价格。",
+      "source_ids": [
+        "COINBASE",
+        "AUCTION"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I087",
+      "family": "F18",
+      "title": "海外休市时的本地ETF估值",
+      "mechanism": "基础市场关闭期间本地ETF承担价格发现，恢复交易后的收敛可能受投资者结构影响。",
+      "expression": "跨国ETF；小时至数日",
+      "required_data": "两地交易日历、实时外汇、可交易替代品、NAV时间",
+      "falsifier": "使用休市时陈旧NAV作为公允价格，或汇率已解释所有溢价。",
+      "screen": "B",
+      "blocker": "不能因ETF偏离旧NAV就称套利，需可观测且可交易的当前估值。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I088",
+      "family": "F18",
+      "title": "跨币种融资基差",
+      "mechanism": "不同币种融资需求和抵押品约束可能使可执行远期与现金利差偏离。",
+      "expression": "FX现货/远期与双币融资；至交割",
+      "required_data": "账户可获融资利率、FX买卖价、抵押品、交割和信用条件",
+      "falsifier": "只有使用机构优惠融资或理论中间价才能取得收益。",
+      "screen": "C",
+      "blocker": "双币借贷、远期和信用条件未具备，不把理论利率平价偏离当零售机会。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I089",
+      "family": "F18",
+      "title": "碳配额与合格抵销品替代",
+      "mechanism": "监管允许的履约替代关系可能把不同信用单位价格联系起来。",
+      "expression": "合规可交易碳产品；数周",
+      "required_data": "当前适用规则、年份/地区/资格、交割和注销费用",
+      "falsifier": "两种凭证法律上不能替代，或交易/履约资格不存在。",
+      "screen": "C",
+      "blocker": "规则和市场准入未逐项核实；不混同自愿信用与强制配额。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I090",
+      "family": "F18",
+      "title": "灾难保险资本补偿",
+      "mechanism": "保险转移极端自然灾害损失给资本市场，检验保费是否超过模型风险与尾损。",
+      "expression": "灾难债或可达基金；数月至多年",
+      "required_data": "真实合同触发、地区暴露、损失发展、可成交报价和锁定条款",
+      "falsifier": "忽略未发生但合理的巨灾路径后才高Sharpe，或无法退出/分散。",
+      "screen": "C",
+      "blocker": "机构最低单位、锁定与尾部集中不适合当前直接实施；基金代理也不复制单笔保险。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I091",
+      "family": "F19",
+      "title": "天气预报修订到能源需求",
+      "mechanism": "新的气温预报通过供暖/制冷需求改变能源需求估计，可能存在可交易的消化延迟。",
+      "expression": "天然气相关ETF或获准合约；数日",
+      "required_data": "逐次预报发布版本、区域人口权重、库存与真实合约/ETF报价",
+      "falsifier": "使用再分析天气或未来实况替代当时预报，或库存已吸收全部信息。",
+      "screen": "B",
+      "blocker": "地理加权可形成研究能力，但历史预报版本、合约风险单位需先解决。",
+      "source_ids": [
+        "EIA"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I092",
+      "family": "F19",
+      "title": "遥感作物状态的产量预测",
+      "mechanism": "可用卫星植被/土壤信号可能在官方产量发布前改进供给预测。",
+      "expression": "相关农业工具；数周",
+      "required_data": "历史实际可用影像、云掩膜、当时种植区、产量初值和报价",
+      "falsifier": "使用后来拼接/修正影像或未来种植地图，或预测虽准却无价格增量。",
+      "screen": "B",
+      "blocker": "与054共享农业风险，但检验的是发布前实物观测信息；处理成本可能很高。",
+      "source_ids": [
+        "USDA"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I093",
+      "family": "F19",
+      "title": "夜间灯光与经济活动误差",
+      "mechanism": "区域照明变化可能提供官方统计外的活动信息，但必须与天气/停电分离。",
+      "expression": "国家/区域ETF；数周至数月",
+      "required_data": "当时影像可用版本、云/月光/灾害控制、首次宏观数据",
+      "falsifier": "光照变化不能稳定预测活动，或预测不优于已公开指标。",
+      "screen": "B",
+      "blocker": "空间预测能力不等于市场领先；暂未核查完整历史影像许可与延迟。",
+      "source_ids": [
+        "VINTAGE"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I094",
+      "family": "F19",
+      "title": "港口拥堵到供应链交付",
+      "mechanism": "航迹与港口排队可能在财报前揭示交付延误、库存和运输成本。",
+      "expression": "航运、制造或零售股票；数周",
+      "required_data": "有许可的历史AIS、真实接收时间、港口/客户映射、公司披露",
+      "falsifier": "仅依赖商业平台事后清洗记录，或港口拥堵与企业收入无可靠联系。",
+      "screen": "B",
+      "blocker": "AIS缺测和授权成本未知；与055的运价信号相关，不当独立样本叠加。",
+      "source_ids": [
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I095",
+      "family": "F19",
+      "title": "野火空间暴露到企业损失",
+      "mechanism": "已公开火点与电网/资产暴露的空间关系可能帮助识别市场尚未区分的风险。",
+      "expression": "流动公用事业/保险股票；数日至数周",
+      "required_data": "FIRMS实际到达时间、事前资产地图、火势/天气、原始公告与报价",
+      "falsifier": "用最终烧毁边界或后来责任认定选股，或首次可用信号已经被市场消化。",
+      "screen": "P",
+      "blocker": "适合作为地理信息研究切口，不是自动投资建议；责任/资产数据与跳空风险未解决。",
+      "source_ids": [
+        "FIRMS",
+        "SEC"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I096",
+      "family": "F20",
+      "title": "注意力激增后的价格压力",
+      "mechanism": "非基本面关注可能吸引短期买盘并在注意力下降后恢复，需与真实信息区分。",
+      "expression": "可获准的股票表达；数日",
+      "required_data": "合法公开注意力时间序列、首发新闻、完整股票池和报价",
+      "falsifier": "只凭后来热门名单选股，或上涨来自真实盈利消息。",
+      "screen": "B",
+      "blocker": "文本/平台数据版本与做空条件未核实；不制造传播热度或参与拉抬。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I097",
+      "family": "F20",
+      "title": "整数价位的心理锚定",
+      "mechanism": "投资者止损/限价偏好可能在整数位置形成可重复的非随机订单集中。",
+      "expression": "实际流动产品；分钟",
+      "required_data": "逐笔报价/订单分布、tick规则、盲选价位和延迟成交",
+      "falsifier": "只有事后选择被触碰的整数位才显著，或效应仅由tick离散化解释。",
+      "screen": "B",
+      "blocker": "与034不同：检验心理锚定而非tick机械收益；需逐笔证据，不靠画线。",
+      "source_ids": [
+        "AUCTION"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I098",
+      "family": "F20",
+      "title": "彩票偏好造成的正偏斜溢价",
+      "mechanism": "部分投资者可能为极小概率暴涨支付过高价格，形成反向风险溢价。",
+      "expression": "需可控风险的反向表达；数周",
+      "required_data": "完整含失败股票池、尾分布、实际借券/期权报价、跳空情景",
+      "falsifier": "借券召回、挤空和费用吞没收益，或最大单位风险超限。",
+      "screen": "C",
+      "blocker": "小账户无法靠裸空分散尾部风险；当前无可验证且预算内的限损表达。",
+      "source_ids": [
+        "OPTIONS"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    },
+    {
+      "id": "I099",
+      "family": "F20",
+      "title": "研究覆盖启动的信息发现",
+      "mechanism": "原本低覆盖企业在首次被系统研究后，信息不对称可能下降并带来估值调整。",
+      "expression": "普通股；数周至数月",
+      "required_data": "历史真实覆盖起始、报告首次分发、公司新闻、退市样本",
+      "falsifier": "所谓首次覆盖是供应商历史不全，或投行业务/发行事件解释变化。",
+      "screen": "B",
+      "blocker": "商业分析师历史成本未知，与008修正扩散不是相同触发但共享信息因子。",
+      "source_ids": [],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "稀疏/慢速机会，先作为组合候选；不能由少量事件年化证明1000%",
+      "related_prior": null
+    },
+    {
+      "id": "I100",
+      "family": "F20",
+      "title": "公开持仓拥挤与退出压力",
+      "mechanism": "发布后可得的持仓集中度可能识别风险承受者过度同向暴露及后续退出压力。",
+      "expression": "获准小合约或现金ETF代理；数日至数周",
+      "required_data": "COT发布版本和真正发布时间、合约分类、报价与换月",
+      "falsifier": "把周二头寸当作周二已公开，或拥挤指标只是在追随价格趋势。",
+      "screen": "B",
+      "blocker": "严格从实际发布后使用；不同交易者类别含义不同，不能一概反向。",
+      "source_ids": [
+        "COT"
+      ],
+      "profitability": "UNTESTED_IN_THIS_CATALOGUE",
+      "live_execution": "UNVERIFIED",
+      "target_role": "机会数量、容量及相关性尚待实测，不能预设满足1000%目标",
+      "related_prior": null
+    }
+  ]
+}

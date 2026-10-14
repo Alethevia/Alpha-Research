@@ -1,0 +1,150 @@
+{
+  "evidence_type": "synthetic_product_arithmetic_not_backtest",
+  "illustrative_account": {
+    "equity_usd": "2000",
+    "risk_budget_usd": "20",
+    "available_funds_usd": "2000",
+    "reserve_usd": "300"
+  },
+  "assumptions": [
+    "This is a unit-size comparison, not market signals or recommended orders.",
+    "The $20 risk budget (1%) and $300 unallocated cash reserve are research assumptions, not additional user requirements.",
+    "Every price, stop, premium and all-in execution cost in these examples is hypothetical. Public multipliers/margin references are separately identified.",
+    "Public initial margin is a dated reference, not verified account buying power; fees, margin changes, minimum account equity and liquidation buffers still need verification.",
+    "Each row is an alternative standalone proposal. No simultaneous portfolio or target return is inferred.",
+    "All verification flags remain false; none of these rows authorizes execution."
+  ],
+  "proposals": [
+    {
+      "id": "NES_20_POINT_STOP_ILLUSTRATION",
+      "kind": "future",
+      "currency": "USD",
+      "loss_before_cost_per_unit_usd": "10",
+      "capital_per_unit_usd": "353.70",
+      "variable_round_trip_cost_per_unit_usd": "2",
+      "fixed_round_trip_cost_usd": "0",
+      "quantity_step": "1",
+      "minimum_quantity": "1",
+      "risk_basis": "planned_stop_not_max_loss",
+      "note": "20 index points times $0.50/point. $2 assumed all-in round-trip variable cost. Capital uses the public long overnight initial margin observed 2026-10-13 UTC; not account-specific, includes no dynamic broker add-ons.",
+      "public_reference_urls": [
+        "https://www.cmegroup.com/articles/faqs/faq-e-nano-equity-index-futures.html",
+        "https://www.interactivebrokers.com/en/trading/margin-futures-fops.php?ex=us&hm=us&pm=0&rgt=0&rsk=1&rst=101004110808"
+      ],
+      "verified": {}
+    },
+    {
+      "id": "MES_20_POINT_STOP_ILLUSTRATION",
+      "kind": "future",
+      "currency": "USD",
+      "loss_before_cost_per_unit_usd": "100",
+      "capital_per_unit_usd": "3538.14",
+      "variable_round_trip_cost_per_unit_usd": "2",
+      "fixed_round_trip_cost_usd": "0",
+      "quantity_step": "1",
+      "minimum_quantity": "1",
+      "risk_basis": "planned_stop_not_max_loss",
+      "note": "Same illustrative 20-point stop times $5/point; $2 assumed cost. Public long overnight initial margin observed 2026-10-13 UTC, not account-specific.",
+      "public_reference_urls": [
+        "https://www.cmegroup.com/articles/faqs/faq-e-nano-equity-index-futures.html",
+        "https://www.interactivebrokers.com/en/trading/margin-futures-fops.php?ex=us&hm=us&pm=0&rgt=0&rsk=1&rst=101004110808"
+      ],
+      "verified": {}
+    },
+    {
+      "id": "NNQ_50_POINT_STOP_ILLUSTRATION",
+      "kind": "future",
+      "currency": "USD",
+      "loss_before_cost_per_unit_usd": "10",
+      "capital_per_unit_usd": "645.998",
+      "variable_round_trip_cost_per_unit_usd": "2",
+      "fixed_round_trip_cost_usd": "0",
+      "quantity_step": "1",
+      "minimum_quantity": "1",
+      "risk_basis": "planned_stop_not_max_loss",
+      "note": "50 points times $0.20/point. $2 assumed cost; public long overnight initial margin, not an account quote.",
+      "public_reference_urls": [
+        "https://www.cmegroup.com/articles/faqs/faq-e-nano-equity-index-futures.html",
+        "https://www.interactivebrokers.com/en/trading/margin-futures-fops.php?ex=us&hm=us&pm=0&rgt=0&rsk=1&rst=101004110808"
+      ],
+      "verified": {}
+    },
+    {
+      "id": "STANDARD_LONG_OPTION_1_DOLLAR_QUOTE",
+      "kind": "long_option",
+      "currency": "USD",
+      "loss_before_cost_per_unit_usd": "100",
+      "capital_per_unit_usd": "100",
+      "variable_round_trip_cost_per_unit_usd": "2",
+      "fixed_round_trip_cost_usd": "0",
+      "quantity_step": "1",
+      "minimum_quantity": "1",
+      "risk_basis": "entire_premium_at_risk_before_exercise",
+      "note": "Invented $1 premium quote times assumed standard 100 multiplier. No actual contract, quote or exercise funding verified. $2 assumed round-trip cost.",
+      "public_reference_urls": [],
+      "verified": {}
+    },
+    {
+      "id": "NANOS_LONG_OPTION_8_DOLLAR_QUOTE",
+      "kind": "long_option",
+      "currency": "USD",
+      "loss_before_cost_per_unit_usd": "8",
+      "capital_per_unit_usd": "8",
+      "variable_round_trip_cost_per_unit_usd": "0.50",
+      "fixed_round_trip_cost_usd": "0",
+      "quantity_step": "1",
+      "minimum_quantity": "1",
+      "risk_basis": "entire_premium_at_risk_cash_settled",
+      "note": "Invented 8-point premium quote times published $1 multiplier. $0.50 assumed all-in cost, not IBKR quoted commission. Current spread/depth not known.",
+      "public_reference_urls": [
+        "https://www.cboe.com/tradable-products/sp-500/nanos-index-options/specifications/"
+      ],
+      "verified": {}
+    },
+    {
+      "id": "DEBIT_SPREAD_015_QUOTE_ILLUSTRATION",
+      "kind": "option_spread",
+      "currency": "USD",
+      "loss_before_cost_per_unit_usd": "15",
+      "capital_per_unit_usd": "15",
+      "variable_round_trip_cost_per_unit_usd": "4",
+      "fixed_round_trip_cost_usd": "0",
+      "quantity_step": "1",
+      "minimum_quantity": "1",
+      "risk_basis": "expiry_payoff_bound_conditional_on_intact_legs",
+      "note": "Invented 0.15 net debit times assumed 100 multiplier; $4 assumed total cost for both legs and both sides. This is not a real quoted spread. Early assignment, legging, liquidation and expiry funding remain unverified.",
+      "public_reference_urls": [],
+      "verified": {}
+    },
+    {
+      "id": "STOCK_50_PRICE_050_STOP_ILLUSTRATION",
+      "kind": "stock",
+      "currency": "USD",
+      "loss_before_cost_per_unit_usd": "0.50",
+      "capital_per_unit_usd": "50",
+      "variable_round_trip_cost_per_unit_usd": "0.02",
+      "fixed_round_trip_cost_usd": "2",
+      "quantity_step": "1",
+      "minimum_quantity": "1",
+      "risk_basis": "planned_stop_not_max_loss",
+      "note": "Invented $50 share price and $0.50 stop. $2 assumed fixed round-trip cost plus $0.02/share. No fractional-share permission assumed.",
+      "public_reference_urls": [],
+      "verified": {}
+    },
+    {
+      "id": "CRYPTO_100000_PRICE_1000_STOP_ILLUSTRATION",
+      "kind": "crypto_spot",
+      "currency": "USD",
+      "loss_before_cost_per_unit_usd": "1000",
+      "capital_per_unit_usd": "100000",
+      "variable_round_trip_cost_per_unit_usd": "700",
+      "fixed_round_trip_cost_usd": "0",
+      "quantity_step": "0.00000001",
+      "minimum_quantity": "0.0001",
+      "risk_basis": "planned_stop_not_max_loss",
+      "note": "Invented $100000 price, $1000/coin stop and $700/coin total variable cost. Quantity step and minimum are assumptions, not verified account metadata.",
+      "public_reference_urls": [],
+      "verified": {}
+    }
+  ]
+}

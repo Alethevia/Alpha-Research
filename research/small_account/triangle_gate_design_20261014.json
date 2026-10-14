@@ -1,0 +1,29 @@
+{
+  "evidence_type": "FIXED_BUDGET_DATA_ACCESS_AND_SNAPSHOT_BOUND_DIAGNOSTIC_NOT_PERFORMANCE_PREREGISTRATION",
+  "frozen_utc": "2026-10-14T19:11:51.409666+00:00",
+  "already_seen_probe": "alpaca_public_probe.json",
+  "additional_requests": 4,
+  "collection_rule": "Four sequential foreground HTTP requests, one per index, no retries, no price-dependent stopping; no fixed interval or statistical independence asserted. Preserve failures and interrupted attempts.",
+  "timeout_seconds": 12,
+  "sizes_usd": [
+    "50",
+    "500",
+    "2000"
+  ],
+  "routes": [
+    "USD_BTC_ETH_USD",
+    "USD_ETH_BTC_USD"
+  ],
+  "fee_per_leg": "0.0025",
+  "fee_basis": "Alpaca lowest-volume public taker fee reserved in received asset on all three legs; not account-verified.",
+  "max_book_age_seconds": 2.0,
+  "max_pair_skew_seconds": 0.25,
+  "clock_threshold_status": "Diagnostic choices, not exchange execution guarantees or measured order latency.",
+  "invalid_book_rule": "Reject absent, crossed, nonpositive or duplicate-price levels; retain stale/skewed books only as hypothetical snapshot arithmetic.",
+  "capital_interpretation": "Each size is a separate nonexecuted diagnostic; $2000 uses entire capital and no extra reserve, hence optimistic. No simultaneous allocation.",
+  "limitations": [
+    "Continuous quantities; account pair permissions, minimum sizes and rounding unverified.",
+    "No guaranteed book survival, atomic fills, failure unwind or output fee debit timing.",
+    "No historical performance or annualization; samples correlated and selected after prior research."
+  ]
+}

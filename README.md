@@ -4,6 +4,10 @@ A quantitative research framework for factor-based equity strategies with instit
 
 **Status: Research Only (v0.10.0) — NOT Production Ready**
 
+**Small-account research (2026-10-12):** A separate [target and validation lab](research/small_account/README.md)
+studies a $2,000 account and a +1000% one-year research target. It includes reproducible
+hypothetical sensitivity analysis and an experiment journal, not a validated strategy or live trader.
+
 > **CRITICAL**: This is research code with known limitations. NOT validated for live trading.
 > Read [Limitations & Honest Assessment](#limitations--honest-assessment) before any use.
 

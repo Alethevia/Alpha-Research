@@ -1,0 +1,627 @@
+{
+  "status": "HISTORICAL_PRICE_PROXY_SCREEN_ONLY",
+  "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+  "code_sha256": {
+    "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+    "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+    "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+  },
+  "results": [
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "development_2024",
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "zero_cost_diagnostic",
+        "fee_per_side": 0,
+        "slippage_per_side": 0,
+        "monthly_overhead_usd": 0
+      },
+      "initial_equity": 2000,
+      "final_equity": 3458.9224455977633,
+      "net_return": 0.7294612227988817,
+      "elapsed_days": 366.0,
+      "annualized_return_if_at_least_365_days": 0.7275208857891806,
+      "maximum_observed_open_close_drawdown": 0.06269414521019323,
+      "low_mark_drawdown_against_previously_observed_peak": 0.16304955804269194,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": false,
+      "round_trips_including_terminal_valuation": 85,
+      "win_fraction_after_variable_costs": 0.47058823529411764,
+      "fees_usd_equivalent": 0.0,
+      "overhead_usd": 0.0,
+      "net_trade_pnl_sum": 1458.9224455977635,
+      "cash_only_return_with_same_overhead": 0.0,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": 1.2098589478636854,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8782,
+        "expected_hours": 8784,
+        "missing_hours": 2,
+        "zero_trade_count_bars": 513,
+        "zero_volume_bars": 513,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "BTC/USD",
+      "experiment_id": "H1_BTC_USD_development_2024_zero_cost_diagnostic",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "development_2024",
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "alpaca_tier1_cost_assumption",
+        "fee_per_side": 0.0025,
+        "slippage_per_side": 0.001,
+        "monthly_overhead_usd": 10
+      },
+      "initial_equity": 2000,
+      "final_equity": 1879.3574897664569,
+      "net_return": -0.060321255116771555,
+      "elapsed_days": 366.0,
+      "annualized_return_if_at_least_365_days": -0.060201443786845,
+      "maximum_observed_open_close_drawdown": 0.19762889692600405,
+      "low_mark_drawdown_against_previously_observed_peak": 0.1979248145149871,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": false,
+      "round_trips_including_terminal_valuation": 88,
+      "win_fraction_after_variable_costs": 0.32954545454545453,
+      "fees_usd_equivalent": 544.776414640636,
+      "overhead_usd": 120.0,
+      "net_trade_pnl_sum": -0.6425102335424526,
+      "cash_only_return_with_same_overhead": -0.06,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": 1.0627643984029627,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8782,
+        "expected_hours": 8784,
+        "missing_hours": 2,
+        "zero_trade_count_bars": 513,
+        "zero_volume_bars": 513,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "BTC/USD",
+      "experiment_id": "H1_BTC_USD_development_2024_alpaca_tier1_cost_assumption",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "development_2024",
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "double_variable_cost_stress",
+        "fee_per_side": 0.005,
+        "slippage_per_side": 0.002,
+        "monthly_overhead_usd": 10
+      },
+      "initial_equity": 2000,
+      "final_equity": 1475.6931457170533,
+      "net_return": -0.2621534271414734,
+      "elapsed_days": 366.0,
+      "annualized_return_if_at_least_365_days": -0.2616936125090492,
+      "maximum_observed_open_close_drawdown": 0.2951654321461836,
+      "low_mark_drawdown_against_previously_observed_peak": 0.2948167182574457,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": false,
+      "round_trips_including_terminal_valuation": 89,
+      "win_fraction_after_variable_costs": 0.23595505617977527,
+      "fees_usd_equivalent": 566.8160438911179,
+      "overhead_usd": 120.0,
+      "net_trade_pnl_sum": -404.306854282946,
+      "cash_only_return_with_same_overhead": -0.06,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": 1.048336901427231,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8782,
+        "expected_hours": 8784,
+        "missing_hours": 2,
+        "zero_trade_count_bars": 513,
+        "zero_volume_bars": 513,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "BTC/USD",
+      "experiment_id": "H1_BTC_USD_development_2024_double_variable_cost_stress",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "chronological_check_2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "zero_cost_diagnostic",
+        "fee_per_side": 0,
+        "slippage_per_side": 0,
+        "monthly_overhead_usd": 0
+      },
+      "initial_equity": 2000,
+      "final_equity": 1888.659191834412,
+      "net_return": -0.055670404082794,
+      "elapsed_days": 365.0,
+      "annualized_return_if_at_least_365_days": -0.055707452139180935,
+      "maximum_observed_open_close_drawdown": 0.13117834269880313,
+      "low_mark_drawdown_against_previously_observed_peak": 0.13206037790112835,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": false,
+      "round_trips_including_terminal_valuation": 88,
+      "win_fraction_after_variable_costs": 0.2840909090909091,
+      "fees_usd_equivalent": 0.0,
+      "overhead_usd": 0.0,
+      "net_trade_pnl_sum": -111.34080816558719,
+      "cash_only_return_with_same_overhead": 0.0,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": -0.06310996603639696,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8759,
+        "expected_hours": 8760,
+        "missing_hours": 1,
+        "zero_trade_count_bars": 215,
+        "zero_volume_bars": 215,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "BTC/USD",
+      "experiment_id": "H1_BTC_USD_chronological_check_2025_zero_cost_diagnostic",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "chronological_check_2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "alpaca_tier1_cost_assumption",
+        "fee_per_side": 0.0025,
+        "slippage_per_side": 0.001,
+        "monthly_overhead_usd": 10
+      },
+      "initial_equity": 2000,
+      "final_equity": 1415.3405477063707,
+      "net_return": -0.29232972614681463,
+      "elapsed_days": 365.0,
+      "annualized_return_if_at_least_365_days": -0.29249730637734495,
+      "maximum_observed_open_close_drawdown": 0.3000299000452479,
+      "low_mark_drawdown_against_previously_observed_peak": 0.3003221386063175,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": true,
+      "round_trips_including_terminal_valuation": 84,
+      "win_fraction_after_variable_costs": 0.2261904761904762,
+      "fees_usd_equivalent": 350.6238178512813,
+      "overhead_usd": 120.0,
+      "net_trade_pnl_sum": -464.65945229362984,
+      "cash_only_return_with_same_overhead": -0.06,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": -0.12547205370418324,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8759,
+        "expected_hours": 8760,
+        "missing_hours": 1,
+        "zero_trade_count_bars": 215,
+        "zero_volume_bars": 215,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "BTC/USD",
+      "experiment_id": "H1_BTC_USD_chronological_check_2025_alpaca_tier1_cost_assumption",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "chronological_check_2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "double_variable_cost_stress",
+        "fee_per_side": 0.005,
+        "slippage_per_side": 0.002,
+        "monthly_overhead_usd": 10
+      },
+      "initial_equity": 2000,
+      "final_equity": 1374.242757408427,
+      "net_return": -0.3128786212957865,
+      "elapsed_days": 365.0,
+      "annualized_return_if_at_least_365_days": -0.3130552002444492,
+      "maximum_observed_open_close_drawdown": 0.3161175600211601,
+      "low_mark_drawdown_against_previously_observed_peak": 0.2953716216287767,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": true,
+      "round_trips_including_terminal_valuation": 63,
+      "win_fraction_after_variable_costs": 0.14285714285714285,
+      "fees_usd_equivalent": 366.81493306552755,
+      "overhead_usd": 120.0,
+      "net_trade_pnl_sum": -505.75724259157164,
+      "cash_only_return_with_same_overhead": -0.06,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": -0.1315887237951272,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8759,
+        "expected_hours": 8760,
+        "missing_hours": 1,
+        "zero_trade_count_bars": 215,
+        "zero_volume_bars": 215,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "BTC/USD",
+      "experiment_id": "H1_BTC_USD_chronological_check_2025_double_variable_cost_stress",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "development_2024",
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "zero_cost_diagnostic",
+        "fee_per_side": 0,
+        "slippage_per_side": 0,
+        "monthly_overhead_usd": 0
+      },
+      "initial_equity": 2000,
+      "final_equity": 2456.2632727307437,
+      "net_return": 0.22813163636537181,
+      "elapsed_days": 366.0,
+      "annualized_return_if_at_least_365_days": 0.22761458600145534,
+      "maximum_observed_open_close_drawdown": 0.08896011484485933,
+      "low_mark_drawdown_against_previously_observed_peak": 0.08935966268074347,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": false,
+      "round_trips_including_terminal_valuation": 81,
+      "win_fraction_after_variable_costs": 0.4444444444444444,
+      "fees_usd_equivalent": 0.0,
+      "overhead_usd": 0.0,
+      "net_trade_pnl_sum": 456.2632727307455,
+      "cash_only_return_with_same_overhead": 0.0,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": 0.46014490847654943,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8782,
+        "expected_hours": 8784,
+        "missing_hours": 2,
+        "zero_trade_count_bars": 1583,
+        "zero_volume_bars": 1583,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "ETH/USD",
+      "experiment_id": "H1_ETH_USD_development_2024_zero_cost_diagnostic",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "development_2024",
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "alpaca_tier1_cost_assumption",
+        "fee_per_side": 0.0025,
+        "slippage_per_side": 0.001,
+        "monthly_overhead_usd": 10
+      },
+      "initial_equity": 2000,
+      "final_equity": 1614.5794247888298,
+      "net_return": -0.19271028760558506,
+      "elapsed_days": 366.0,
+      "annualized_return_if_at_least_365_days": -0.19235607330235027,
+      "maximum_observed_open_close_drawdown": 0.21768164780979105,
+      "low_mark_drawdown_against_previously_observed_peak": 0.21734088097180848,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": false,
+      "round_trips_including_terminal_valuation": 82,
+      "win_fraction_after_variable_costs": 0.3048780487804878,
+      "fees_usd_equivalent": 395.87539305370245,
+      "overhead_usd": 120.0,
+      "net_trade_pnl_sum": -265.4205752111715,
+      "cash_only_return_with_same_overhead": -0.06,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": 0.36295347566254255,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8782,
+        "expected_hours": 8784,
+        "missing_hours": 2,
+        "zero_trade_count_bars": 1583,
+        "zero_volume_bars": 1583,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "ETH/USD",
+      "experiment_id": "H1_ETH_USD_development_2024_alpaca_tier1_cost_assumption",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "development_2024",
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2025-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "double_variable_cost_stress",
+        "fee_per_side": 0.005,
+        "slippage_per_side": 0.002,
+        "monthly_overhead_usd": 10
+      },
+      "initial_equity": 2000,
+      "final_equity": 1425.6738850309766,
+      "net_return": -0.28716305748451165,
+      "elapsed_days": 366.0,
+      "annualized_return_if_at_least_365_days": -0.2866684245962171,
+      "maximum_observed_open_close_drawdown": 0.2981050856187373,
+      "low_mark_drawdown_against_previously_observed_peak": 0.2974505047383811,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": false,
+      "round_trips_including_terminal_valuation": 82,
+      "win_fraction_after_variable_costs": 0.1951219512195122,
+      "fees_usd_equivalent": 472.547402759815,
+      "overhead_usd": 120.0,
+      "net_trade_pnl_sum": -454.32611496902365,
+      "cash_only_return_with_same_overhead": -0.06,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": 0.35342063363588716,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8782,
+        "expected_hours": 8784,
+        "missing_hours": 2,
+        "zero_trade_count_bars": 1583,
+        "zero_volume_bars": 1583,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "ETH/USD",
+      "experiment_id": "H1_ETH_USD_development_2024_double_variable_cost_stress",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "chronological_check_2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "zero_cost_diagnostic",
+        "fee_per_side": 0,
+        "slippage_per_side": 0,
+        "monthly_overhead_usd": 0
+      },
+      "initial_equity": 2000,
+      "final_equity": 1465.7446764036008,
+      "net_return": -0.2671276617981996,
+      "elapsed_days": 365.0,
+      "annualized_return_if_at_least_365_days": -0.26728364849531505,
+      "maximum_observed_open_close_drawdown": 0.30882260201075173,
+      "low_mark_drawdown_against_previously_observed_peak": 0.311276804082242,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": true,
+      "round_trips_including_terminal_valuation": 93,
+      "win_fraction_after_variable_costs": 0.20430107526881722,
+      "fees_usd_equivalent": 0.0,
+      "overhead_usd": 0.0,
+      "net_trade_pnl_sum": -534.2553235963985,
+      "cash_only_return_with_same_overhead": 0.0,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": -0.10850302027232006,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8759,
+        "expected_hours": 8760,
+        "missing_hours": 1,
+        "zero_trade_count_bars": 618,
+        "zero_volume_bars": 618,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "ETH/USD",
+      "experiment_id": "H1_ETH_USD_chronological_check_2025_zero_cost_diagnostic",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "chronological_check_2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "alpaca_tier1_cost_assumption",
+        "fee_per_side": 0.0025,
+        "slippage_per_side": 0.001,
+        "monthly_overhead_usd": 10
+      },
+      "initial_equity": 2000,
+      "final_equity": 1396.0855462385514,
+      "net_return": -0.30195722688072435,
+      "elapsed_days": 365.0,
+      "annualized_return_if_at_least_365_days": -0.30212907480283435,
+      "maximum_observed_open_close_drawdown": 0.3242759947391022,
+      "low_mark_drawdown_against_previously_observed_peak": 0.30128570656238973,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": true,
+      "round_trips_including_terminal_valuation": 55,
+      "win_fraction_after_variable_costs": 0.12727272727272726,
+      "fees_usd_equivalent": 153.28942481583897,
+      "overhead_usd": 120.0,
+      "net_trade_pnl_sum": -483.9144537614489,
+      "cash_only_return_with_same_overhead": -0.06,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": -0.16784361606256626,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8759,
+        "expected_hours": 8760,
+        "missing_hours": 1,
+        "zero_trade_count_bars": 618,
+        "zero_volume_bars": 618,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "ETH/USD",
+      "experiment_id": "H1_ETH_USD_chronological_check_2025_alpaca_tier1_cost_assumption",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    },
+    {
+      "evidence_type": "historical_development",
+      "classification": "price_proxy_only_not_verified_execution",
+      "period": {
+        "name": "chronological_check_2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      "cost_case": {
+        "name": "double_variable_cost_stress",
+        "fee_per_side": 0.005,
+        "slippage_per_side": 0.002,
+        "monthly_overhead_usd": 10
+      },
+      "initial_equity": 2000,
+      "final_equity": 1365.766634423215,
+      "net_return": -0.31711668278839245,
+      "elapsed_days": 365.0,
+      "annualized_return_if_at_least_365_days": -0.31729506568624233,
+      "maximum_observed_open_close_drawdown": 0.3318622113748465,
+      "low_mark_drawdown_against_previously_observed_peak": 0.301488206088665,
+      "drawdown_ceiling_breached": false,
+      "drawdown_pause_latched": true,
+      "round_trips_including_terminal_valuation": 53,
+      "win_fraction_after_variable_costs": 0.09433962264150944,
+      "fees_usd_equivalent": 227.20494565823594,
+      "overhead_usd": 120.0,
+      "net_trade_pnl_sum": -514.2333655767873,
+      "cash_only_return_with_same_overhead": -0.06,
+      "passive_buy_hold_return_with_overhead_reserved_upfront": -0.17366392870800862,
+      "expired_entries_due_to_missing_bar": 0,
+      "year_target_arithmetic_condition_met": false,
+      "data_quality": {
+        "observed_bars": 8759,
+        "expected_hours": 8760,
+        "missing_hours": 1,
+        "zero_trade_count_bars": 618,
+        "zero_volume_bars": 618,
+        "bars_do_not_establish_executable_price_or_size": true
+      },
+      "symbol": "ETH/USD",
+      "experiment_id": "H1_ETH_USD_chronological_check_2025_double_variable_cost_stress",
+      "data_sha256": "f765d30a4ef0a6fe9af21326ff500efa16e3371b96d884bef763e01bc1373bcf",
+      "code_sha256": {
+        "h1_backtest.py": "e3d789371321915290d1ed52f33c28c8ea8c7fa2b4e3c6fa05d1541be6bb99a2",
+        "risk_controls.py": "1c74a09ac7f8acaecdf66f085f7a13a592ffe45c9c3c45e2acb024f3880adcee",
+        "experiment_registry.py": "9a21efc7e87db891ae8a4f98b66e6ce4234f82d57d510ce16cb0aa4640f9633a"
+      }
+    }
+  ],
+  "limitations": [
+    "Bar prices and assumed slippage are not actual executable bid/ask fills or capacity evidence.",
+    "Alpaca crypto bars may contain quote-derived prices and zero trades; trade counts are reported.",
+    "Historical bars have no local receive timestamps; delayed execution does not certify point-in-time availability.",
+    "Current tier-1 fees are projected onto historical prices; historical fee schedules were not reconstructed.",
+    "Slippage, monthly overhead, quantity step and minimum entry are research assumptions.",
+    "Each symbol and each calendar year resets to $2000 as an alternative scenario, not a combined account.",
+    "Open/close risk observations omit intrabar peaks; true maximum drawdown can be larger.",
+    "A pause request is not a guaranteed liquidation; gaps can exceed the 40% drawdown ceiling.",
+    "These are development results; no parameter tuning or independent forward trading was performed.",
+    "12 fixed cases are retained; relevant legacy trials must also be considered for selection bias."
+  ],
+  "audit": {
+    "rules_published_before_performance_commit": "b55d965c35ebaf30881bf8910b331ba95227bf05",
+    "design_sha256": "eed0ba913377e9ae796e0aee00e9d54cc2651989a73451fbe093a361607574cd",
+    "journal_sha256": "73bc34af05575d38c89be301abf015bc41344fa0512aeddcf0563495dba354ee",
+    "registered_cases": 12,
+    "completed_cases": 12,
+    "hash_chain_and_all_result_artifact_hashes_verified": true,
+    "cash_reconciliation_max_absolute_error_usd": 2.2737367544323206e-12,
+    "unit_tests_passed_before_market_evaluation": 29
+  },
+  "assessment": {
+    "decision": "REJECT_THIS_FROZEN_H1_BASELINE_FOR_BOTH_ASSETS",
+    "reason": "Both 2024 and 2025 lose under the frozen base-cost assumptions for each asset. No scenario reaches the +1000% target.",
+    "scope": "This rejects one fixed parameterization on one price feed under stated assumptions; it does not disprove all breakout strategies or the overall research goal.",
+    "next_research_gate": "Freeze a separate hypothesis and obtain authorized stock/ETF data with quotes, account permissions and actual cost schedules before execution claims."
+  }
+}

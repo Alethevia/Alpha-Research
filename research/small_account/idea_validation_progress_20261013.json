@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-13",
+  "original_catalogue_snapshot_preserved": true,
+  "original_queue": "idea_validation_queue.json",
+  "new_account_scenarios": 36,
+  "new_registered_price_diagnostics": 2,
+  "new_source_intakes": 3,
+  "new_tender_cases": 1,
+  "validated_profitable": 0,
+  "execution_authorized": false,
+  "updates": [
+    {
+      "id": "I037",
+      "status": "FIXED_RESIDUAL_EXPRESSIONS_REJECTED",
+      "results": "i037_results_20261013.json",
+      "scope": "Two frozen cash-long expressions on reused development histories; not proof every ETF relative-value method fails.",
+      "next": "Stop tuning this rule on these histories; a materially new mechanism needs a new spec/trial."
+    },
+    {
+      "id": "I010",
+      "status": "INTAKE_COMPLETE_FIRST_PUBLIC_TIME_UNRESOLVED",
+      "results": "wave1_source_results_20261013.json",
+      "next": "Expand consecutive dates and publication/receipt chains before novelty scoring."
+    },
+    {
+      "id": "I019",
+      "status": "TERMS_VERIFIED_NO_INCREMENTAL_ALLOCATION_IN_CASE",
+      "results": "wave1_source_results_20261013.json",
+      "next": "Consecutive offer registry with cancellations/oversubscription; verify actual broker deadline/fees and tax documentation."
+    }
+  ],
+  "report": "wave1_results_20261013.md",
+  "next_research_wave": [
+    "I001",
+    "I023",
+    "I076"
+  ],
+  "next_research_wave_status": "DATA_INTAKE_PENDING_NOT_SCHEDULED",
+  "counts_are_not_independent_alpha_tests": true
+}
