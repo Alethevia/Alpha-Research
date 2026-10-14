@@ -91,7 +91,8 @@
       "status": "BLOCKED_ON_VENUE_FEE_AND_BOOK_VERIFICATION",
       "sources": [
         "COINBASE_FEES"
-      ]
+      ],
+      "seed_inventory_accounting": "Seed coins carry market exposure. Incremental round-trip cash is not whole-account PnL. Include seed acquisition, mark-to-market and funded hedge or session-end liquidation; fees and capital share the same $2000 pool."
     },
     {
       "id": "A04",
@@ -325,5 +326,6 @@
         }
       }
     }
-  ]
+  ],
+  "mathematical_research": "arbitrage_conjectures_20261014.json"
 }

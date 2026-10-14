@@ -215,5 +215,6 @@
     }
   ],
   "research_questions_scope_note": "H1-H6 below are retained historical conjectures, not the active queue. Active A01-A04 and separately classified watchlist are defined in ultrashort_arbitrage_scope_20261014.json",
-  "active_research_scope": "ultrashort_arbitrage_scope_20261014.json"
+  "active_research_scope": "ultrashort_arbitrage_scope_20261014.json",
+  "mathematical_research": "arbitrage_conjectures_20261014.json"
 }
