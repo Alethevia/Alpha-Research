@@ -62,6 +62,7 @@
     }
   ],
   "validation_protocol": [
+    "Latest active scope is ultra-short arbitrage; original broad-universe catalogue and prior performance trials remain historical evidence. No profitability conclusion changes solely because the scope changed.",
     "H1 fixed crypto baseline, M2 opening-drive subtest and H3 positive FOMC subtest completed historical price screening. Original and roll-aware nano coverage diagnostics completed. Other catalogue hypotheses remain drafts unless separately frozen; H3B is not preregistered or backtested.",
     "Freeze economic mechanism, parameters, data hashes, code revision, costs, sample windows, primary metric and rejection rules before each experiment.",
     "Separate chronological development/selection from untouched evaluation; purge or embargo overlapping labels and event groups.",
@@ -147,24 +148,26 @@
     }
   ],
   "research_universe": {
-    "scope": "Any financial product may be investigated, as clarified by user on 2026-10-12 America/New_York.",
+    "scope": "Broad equity indexes and major crypto; ultra-short arbitrage research per user instruction on 2026-10-14.",
     "asset_classes": [
-      "crypto_spot",
-      "crypto_derivatives",
-      "stocks",
-      "etfs_including_leveraged_inverse",
-      "equity_commodity_rate_fx_futures",
-      "listed_options",
-      "fx",
-      "bonds",
-      "other_financial_products"
+      "broad_equity_index_futures",
+      "broad_equity_index_options",
+      "major_crypto_spot",
+      "account_eligible_major_crypto_futures_and_options"
+    ],
+    "priority_underlyings": [
+      "S&P 500",
+      "Nasdaq-100",
+      "BTC",
+      "ETH"
     ],
     "account_access_must_be_verified": true,
     "research_scope_is_not_live_order_authorization": true,
     "product_choice_must_follow_net_edge_and_executable_unit_size": true,
     "no_additional_capital_assumed": true,
     "all_products_share_the_same_account_drawdown_limit": true,
-    "candidate_queue": "multi_asset_queue.json"
+    "candidate_queue": "multi_asset_queue.json",
+    "scope_specification": "ultrashort_arbitrage_scope_20261014.json"
   },
   "research_catalogues": [
     {
@@ -184,5 +187,33 @@
       "not_performance_preregistration": true
     }
   ],
-  "research_progress": "idea_validation_progress_20261013.json"
+  "research_progress": "idea_validation_progress_20261013.json",
+  "scope_history": [
+    {
+      "superseded_on": "2026-10-14",
+      "reason": "Latest user narrowed to broad markets, ultra-short arbitrage, futures/options/crypto.",
+      "previous_research_universe": {
+        "scope": "Any financial product may be investigated, as clarified by user on 2026-10-12 America/New_York.",
+        "asset_classes": [
+          "crypto_spot",
+          "crypto_derivatives",
+          "stocks",
+          "etfs_including_leveraged_inverse",
+          "equity_commodity_rate_fx_futures",
+          "listed_options",
+          "fx",
+          "bonds",
+          "other_financial_products"
+        ],
+        "account_access_must_be_verified": true,
+        "research_scope_is_not_live_order_authorization": true,
+        "product_choice_must_follow_net_edge_and_executable_unit_size": true,
+        "no_additional_capital_assumed": true,
+        "all_products_share_the_same_account_drawdown_limit": true,
+        "candidate_queue": "multi_asset_queue.json"
+      }
+    }
+  ],
+  "research_questions_scope_note": "H1-H6 below are retained historical conjectures, not the active queue. Active A01-A04 and separately classified watchlist are defined in ultrashort_arbitrage_scope_20261014.json",
+  "active_research_scope": "ultrashort_arbitrage_scope_20261014.json"
 }

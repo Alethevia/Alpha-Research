@@ -1,6 +1,8 @@
 {
-  "status": "FIRST_100_DIRECTION_WAVE_EVALUATED_NO_VALIDATED_ALPHA",
-  "ordering_basis": "Information value, access and implementability; not predicted returns or investment allocation.",
+  "status": "ULTRASHORT_ARBITRAGE_SCOPE_FROZEN_INTAKE_NOT_PERFORMANCE_PREREGISTRATION",
+  "as_of": "2026-10-14",
+  "scope_specification": "ultrashort_arbitrage_scope_20261014.json",
+  "ordering_basis": "Economic identity and falsification value, then account/data feasibility; not forecast returns or capital allocation.",
   "shared_constraints": {
     "capital_usd": 2000,
     "maximum_drawdown_from_peak": 0.4,
@@ -9,130 +11,319 @@
   },
   "tracks": [
     {
-      "id": "M1",
+      "id": "A01",
       "priority": 1,
-      "parent_hypothesis": "H3",
+      "name": "Same-expiry micro/nano index-futures parity",
       "products": [
-        "NES",
-        "NNQ",
-        "other_small_equity_index_futures_after_screening"
+        "MES/NES",
+        "MNQ/NNQ"
       ],
-      "mechanism_to_test": "Continuation after a scheduled macro release, conditional on contemporaneous liquidity and direction.",
-      "first_data_gate": "Exact contract-month trades and executable quotes, receive timestamps, roll/settlement calendar, current IBKR permissions, minimum-equity rules, initial/maintenance margin and all-in fees.",
-      "rejection_before_performance": "A minimum integer contract cannot fit risk/funding constraints, or quotes/depth cannot support delayed entry and exit.",
-      "history_rule": "No NES/NNQ synthetic fills before listing. ES/MES can support signal discovery only; cannot certify nano execution. Short post-launch histories cannot establish one-year returns.",
-      "status": "ACTUAL_DATED_BARS_AND_ROLL_COVERAGE_CHECKED_EXECUTION_GATE_UNRESOLVED",
-      "access_probe": "Actual September 2026 NESZ6/MESZ6 and NESU6/MESU6 five-minute aggregates retrieved. Calendar-roll coverage: NES 1600/1638, MES 1614/1638. Shared two-hour September 11 gap unresolved. Earlier quote access was NOT_ENTITLED; no account margin/permission or fill verification.",
-      "completed_diagnostics": [
-        "M1_NANO_DATA_GATE",
-        "M1_NANO_ROLL_COVERAGE_FOLLOWUP_20261013"
+      "classification": "MATCHED_FINAL_SETTLEMENT_WITH_UNPROVEN_INTRADAY_CONVERGENCE",
+      "hedge_contract_ratio": {
+        "micro": 1,
+        "nano": 10
+      },
+      "multipliers_usd_per_index_point": {
+        "MES": 5,
+        "NES": 0.5,
+        "MNQ": 2,
+        "NNQ": 0.2
+      },
+      "contract_side_executions_per_round_trip": 22,
+      "hypothesis": "Executable cross-size price divergence may exceed all costs and compress before the fixed intraday exit. Matching final SOQ motivates parity but does not prove that horizon.",
+      "first_falsification": "Test exact same-expiry synchronized books with size for all 10 nanos; reject if fee break-even exceeds executable spread compression, or combined margin/unwind reserve cannot fit.",
+      "unresolved": [
+        "quote entitlement and receipt latency",
+        "same-expiry order-book depth",
+        "broker margin offsets and minimum account equity",
+        "package routing or bounded failed-leg unwind",
+        "daily tick rounding and final cash rounding"
       ],
-      "results": "h3_results_20261013.md"
-    },
-    {
-      "id": "M2",
-      "priority": 1,
-      "parent_hypothesis": "H3",
-      "products": [
-        "US_stocks",
-        "sector_and_index_ETFs"
-      ],
-      "mechanism_to_test": "Post-announcement price continuation after information is public; compare stock and ETF expressions.",
-      "first_data_gate": "Point-in-time event release/receipt times, delisted-inclusive universe, corporate actions, minute quotes, account-specific costs and buying power.",
-      "rejection_before_performance": "The apparent edge requires retrospective event labels, future constituent selection or fills before receipt.",
-      "status": "OPENING_AND_POSITIVE_FOMC_SUBTESTS_REJECTED_OTHER_ANNOUNCEMENTS_UNTESTED",
-      "subtests": [
-        {
-          "experiment_family": "M2_OPENING_DRIVE_FIXED_20261013",
-          "design": "m2_design.json",
-          "results": "m2_results_20261013.md",
-          "status": "REJECTED_BY_PREDECLARED_TWO_WINDOW_GATE",
-          "scope": "Opening-session price continuation on SPY/QQQ/TQQQ. This does not test earnings or scheduled announcement continuation.",
-          "cases": 36,
-          "data": "Massive actual unadjusted 5-minute ETF aggregates, 2025 and 2026 Q1-Q3. Quotes and earnings endpoints returned NOT_ENTITLED.",
-          "next_requirement": "An independently motivated new event hypothesis needs point-in-time event times and executable quotes; retain this failure and count subsequent revisions."
-        },
-        {
-          "experiment_family": "H3_FOMC_CONTINUATION_20261013",
-          "design": "h3_design.json",
-          "results": "h3_results_20261013.md",
-          "status": "REJECTED_BY_PREDECLARED_TWO_WINDOW_GATE",
-          "cases": 36,
-          "scope": "14 scheduled FOMC decisions on previously inspected M2 ETF data, positive-reaction long-only rule. One shared trading event in 2025 and zero in 2026; annual inactivity charged. Not independent holdout validation.",
-          "next_requirement": "Any two-sided or negative-response variant is a new trial requiring its own frozen design, tradable instrument/cost model and unused evaluation data."
-        }
+      "status": "BLOCKED_ON_QUOTES_AND_ACCOUNT_COSTS",
+      "sources": [
+        "CME_NANO"
       ]
     },
     {
-      "id": "M3",
+      "id": "A02",
       "priority": 2,
-      "parent_hypothesis": "H6",
+      "name": "Index-option same-expiry payoff-bound violations",
       "products": [
-        "long_listed_options",
-        "intact_debit_spreads",
-        "NANOS_if_liquidity_verified"
+        "XSP first",
+        "SPX as reference or only if unit fits",
+        "major-crypto options only after verified specifications/access"
       ],
-      "mechanism_to_test": "A separately validated signal may benefit from a convex payoff; test against the same signal in the underlying after premium, IV changes and execution costs.",
-      "first_data_gate": "Actual OPRA or exchange option quotes and sizes, expired chains, per-contract multiplier/deliverable, account option level and exercise/assignment funding.",
-      "rejection_before_performance": "Indicative quotes presented as executable, stale spreads, one contract above risk budget, unmodeled assignment or insufficient close-out depth.",
-      "liquidity_note": "Cboe public NANOS page showed volume 104 and open interest 1296 as of 2026-10-09. One day is not an ADV estimate or a fill test. Keep on watchlist until quotes establish feasibility.",
-      "status": "NOT_PREREGISTERED_AWAITING_DATA"
+      "classification": "STATIC_PAYOFF_BOUND_CANDIDATE_INTRADAY_EXIT_UNPROVEN",
+      "hypothesis": "An intact executable vertical or butterfly package may violate a verified payoff bound after fees; a separate closing package must realize the edge inside the holding cap.",
+      "first_falsification": "Use actual package pricing or conservatively executable leg books with matching settlement; reject stale theoretical-mid violations, unaffordable collateral or profits requiring holding beyond the horizon.",
+      "xsp_multiplier_usd_per_point": 100,
+      "unresolved": [
+        "expired-series quotes and complex-order liquidity",
+        "broker multi-leg routing and permissions",
+        "full opening/closing package fees",
+        "cash collateral and settlement timing",
+        "short-leg and timeout handling"
+      ],
+      "status": "BLOCKED_ON_PACKAGE_QUOTES_AND_ACCOUNT_COSTS",
+      "sources": [
+        "XSP_SPECS",
+        "CBOE_COMPLEX"
+      ]
     },
     {
-      "id": "M4",
-      "priority": 2,
-      "parent_hypothesis": "H2",
+      "id": "A03",
+      "priority": 3,
+      "name": "Prefunded same-asset cross-venue crypto price difference",
       "products": [
-        "crypto_spot",
-        "account_eligible_crypto_derivatives"
+        "BTC spot",
+        "ETH spot"
       ],
-      "mechanism_to_test": "Reversal after directly observed temporary sell-pressure decay.",
-      "first_data_gate": "Trade/order-book and receipt timestamps, verified market access and funding/liquidation model for derivatives.",
-      "rejection_before_performance": "Pressure is inferred from future lows, or fees, funding, adverse selection and missed fills erase the effect.",
-      "legacy_result": "The rejected H1 breakout baseline remains rejected; it is not relabeled as H2.",
-      "status": "NOT_PREREGISTERED_AWAITING_DATA"
+      "classification": "CROSS_VENUE_NONATOMIC_ARBITRAGE_CANDIDATE_WITH_INVENTORY",
+      "hypothesis": "A funded buy at venue A and equal-unit sell of existing inventory at B may retain positive edge after fees, latency, failure handling and inventory restoration.",
+      "first_falsification": "Require accessible venues and synchronized depth, $2000 total across cash and coins, and a complete inventory-reset cycle; reject opportunities erased by executable fee tiers or rebalancing.",
+      "unresolved": [
+        "actual eligible venue/account access",
+        "both fee tiers and fee currency",
+        "minimum sizes and inventory allocation",
+        "nonatomic leg risk",
+        "rebalance costs and residual exposure"
+      ],
+      "status": "BLOCKED_ON_VENUE_FEE_AND_BOOK_VERIFICATION",
+      "sources": [
+        "COINBASE_FEES"
+      ]
+    },
+    {
+      "id": "A04",
+      "priority": 4,
+      "name": "Same-venue triangular spot conversion",
+      "products": [
+        "USD to BTC to ETH to USD if all three pairs exist"
+      ],
+      "classification": "THREE_LEG_CONVERSION_CANDIDATE_NONATOMIC_UNLESS_PROVEN",
+      "hypothesis": "Three executable directional conversion rates may leave more starting currency after fees, rounding and failed-leg liquidation.",
+      "first_falsification": "Verify all pairs are simultaneously available to this account and capacity survives the smallest leg; replay actual order-arrival sequencing and full inventory closure.",
+      "unresolved": [
+        "pair availability",
+        "three-leg fees and precision",
+        "depth after earlier legs",
+        "partial-fill residual coins and dust",
+        "no assumed atomic execution"
+      ],
+      "status": "BLOCKED_ON_PAIR_AND_EXECUTION_VERIFICATION",
+      "sources": [
+        "COINBASE_FEES"
+      ]
     }
   ],
-  "additional_scope": [
-    "FX, rates, commodity futures, bonds and other products remain admissible after the same access/size/cost/data gates.",
-    "No remote broker API, order router or unattended research schedule has been enabled."
+  "watchlist": [
+    {
+      "id": "A05",
+      "name": "Same-index calendar spread",
+      "classification": "STATISTICAL_RELATIVE_VALUE_NOT_LOCKED_ARBITRAGE",
+      "promotion_gate": "Account margin plus native-spread quotes; a frozen intraday convergence model must survive actual carry, roll, delay and time-stop exits."
+    },
+    {
+      "id": "A06",
+      "name": "BTC/ETH spot versus eligible derivative intraday basis",
+      "classification": "STATISTICAL_RELATIVE_VALUE_UNLESS_MATCHED_TERMINAL_PAYOFF_PROVEN",
+      "promotion_gate": "Verify actual legal/account access, settlement, margin, funding, borrow, liquidation and hedge sizing. Holding to maturity or through funding cycles is not automatically ultra-short."
+    },
+    {
+      "id": "A07",
+      "name": "Option synthetic forward versus future",
+      "classification": "PARITY_ONLY_AFTER_CASHFLOW_MATCHING",
+      "promotion_gate": "Same underlying scale, expiry instant, settlement index and currency; model discounting/dividends/variation margin. XSP closing settlement and quarterly futures opening SOQ are not interchangeable."
+    }
   ],
   "next_candidate": {
-    "status": "WAVE1_RECORDED_WAVE2_DATA_INTAKE_PENDING",
-    "catalogue": "idea_catalogue_100.json",
-    "screen_report": "idea_100_directions_20261013.md",
-    "intake_details": "idea_validation_queue.json",
-    "first_wave": [
-      "I037",
-      "I010",
-      "I019"
+    "order": [
+      "A01",
+      "A02",
+      "A03",
+      "A04"
     ],
-    "second_wave": [
-      "I001",
-      "I023",
-      "I076"
-    ],
-    "selection_basis": "Original catalogue preserved as a desk-screen snapshot. Follow-up findings versioned separately. Next wave needs data gates and new frozen performance specs.",
-    "new_performance_backtests": 36,
+    "next_action": "First clear executable-quote, all-in-fee and aggregate-funding gates; no OHLC performance proxy for arbitrage.",
     "execution_authorized": false,
-    "progress": "idea_validation_progress_20261013.json",
-    "report": "wave1_results_20261013.md",
-    "first_wave_decisions": {
-      "I037": "FIXED_RULE_REJECTED",
-      "I010": "FIRST_PUBLIC_TIME_UNRESOLVED",
-      "I019": "NO_ALLOCATION_ADVANTAGE_OBSERVED"
-    }
+    "new_performance_backtests": 0
   },
-  "retained_h3b_candidate": {
-    "id": "H3B",
-    "status": "IDEA_ONLY_NOT_PREREGISTERED_IMPLEMENTED_OR_BACKTESTED",
-    "motivation": "Descriptive directional continuation differences are positive over 14 shared events; no costs or executable short positions in that statistic.",
-    "hypothesis_to_formalize": "Negative-response or two-sided post-FOMC continuation after executable delay and full costs.",
-    "required_gates": [
-      "Freeze a new rule before evaluation and retain all prior trials.",
-      "Resolve shared futures data gap without deleting it or filling it with invented prices.",
-      "Actual inverse-ETF or dated-futures prices, executable quotes and account-specific funding/fees.",
-      "Untouched chronological and future paper data; previously used 2025/2026 histories remain development data."
-    ]
-  }
+  "parked_priorities": [
+    {
+      "id": "I010",
+      "reason": "Single-stock filing event is outside narrowed scope."
+    },
+    {
+      "id": "I019",
+      "reason": "Single-stock tender is outside narrowed scope."
+    },
+    {
+      "id": "I001",
+      "reason": "Directional macro-event response is not active arbitrage research."
+    },
+    {
+      "id": "I023",
+      "reason": "Directional response to leveraged ETF reset demand is not locked arbitrage."
+    },
+    {
+      "id": "I076",
+      "reason": "Liquidation reversal is statistical direction risk, not a price-parity trade."
+    },
+    {
+      "id": "I037",
+      "reason": "Rejected fixed cash-long ETF residual rule remains rejected; no new evidence from scope change."
+    },
+    {
+      "id": "I067",
+      "reason": "Box financing normally locks capital until maturity; an intraday resale requires separate executable evidence."
+    },
+    {
+      "id": "H3B",
+      "reason": "Directional negative/two-sided FOMC continuation is parked."
+    }
+  ],
+  "superseded_queue_history": [
+    {
+      "superseded_on": "2026-10-14",
+      "active": false,
+      "reason": "User narrowed scope to ultra-short arbitrage in broad markets.",
+      "queue": {
+        "status": "FIRST_100_DIRECTION_WAVE_EVALUATED_NO_VALIDATED_ALPHA",
+        "ordering_basis": "Information value, access and implementability; not predicted returns or investment allocation.",
+        "shared_constraints": {
+          "capital_usd": 2000,
+          "maximum_drawdown_from_peak": 0.4,
+          "risk_per_trade_research_default": 0.01,
+          "single_shared_capital_pool": true
+        },
+        "tracks": [
+          {
+            "id": "M1",
+            "priority": 1,
+            "parent_hypothesis": "H3",
+            "products": [
+              "NES",
+              "NNQ",
+              "other_small_equity_index_futures_after_screening"
+            ],
+            "mechanism_to_test": "Continuation after a scheduled macro release, conditional on contemporaneous liquidity and direction.",
+            "first_data_gate": "Exact contract-month trades and executable quotes, receive timestamps, roll/settlement calendar, current IBKR permissions, minimum-equity rules, initial/maintenance margin and all-in fees.",
+            "rejection_before_performance": "A minimum integer contract cannot fit risk/funding constraints, or quotes/depth cannot support delayed entry and exit.",
+            "history_rule": "No NES/NNQ synthetic fills before listing. ES/MES can support signal discovery only; cannot certify nano execution. Short post-launch histories cannot establish one-year returns.",
+            "status": "ACTUAL_DATED_BARS_AND_ROLL_COVERAGE_CHECKED_EXECUTION_GATE_UNRESOLVED",
+            "access_probe": "Actual September 2026 NESZ6/MESZ6 and NESU6/MESU6 five-minute aggregates retrieved. Calendar-roll coverage: NES 1600/1638, MES 1614/1638. Shared two-hour September 11 gap unresolved. Earlier quote access was NOT_ENTITLED; no account margin/permission or fill verification.",
+            "completed_diagnostics": [
+              "M1_NANO_DATA_GATE",
+              "M1_NANO_ROLL_COVERAGE_FOLLOWUP_20261013"
+            ],
+            "results": "h3_results_20261013.md"
+          },
+          {
+            "id": "M2",
+            "priority": 1,
+            "parent_hypothesis": "H3",
+            "products": [
+              "US_stocks",
+              "sector_and_index_ETFs"
+            ],
+            "mechanism_to_test": "Post-announcement price continuation after information is public; compare stock and ETF expressions.",
+            "first_data_gate": "Point-in-time event release/receipt times, delisted-inclusive universe, corporate actions, minute quotes, account-specific costs and buying power.",
+            "rejection_before_performance": "The apparent edge requires retrospective event labels, future constituent selection or fills before receipt.",
+            "status": "OPENING_AND_POSITIVE_FOMC_SUBTESTS_REJECTED_OTHER_ANNOUNCEMENTS_UNTESTED",
+            "subtests": [
+              {
+                "experiment_family": "M2_OPENING_DRIVE_FIXED_20261013",
+                "design": "m2_design.json",
+                "results": "m2_results_20261013.md",
+                "status": "REJECTED_BY_PREDECLARED_TWO_WINDOW_GATE",
+                "scope": "Opening-session price continuation on SPY/QQQ/TQQQ. This does not test earnings or scheduled announcement continuation.",
+                "cases": 36,
+                "data": "Massive actual unadjusted 5-minute ETF aggregates, 2025 and 2026 Q1-Q3. Quotes and earnings endpoints returned NOT_ENTITLED.",
+                "next_requirement": "An independently motivated new event hypothesis needs point-in-time event times and executable quotes; retain this failure and count subsequent revisions."
+              },
+              {
+                "experiment_family": "H3_FOMC_CONTINUATION_20261013",
+                "design": "h3_design.json",
+                "results": "h3_results_20261013.md",
+                "status": "REJECTED_BY_PREDECLARED_TWO_WINDOW_GATE",
+                "cases": 36,
+                "scope": "14 scheduled FOMC decisions on previously inspected M2 ETF data, positive-reaction long-only rule. One shared trading event in 2025 and zero in 2026; annual inactivity charged. Not independent holdout validation.",
+                "next_requirement": "Any two-sided or negative-response variant is a new trial requiring its own frozen design, tradable instrument/cost model and unused evaluation data."
+              }
+            ]
+          },
+          {
+            "id": "M3",
+            "priority": 2,
+            "parent_hypothesis": "H6",
+            "products": [
+              "long_listed_options",
+              "intact_debit_spreads",
+              "NANOS_if_liquidity_verified"
+            ],
+            "mechanism_to_test": "A separately validated signal may benefit from a convex payoff; test against the same signal in the underlying after premium, IV changes and execution costs.",
+            "first_data_gate": "Actual OPRA or exchange option quotes and sizes, expired chains, per-contract multiplier/deliverable, account option level and exercise/assignment funding.",
+            "rejection_before_performance": "Indicative quotes presented as executable, stale spreads, one contract above risk budget, unmodeled assignment or insufficient close-out depth.",
+            "liquidity_note": "Cboe public NANOS page showed volume 104 and open interest 1296 as of 2026-10-09. One day is not an ADV estimate or a fill test. Keep on watchlist until quotes establish feasibility.",
+            "status": "NOT_PREREGISTERED_AWAITING_DATA"
+          },
+          {
+            "id": "M4",
+            "priority": 2,
+            "parent_hypothesis": "H2",
+            "products": [
+              "crypto_spot",
+              "account_eligible_crypto_derivatives"
+            ],
+            "mechanism_to_test": "Reversal after directly observed temporary sell-pressure decay.",
+            "first_data_gate": "Trade/order-book and receipt timestamps, verified market access and funding/liquidation model for derivatives.",
+            "rejection_before_performance": "Pressure is inferred from future lows, or fees, funding, adverse selection and missed fills erase the effect.",
+            "legacy_result": "The rejected H1 breakout baseline remains rejected; it is not relabeled as H2.",
+            "status": "NOT_PREREGISTERED_AWAITING_DATA"
+          }
+        ],
+        "additional_scope": [
+          "FX, rates, commodity futures, bonds and other products remain admissible after the same access/size/cost/data gates.",
+          "No remote broker API, order router or unattended research schedule has been enabled."
+        ],
+        "next_candidate": {
+          "status": "WAVE1_RECORDED_WAVE2_DATA_INTAKE_PENDING",
+          "catalogue": "idea_catalogue_100.json",
+          "screen_report": "idea_100_directions_20261013.md",
+          "intake_details": "idea_validation_queue.json",
+          "first_wave": [
+            "I037",
+            "I010",
+            "I019"
+          ],
+          "second_wave": [
+            "I001",
+            "I023",
+            "I076"
+          ],
+          "selection_basis": "Original catalogue preserved as a desk-screen snapshot. Follow-up findings versioned separately. Next wave needs data gates and new frozen performance specs.",
+          "new_performance_backtests": 36,
+          "execution_authorized": false,
+          "progress": "idea_validation_progress_20261013.json",
+          "report": "wave1_results_20261013.md",
+          "first_wave_decisions": {
+            "I037": "FIXED_RULE_REJECTED",
+            "I010": "FIRST_PUBLIC_TIME_UNRESOLVED",
+            "I019": "NO_ALLOCATION_ADVANTAGE_OBSERVED"
+          }
+        },
+        "retained_h3b_candidate": {
+          "id": "H3B",
+          "status": "IDEA_ONLY_NOT_PREREGISTERED_IMPLEMENTED_OR_BACKTESTED",
+          "motivation": "Descriptive directional continuation differences are positive over 14 shared events; no costs or executable short positions in that statistic.",
+          "hypothesis_to_formalize": "Negative-response or two-sided post-FOMC continuation after executable delay and full costs.",
+          "required_gates": [
+            "Freeze a new rule before evaluation and retain all prior trials.",
+            "Resolve shared futures data gap without deleting it or filling it with invented prices.",
+            "Actual inverse-ETF or dated-futures prices, executable quotes and account-specific funding/fees.",
+            "Untouched chronological and future paper data; previously used 2025/2026 histories remain development data."
+          ]
+        }
+      }
+    }
+  ]
 }
