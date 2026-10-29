@@ -1,3 +1,5 @@
+> Historical research note. Its dates, performance figures and audit labels are not an independent certification. See the current README and AUDIT.md for verified scope.
+
 # Backtest Strategy Review
 
 **Date**: 2026-02-08

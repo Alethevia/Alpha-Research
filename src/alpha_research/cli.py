@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Alpha Research CLI - Production-Grade Quantitative Trading System.
+Alpha Research CLI - Experimental Quantitative Trading System.
 
 Provides command-line interface for:
 - PIT Dataset building and validation
@@ -40,7 +40,7 @@ def setup_parser() -> argparse.ArgumentParser:
     """Create the argument parser with all subcommands."""
     parser = argparse.ArgumentParser(
         prog='alpha-research',
-        description='Alpha Research - Production-Grade Quantitative Trading System',
+        description='Alpha Research - Experimental Quantitative Trading System',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -56,7 +56,7 @@ Examples:
   # Show system status
   alpha-research status
 
-For more information, see: https://github.com/your-org/Alpha-Research
+For more information, see: https://github.com/Alethevia/Alpha-Research
         """
     )
     parser.add_argument(

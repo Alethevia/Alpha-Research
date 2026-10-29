@@ -1,3 +1,5 @@
+> Historical research note. Its dates, performance figures and audit labels are not an independent certification. See the current README and AUDIT.md for verified scope.
+
 # Alpha Research - Third-Party Audit Report
 
 **Audit Date**: 2026-01-23

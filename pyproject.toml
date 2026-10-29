@@ -3,6 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
+dynamic = ["dependencies"]
 name = "alpha-research"
 version = "0.2.0"
 description = "Quantitative research framework for factor-based equity analysis with rigorous validation"
@@ -64,3 +65,6 @@ python_version = "3.10"
 warn_return_any = true
 warn_unused_configs = true
 ignore_missing_imports = true
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
